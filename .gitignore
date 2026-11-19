@@ -1,0 +1,13 @@
+# Repository pubblico: solo la web app.
+# Android, Firebase e i materiali sorgente dei corsi restano locali.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/.github/
+!/web/
+
+# Sicurezza e file di sistema
+.DS_Store
+.env
+*.log

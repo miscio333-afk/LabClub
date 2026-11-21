@@ -6,6 +6,17 @@
 !/LICENSE
 !/.github/
 !/web/
+!/web-v2/
+
+# web-v2: pubblica solo l'app, non i materiali sorgente
+/web-v2/assets/avatar/
+/web-v2/assets/img/_gen/
+/web-v2/assets/img/hero.jpg
+/web-v2/assets/img/hero-crew.webp
+/web-v2/assets/video/corso-base-001.mp4
+/web-v2/assets/video/hero-001.mp4
+/web-v2/assets/video/hero-001.webm
+/web-v2/assets/video/webeapp-001.mp4
 
 # Sicurezza e file di sistema
 .DS_Store

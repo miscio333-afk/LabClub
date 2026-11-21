@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>LabClub — Tech, senza scorciatoie</title>
+    <meta
+      name="description"
+      content="LabClub: quattro corsi di tecnologia, quiz, drop e laboratorio codice. Aperto a tutti, senza login, anche offline."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LabClub — Tech, senza scorciatoie" />
+    <meta
+      property="og:description"
+      content="Quattro corsi di tecnologia, quiz, drop settimanali e un laboratorio codice. Senza login, anche offline."
+    />
+    <meta property="og:image" content="assets/img/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/img/og-cover.jpg" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preload" as="image" href="assets/img/hero-001-poster.webp" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LabClub" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/screens.css" />
+    <link rel="stylesheet" href="css/lesson.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <a class="brand" href="#/" aria-label="LabClub, vai alla home">
+          <img src="assets/img/logo.jpg" alt="" width="30" height="30" />
+          <span class="brand-name">LAB<span>CLUB</span></span>
+        </a>
+        <span class="topbar-spacer"></span>
+        <a class="points-pill" href="#/profilo" id="points-pill" aria-label="Punti e profilo">
+          <b id="points-value">0</b> PT
+        </a>
+        <a class="avatar-btn" href="#/profilo" id="avatar-btn" aria-label="Apri il profilo">🕶️</a>
+      </header>
+
+      <div id="storage-warning" class="storage-banner hidden" role="status"></div>
+
+      <main class="view" id="view">
+        <noscript>
+          <div class="empty">
+            <span class="empty-icon">⚡</span>
+            <p>LabClub ha bisogno di JavaScript per funzionare. Attivalo e ricarica la pagina.</p>
+          </div>
+        </noscript>
+      </main>
+
+      <nav class="tabbar" aria-label="Navigazione principale">
+        <a class="tab" href="#/" data-tab="home">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
+          </svg>
+          Home
+        </a>
+        <a class="tab" href="#/corsi" data-tab="corsi">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          Corsi
+        </a>
+        <a class="tab" href="#/drops" data-tab="drops">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2 3 14h7l-1 8 10-12h-7z" />
+          </svg>
+          Drops
+        </a>
+        <a class="tab" href="#/indizi" data-tab="indizi">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18h6" />
+            <path d="M10 22h4" />
+            <path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z" />
+          </svg>
+          Indizi
+        </a>
+        <a class="tab" href="#/profilo" data-tab="profilo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+          </svg>
+          Profilo
+        </a>
+      </nav>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <script src="content/base-course.js"></script>
+    <script src="content/courses.js"></script>
+    <script src="content/drops.js"></script>
+    <script src="content/badges.js"></script>
+    <script src="content/hints.js"></script>
+    <script src="js/python.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/widgets/registry.js"></script>
+    <script src="js/widgets/von-neumann.js"></script>
+    <script src="js/widgets/binary.js"></script>
+    <script src="js/widgets/compilers.js"></script>
+    <script src="js/widgets/flowchart.js"></script>
+    <script src="js/widgets/variables.js"></script>
+    <script src="js/widgets/conditions.js"></script>
+    <script src="js/widgets/loops.js"></script>
+    <script src="js/widgets/functions.js"></script>
+    <script src="js/widgets/lists.js"></script>
+    <script src="js/widgets/strings.js"></script>
+    <script src="js/widgets/validation.js"></script>
+    <script src="js/widgets/debug.js"></script>
+    <script src="js/views/home.js"></script>
+    <script src="js/views/courses.js"></script>
+    <script src="js/views/lesson.js"></script>
+    <script src="js/views/drops.js"></script>
+    <script src="js/views/hints.js"></script>
+    <script src="js/views/lab.js"></script>
+    <script src="js/views/profile.js"></script>
+    <script src="js/views/portfolio.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

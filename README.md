@@ -25,6 +25,8 @@ Nessun login, nessun database, nessun build step: solo HTML, CSS e JavaScript.
 - **Python Lite** nel browser: variabili, condizioni, cicli, funzioni, liste, stringhe,
   slicing, float e ricorsione, con output e verifica dell'esercizio.
 - **PWA offline**: service worker e cache locale; l'app si apre anche senza rete.
+- **Intro con avatar**: due capitoli del Corso Base hanno un video full-bleed con voce,
+  poster e barra di avanzamento; l'audio parte solo al click.
 - **Progressi locali**: punti, timbri, badge, quiz e portfolio salvati in `localStorage`.
 - **Mobile-first**: layout verificato da 320px in su.
 - **Zero servizi esterni a runtime**: niente login, Firebase, AI o API.
@@ -34,28 +36,30 @@ Nessun login, nessun database, nessun build step: solo HTML, CSS e JavaScript.
 Serve solo un server statico:
 
 ```bash
-cd web
-python3 -m http.server 4173
+cd web-v2
+python3 -m http.server 4174
 ```
 
-Apri `http://localhost:4173`. Da `file://` l'app funziona, ma senza service worker e con
+Apri `http://localhost:4174`. Da `file://` l'app funziona, ma senza service worker e con
 le limitazioni di `localStorage` di alcuni browser.
 
 ## Deploy
 
-Il repository pubblica la sola cartella `web/` tramite GitHub Actions.
+Il repository pubblica la cartella `web-v2/` tramite GitHub Actions.
 
 - Workflow: `.github/workflows/pages.yml`
 - Sorgente Pages: **GitHub Actions**
 - URL: `https://miscio333-afk.github.io/LabClub/`
 
 Ogni push su `main` aggiorna il sito. Dopo una modifica ai file della web app,
-incrementa `CACHE_VERSION` in `web/sw.js` per forzare il refresh della cache PWA.
+incrementa `CACHE_VERSION` in `web-v2/sw.js` per forzare il refresh della cache PWA.
+
+La V1 storica resta in `web/` e non viene più pubblicata.
 
 ## Struttura
 
 ```
-web/
+web-v2/
 ├── index.html            # shell, topbar, tab bar
 ├── manifest.webmanifest  # PWA
 ├── sw.js                 # cache offline
@@ -67,11 +71,11 @@ web/
 │   ├── app.js            # hash router e shell
 │   ├── widgets/          # 12 laboratori interattivi
 │   └── views/            # una funzione per schermata
-└── assets/               # font, immagini e icone
+└── assets/               # font, immagini, video, icone
 ```
 
 Dettagli su contenuti, formato delle lezioni e come aggiungere un laboratorio in
-[`web/README.md`](web/README.md).
+[`web-v2/README.md`](web-v2/README.md).
 
 ## Dati e privacy
 

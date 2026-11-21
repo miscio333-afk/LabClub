@@ -1,0 +1,779 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1138" width="1000" height="1138" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+  <defs>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#001A0D" stroke-width="1" />
+    </pattern>
+
+    <radialGradient id="titleGlow" cx="50%" cy="6%" r="48%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.14" />
+      <stop offset="55%" stop-color="#FFE600" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="matrixFadeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="40%" stop-color="#00FF66" stop-opacity="0.25" />
+      <stop offset="78%" stop-color="#00FF66" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600" stop-opacity="0" />
+      <stop offset="40%" stop-color="#FFE600" stop-opacity="0.25" />
+      <stop offset="78%" stop-color="#FFE600" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#FFE600" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="firmwareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <filter id="matrixHeadGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonTextGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <clipPath id="leftMatrixClip">
+      <rect x="0" y="0" width="24" height="1138" />
+    </clipPath>
+
+    <clipPath id="rightMatrixClip">
+      <rect x="976" y="0" width="24" height="1138" />
+    </clipPath>
+  </defs>
+
+  <rect width="1000" height="1138" fill="#000000" />
+  <rect width="1000" height="1138" fill="url(#gridPattern)" opacity="0.5" />
+  <rect width="1000" height="1138" fill="url(#titleGlow)" />
+
+  <g id="matrix-rain-left" clip-path="url(#leftMatrixClip)">
+    <g>
+      <text x="8" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.45"><tspan x="8" dy="0">0</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">O</tspan><tspan x="8" dy="13">S</tspan><tspan x="8" dy="13">&lt;</tspan><tspan x="8" dy="13">K</tspan><tspan x="8" dy="13">R</tspan><tspan x="8" dy="13">N</tspan><tspan x="8" dy="13">/</tspan><tspan x="8" dy="13">L</tspan><tspan x="8" dy="13">{</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">&gt;</tspan><tspan x="8" dy="13">A</tspan><tspan x="8" dy="13">P</tspan></text>
+      <text x="8" y="208" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-3.20s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="8" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.38"><tspan x="8" dy="0">1</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">U</tspan><tspan x="8" dy="13">I</tspan><tspan x="8" dy="13">&gt;</tspan><tspan x="8" dy="13">B</tspan><tspan x="8" dy="13">I</tspan><tspan x="8" dy="13">;</tspan><tspan x="8" dy="13">O</tspan><tspan x="8" dy="13">S</tspan><tspan x="8" dy="13">}</tspan><tspan x="8" dy="13">A</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">:</tspan><tspan x="8" dy="13">P</tspan><tspan x="8" dy="13">&lt;</tspan></text>
+      <text x="8" y="208" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-10.80s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="18" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.32"><tspan x="18" dy="0">S</tspan><tspan x="18" dy="13">Y</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">&lt;</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">9</tspan><tspan x="18" dy="13">/</tspan><tspan x="18" dy="13">A</tspan><tspan x="18" dy="13">P</tspan><tspan x="18" dy="13">P</tspan><tspan x="18" dy="13">}</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">D</tspan><tspan x="18" dy="13">R</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">#</tspan></text>
+      <text x="18" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">&gt;</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-6.50s" dur="19.00s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="18" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.32"><tspan x="18" dy="0">0</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">O</tspan><tspan x="18" dy="13">S</tspan><tspan x="18" dy="13">&lt;</tspan><tspan x="18" dy="13">K</tspan><tspan x="18" dy="13">R</tspan><tspan x="18" dy="13">N</tspan><tspan x="18" dy="13">/</tspan><tspan x="18" dy="13">L</tspan><tspan x="18" dy="13">{</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">&gt;</tspan><tspan x="18" dy="13">A</tspan><tspan x="18" dy="13">P</tspan></text>
+      <text x="18" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-16.00s" dur="19.00s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g id="matrix-rain-right" clip-path="url(#rightMatrixClip)">
+    <g>
+      <text x="982" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.34"><tspan x="982" dy="0">1</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">U</tspan><tspan x="982" dy="13">I</tspan><tspan x="982" dy="13">&gt;</tspan><tspan x="982" dy="13">B</tspan><tspan x="982" dy="13">I</tspan><tspan x="982" dy="13">;</tspan><tspan x="982" dy="13">O</tspan><tspan x="982" dy="13">S</tspan><tspan x="982" dy="13">}</tspan><tspan x="982" dy="13">A</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">:</tspan><tspan x="982" dy="13">P</tspan><tspan x="982" dy="13">&lt;</tspan></text>
+      <text x="982" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-4.10s" dur="17.10s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="982" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.34"><tspan x="982" dy="0">S</tspan><tspan x="982" dy="13">Y</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">&lt;</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">9</tspan><tspan x="982" dy="13">/</tspan><tspan x="982" dy="13">A</tspan><tspan x="982" dy="13">P</tspan><tspan x="982" dy="13">P</tspan><tspan x="982" dy="13">}</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">D</tspan><tspan x="982" dy="13">R</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">#</tspan></text>
+      <text x="982" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">&gt;</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-12.65s" dur="17.10s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="992" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.45"><tspan x="992" dy="0">0</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">O</tspan><tspan x="992" dy="13">S</tspan><tspan x="992" dy="13">&lt;</tspan><tspan x="992" dy="13">K</tspan><tspan x="992" dy="13">R</tspan><tspan x="992" dy="13">N</tspan><tspan x="992" dy="13">/</tspan><tspan x="992" dy="13">L</tspan><tspan x="992" dy="13">{</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">&gt;</tspan><tspan x="992" dy="13">A</tspan><tspan x="992" dy="13">P</tspan></text>
+      <text x="992" y="208" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-2.40s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="992" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.38"><tspan x="992" dy="0">1</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">U</tspan><tspan x="992" dy="13">I</tspan><tspan x="992" dy="13">&gt;</tspan><tspan x="992" dy="13">B</tspan><tspan x="992" dy="13">I</tspan><tspan x="992" dy="13">;</tspan><tspan x="992" dy="13">O</tspan><tspan x="992" dy="13">S</tspan><tspan x="992" dy="13">}</tspan><tspan x="992" dy="13">A</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">:</tspan><tspan x="992" dy="13">P</tspan><tspan x="992" dy="13">&lt;</tspan></text>
+      <text x="992" y="208" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-9.50s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <g fill="none" stroke-width="1.4" opacity="0.18">
+    <path d="M0,220 L18,220 L30,232" stroke="#00FF66" />
+    <circle cx="18" cy="220" r="2.5" fill="#00FF66" />
+    <path d="M0,560 L14,560 L30,544" stroke="#00FF66" />
+    <circle cx="14" cy="560" r="2.5" fill="#00FF66" />
+    <path d="M1000,240 L982,240 L970,252" stroke="#FFE600" />
+    <circle cx="982" cy="240" r="2.5" fill="#FFE600" />
+    <path d="M1000,560 L984,560 L970,546" stroke="#FFE600" />
+    <circle cx="984" cy="560" r="2.5" fill="#FFE600" />
+  </g>
+
+  <rect x="0" y="-10" width="1000" height="3" fill="#00FF66" opacity="0.12">
+    <animate attributeName="y" from="-10" to="1138" dur="7.60s" repeatCount="indefinite" />
+  </rect>
+
+  <g id="title-group" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <text x="503" y="44" text-anchor="middle" font-size="31" font-weight="bold" letter-spacing="2" fill="#00FFFF" opacity="0">
+      SOFTWARE DI SISTEMA vs
+      <animate attributeName="opacity" values="0;0;0.45;0;0.35;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <text x="497" y="78" text-anchor="middle" font-size="31" font-weight="bold" letter-spacing="2" fill="#FF2E63" opacity="0">
+      SOFTWARE APPLICATIVO
+      <animate attributeName="opacity" values="0;0;0.4;0;0.3;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <g filter="url(#neonTextGlow)">
+      <text x="500" y="44" text-anchor="middle" font-size="31" font-weight="bold" letter-spacing="2">
+        <tspan fill="#00FF66">SOFTWARE DI SISTEMA<animate attributeName="opacity" values="1;1;0.15;1;0.08;1;1" keyTimes="0;0.68;0.70;0.73;0.75;0.78;1" dur="9.50s" repeatCount="indefinite" /></tspan>
+        <tspan fill="#FFFFFF"> vs</tspan>
+      </text>
+      <text x="500" y="78" text-anchor="middle" font-size="31" font-weight="bold" letter-spacing="2">
+        <tspan fill="#FFE600">SOFTWARE APPLICATIVO<animate attributeName="opacity" values="1;1;0.12;1;0.2;1;1" keyTimes="0;0.42;0.44;0.47;0.49;0.52;1" dur="11.40s" repeatCount="indefinite" /></tspan>
+      </text>
+      <text x="500" y="101" text-anchor="middle" font-size="14" fill="#FFFFFF" letter-spacing="1">- Schema di ripasso -</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 3,0; -3,0; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <text x="500" y="122" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="11" fill="#00FF66" letter-spacing="2.8">
+    SYS.LAYERS // MINESWEEPER + TRON + INVADERS + Q*BERT // 1.9x SLOW
+    <animate attributeName="opacity" values="1;0.4;1;0.15;1;0.7;1" keyTimes="0;0.25;0.45;0.48;0.52;0.75;1" dur="4.56s" repeatCount="indefinite" />
+  </text>
+
+  <g id="tron-corridor">
+    <!-- Subtle circuit track guides -->
+    <path d="M486,690 V540 H508 V390 H484 V250 H514 V154" fill="none" stroke="#00FF66" stroke-opacity="0.14" stroke-width="1.4" />
+    <path d="M514,154 V300 H490 V450 H516 V590 H488 V690" fill="none" stroke="#FFE600" stroke-opacity="0.14" stroke-width="1.4" />
+
+    <!-- Green Tron Light Cycle -->
+    <path d="M486,690 V540 H508 V390 H484 V250 H514 V154" pathLength="1000" fill="none" stroke="#00FF66" stroke-width="2.4" stroke-linecap="square" filter="url(#glowGreen)" stroke-dasharray="140 860" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="140" to="-860" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.08;0.90;1" dur="13.30s" repeatCount="indefinite" />
+    </path>
+    <rect x="-3.5" y="-3.5" width="7" height="7" rx="1" fill="#FFFFFF" stroke="#00FF66" stroke-width="1.2" filter="url(#matrixHeadGlow)" opacity="0">
+      <animateMotion path="M486,690 V540 H508 V390 H484 V250 H514 V154" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.90;1" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Yellow Tron Light Cycle -->
+    <path d="M514,154 V300 H490 V450 H516 V590 H488 V690" pathLength="1000" fill="none" stroke="#FFE600" stroke-width="2.4" stroke-linecap="square" filter="url(#glowYellow)" stroke-dasharray="140 860" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="140" to="-860" begin="-5.70s" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.08;0.90;1" begin="-5.70s" dur="13.30s" repeatCount="indefinite" />
+    </path>
+    <rect x="-3.5" y="-3.5" width="7" height="7" rx="1" fill="#FFFFFF" stroke="#FFE600" stroke-width="1.2" filter="url(#matrixHeadGlow)" opacity="0">
+      <animateMotion path="M514,154 V300 H490 V450 H516 V590 H488 V690" begin="-5.70s" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.90;1" begin="-5.70s" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <g id="panel-system-sw" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="138" width="440" height="560" rx="18" fill="#000A05" stroke="#00FF66" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+    <rect x="30" y="138" width="440" height="560" rx="18" fill="none" stroke="#00FF66" stroke-width="2.5" stroke-linecap="round" filter="url(#glowGreen)" stroke-dasharray="140 1850" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1990" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.84;1" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#00FF66" stroke-width="2.5" fill="none">
+      <path d="M24,160 L24,132 L52,132" />
+      <path d="M448,132 L476,132 L476,160" />
+      <path d="M24,676 L24,704 L52,704" />
+      <path d="M448,704 L476,704 L476,676" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <text x="250" y="176" text-anchor="middle" font-size="23" font-weight="bold" fill="#00FF66" letter-spacing="1" filter="url(#neonTextGlow)">
+      Software di Sistema
+      <animate attributeName="opacity" values="1;1;0.15;1;0.1;1;1" keyTimes="0;0.58;0.60;0.63;0.65;0.68;1" dur="8.55s" repeatCount="indefinite" />
+    </text>
+    <text x="250" y="200" text-anchor="middle" font-size="13.2" fill="#FFFFFF">Gestisce l'hardware e la piattaforma</text>
+
+    <g transform="translate(148, 254)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#00FF66" stroke-width="1.6" fill="none" transform="translate(0, -10)">
+          <rect x="-12" y="-12" width="24" height="24" rx="3" fill="#002914" />
+          <text x="0" y="3" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFFFFF" stroke="none">CPU</text>
+          <path d="M-6,-12 V-17 M0,-12 V-17 M6,-12 V-17 M-6,12 V17 M0,12 V17 M6,12 V17 M-12,-6 H-17 M-12,0 H-17 M-12,6 H-17 M12,-6 H17 M12,0 H17 M12,6 H17" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#00FF66">RISORSE &amp; CPU</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" begin="0s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(352, 254)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.57s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#00FF66" stroke-width="1.6" fill="none" transform="translate(0, -10)">
+          <rect x="-20" y="-12" width="40" height="24" rx="3" fill="#002914" />
+          <line x1="-20" y1="-5" x2="20" y2="-5" />
+          <text x="0" y="8" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#FFFFFF" stroke="none">&lt;/&gt;</text>
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#00FF66">KERNEL &amp; DRIVER</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g font-size="13.5" fill="#E0FFE6" xml:space="preserve">
+      <text x="52" y="324">• Fa funzionare il computer e gestisce</text>
+      <text x="52" y="344">  le risorse (CPU, RAM, I/O)</text>
+      <text x="52" y="376">• Lavora in background a stretto</text>
+      <text x="52" y="396">  contatto con l'hardware</text>
+      <text x="52" y="428">• Indispensabile per l'avvio e</text>
+      <text x="52" y="448">  l'uso della macchina</text>
+    </g>
+
+    <rect x="52" y="482" width="294" height="188" rx="10" fill="#001A0D" stroke="#00FF66" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.95;0.2;0.95" dur="7.60s" repeatCount="indefinite" />
+    </rect>
+    <text x="68" y="512" font-size="13.5" font-weight="bold" fill="#00FF66">ESEMPI:</text>
+    <text x="68" y="544" font-size="12.5" fill="#FFFFFF">Sistemi Operativi (Linux,</text>
+    <text x="68" y="568" font-size="12.5" fill="#FFFFFF">Windows, macOS), Driver,</text>
+    <text x="68" y="592" font-size="12.5" fill="#FFFFFF">Firmware (BIOS / UEFI),</text>
+    <text x="68" y="616" font-size="12.5" fill="#FFFFFF">Utility di sistema</text>
+
+    <g id="minesweeper-sys-diag" transform="translate(358, 502)">
+      <rect x="0" y="0" width="92" height="148" rx="8" fill="#020D06" stroke="#00FF66" stroke-opacity="0.38" stroke-width="1.2" />
+      <text x="46" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="#00FF66" letter-spacing="0.8">SYS_CHECK</text>
+      <text x="46" y="27" text-anchor="middle" font-size="6.8" fill="#A8FFCC" opacity="0.8">IRQ // SECTOR</text>
+      <g transform="translate(9, 36)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.06;0.085;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.06;0.085;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.06;0.085;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(28, 36)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.105;0.13;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.105;0.13;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.105;0.13;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(47, 36)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.15;0.175;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.15;0.175;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.15;0.175;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(66, 36)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.195;0.22;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.195;0.22;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.195;0.22;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(9, 55)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.24;0.265;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.24;0.265;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.24;0.265;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(28, 55)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.285;0.31;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.285;0.31;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.285;0.31;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(47, 55)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.33;0.355;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.33;0.355;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.33;0.355;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(66, 55)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.375;0.4;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.375;0.4;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.375;0.4;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(9, 74)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.42;0.445;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.42;0.445;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.42;0.445;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(28, 74)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.465;0.49;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.465;0.49;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.465;0.49;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(47, 74)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#332B00;#1A1500;#332B00;#001A0D;#001A0D" keyTimes="0;0.51;0.535;0.80;0.88;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke" values="#00FF66;#00FF66;#FFE600;#FFE600;#FFE600;#00FF66;#00FF66" keyTimes="0;0.51;0.535;0.80;0.88;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <text x="8" y="12" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFE600" opacity="0">!
+            <animate attributeName="opacity" values="0;0;1;0.35;1;0;0" keyTimes="0;0.51;0.535;0.82;0.88;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </text>
+        </g>
+      <g transform="translate(66, 74)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.555;0.58;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.555;0.58;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.555;0.58;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(9, 93)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.6;0.625;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.6;0.625;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.6;0.625;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(28, 93)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.645;0.67;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.645;0.67;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.645;0.67;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(47, 93)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.69;0.715;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.69;0.715;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.69;0.715;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <g transform="translate(66, 93)">
+          <rect x="0" y="0" width="16" height="16" rx="2.5" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1">
+            <animate attributeName="fill" values="#001A0D;#001A0D;#004D26;#002E17;#001A0D;#001A0D" keyTimes="0;0.735;0.76;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values="0.35;0.35;1;0.8;0.35;0.35" keyTimes="0;0.735;0.76;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </rect>
+          <circle cx="8" cy="8" r="2.2" fill="#00FF66" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.95;0.75;0;0" keyTimes="0;0.735;0.76;0.90;0.95;1" dur="15.20s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      <text x="46" y="128" text-anchor="middle" font-size="7" fill="#00FF66">
+        [✓] OK
+        <tspan fill="#FFE600"> [!] IRQ</tspan>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="4.56s" repeatCount="indefinite" />
+      </text>
+      <rect x="9" y="135" width="74" height="4" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.4" stroke-width="0.6" />
+      <rect x="9" y="135" width="12" height="4" rx="2" fill="#00FF66">
+        <animate attributeName="width" values="0;74;74;0" keyTimes="0;0.78;0.93;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <g id="panel-app-sw" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="530" y="138" width="440" height="560" rx="18" fill="#0A0800" stroke="#FFE600" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" begin="-2.66s" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+    <rect x="530" y="138" width="440" height="560" rx="18" fill="none" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round" filter="url(#glowYellow)" stroke-dasharray="140 1850" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1990" begin="-3.80s" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.84;1" begin="-3.80s" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#FFE600" stroke-width="2.5" fill="none">
+      <path d="M524,160 L524,132 L552,132" />
+      <path d="M948,132 L976,132 L976,160" />
+      <path d="M524,676 L524,704 L552,704" />
+      <path d="M948,704 L976,704 L976,676" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <text x="750" y="176" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFE600" letter-spacing="1" filter="url(#neonTextGlow)">
+      Software Applicativo
+      <animate attributeName="opacity" values="1;1;0.12;1;0.18;1;1" keyTimes="0;0.34;0.36;0.39;0.41;0.44;1" dur="9.50s" repeatCount="indefinite" />
+    </text>
+    <text x="750" y="200" text-anchor="middle" font-size="13.2" fill="#FFFFFF">Risolve compiti specifici per l'utente</text>
+
+    <g transform="translate(616, 254)">
+      <g>
+        <rect x="-61" y="-36" width="122" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.38s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.5" fill="none" transform="translate(0, -10)">
+          <rect x="-18" y="-12" width="30" height="22" rx="2.5" fill="#261F00" />
+          <line x1="-18" y1="-6" x2="12" y2="-6" />
+          <circle cx="11" cy="7" r="7" fill="#1A1500" stroke="#00FF66" />
+          <circle cx="11" cy="7" r="2.5" fill="#00FF66" stroke="none" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFE600">APP / SUITE</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" begin="0.38s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(750, 254)">
+      <g>
+        <rect x="-61" y="-36" width="122" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.76s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.7" fill="none" transform="translate(0, -10)" stroke-linecap="round">
+          <line x1="-11" y1="-10" x2="11" y2="12" stroke="#FFFFFF" />
+          <line x1="11" y1="-10" x2="-11" y2="12" />
+          <circle cx="-11" cy="-10" r="3" />
+          <rect x="8" y="-13" width="6" height="6" rx="1" fill="#FFE600" stroke="none" transform="rotate(45 11 -10)" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFE600">STRUMENTI IDE</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" begin="0.76s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(884, 254)">
+      <g>
+        <rect x="-61" y="-36" width="122" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="1.14s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.5" fill="none" transform="translate(0, -10)">
+          <rect x="-18" y="-9" width="36" height="18" rx="8" fill="#261F00" />
+          <path d="M-11,0 H-5 M-8,-3 V3" stroke="#FFFFFF" stroke-width="1.6" />
+          <circle cx="7" cy="-2" r="1.5" fill="#00FF66" stroke="none" />
+          <circle cx="11" cy="2" r="1.5" fill="#FFE600" stroke="none" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFE600">VIDEOGIOCHI</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" begin="1.14s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g font-size="13.5" fill="#FFF8CC" xml:space="preserve">
+      <text x="552" y="324">• Creato per soddisfare esigenze</text>
+      <text x="552" y="344">  pratiche dell'utente finale</text>
+      <text x="552" y="376">• Si appoggia al Sistema Operativo</text>
+      <text x="552" y="396">  per funzionare</text>
+      <text x="552" y="428">• Opzionale: installato in base</text>
+      <text x="552" y="448">  alle necessità</text>
+    </g>
+
+    <rect x="552" y="482" width="294" height="188" rx="10" fill="#1A1500" stroke="#FFE600" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.95;0.2;0.95" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </rect>
+    <text x="568" y="512" font-size="13.5" font-weight="bold" fill="#FFE600">ESEMPI:</text>
+    <text x="568" y="544" font-size="12.5" fill="#FFFFFF">Browser, Suite Office,</text>
+    <text x="568" y="568" font-size="12.5" fill="#FFFFFF">IDE di programmazione,</text>
+    <text x="568" y="592" font-size="12.5" fill="#FFFFFF">Videogiochi, App</text>
+
+    <g id="space-invaders-app" transform="translate(858, 502)">
+      <rect x="0" y="0" width="92" height="148" rx="8" fill="#0A0800" stroke="#FFE600" stroke-opacity="0.38" stroke-width="1.2" />
+      <text x="46" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFE600" letter-spacing="0.8">GAME_EXE</text>
+      <text x="46" y="27" text-anchor="middle" font-size="6.8" fill="#FFF2A6" opacity="0.8">THREAD_FPS</text>
+
+      <!-- Invader wave shifting discretely -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" calcMode="discrete" values="-5,0; 0,0; 5,0; 0,0; -5,0" keyTimes="0;0.25;0.50;0.75;1" dur="7.60s" repeatCount="indefinite" />
+        <g transform="translate(24, 46)" fill="#FFE600">
+      <rect x="-5" y="-3" width="10" height="5" rx="1" />
+      <rect x="-7" y="-1" width="2" height="3" />
+      <rect x="5" y="-1" width="2" height="3" />
+      <rect x="-4" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+      <rect x="-3" y="-5" width="1.5" height="2" />
+      <rect x="1.5" y="-5" width="1.5" height="2" />
+      <rect x="-3" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+      <rect x="1.5" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+    </g>
+        <g transform="translate(46, 46)" fill="#FFFFFF">
+      <rect x="-5" y="-3" width="10" height="5" rx="1" />
+      <rect x="-7" y="-1" width="2" height="3" />
+      <rect x="5" y="-1" width="2" height="3" />
+      <rect x="-4" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+      <rect x="-3" y="-5" width="1.5" height="2" />
+      <rect x="1.5" y="-5" width="1.5" height="2" />
+      <rect x="-3" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+      <rect x="1.5" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+    </g>
+        <g transform="translate(68, 46)" fill="#FFE600">
+      <rect x="-5" y="-3" width="10" height="5" rx="1" />
+      <rect x="-7" y="-1" width="2" height="3" />
+      <rect x="5" y="-1" width="2" height="3" />
+      <rect x="-4" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+      <rect x="-3" y="-5" width="1.5" height="2" />
+      <rect x="1.5" y="-5" width="1.5" height="2" />
+      <rect x="-3" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+      <rect x="1.5" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+    </g>
+        <g>
+          <g transform="translate(24, 65)" fill="#FFE600">
+      <rect x="-5" y="-3" width="10" height="5" rx="1" />
+      <rect x="-7" y="-1" width="2" height="3" />
+      <rect x="5" y="-1" width="2" height="3" />
+      <rect x="-4" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+      <rect x="-3" y="-5" width="1.5" height="2" />
+      <rect x="1.5" y="-5" width="1.5" height="2" />
+      <rect x="-3" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+      <rect x="1.5" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+    </g>
+          <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.34;0.37;0.88;0.94;1" dur="13.30s" repeatCount="indefinite" />
+        </g>
+        <g>
+          <g transform="translate(46, 65)" fill="#FFE600">
+      <rect x="-5" y="-3" width="10" height="5" rx="1" />
+      <rect x="-7" y="-1" width="2" height="3" />
+      <rect x="5" y="-1" width="2" height="3" />
+      <rect x="-4" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+      <rect x="-3" y="-5" width="1.5" height="2" />
+      <rect x="1.5" y="-5" width="1.5" height="2" />
+      <rect x="-3" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+      <rect x="1.5" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+    </g>
+          <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.66;0.69;0.88;0.94;1" dur="13.30s" repeatCount="indefinite" />
+        </g>
+        <g transform="translate(68, 65)" fill="#FFFFFF">
+      <rect x="-5" y="-3" width="10" height="5" rx="1" />
+      <rect x="-7" y="-1" width="2" height="3" />
+      <rect x="5" y="-1" width="2" height="3" />
+      <rect x="-4" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+      <rect x="-3" y="-5" width="1.5" height="2" />
+      <rect x="1.5" y="-5" width="1.5" height="2" />
+      <rect x="-3" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+      <rect x="1.5" y="-1.5" width="1.5" height="1.5" fill="#0A0800" />
+    </g>
+      </g>
+
+      <!-- Pixel shield barrier -->
+      <g fill="#00FF66" opacity="0.75">
+        <rect x="16" y="98" width="14" height="5" rx="1" />
+        <rect x="39" y="98" width="14" height="5" rx="1" />
+        <rect x="62" y="98" width="14" height="5" rx="1" />
+      </g>
+
+      <!-- Laser shots -->
+      <rect x="23" y="114" width="2" height="7" rx="1" fill="#00FF66" opacity="0">
+        <animate attributeName="y" values="114;64;64" keyTimes="0;0.36;1" dur="13.30s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.95;1;0;0" keyTimes="0;0.06;0.34;0.37;1" dur="13.30s" repeatCount="indefinite" />
+      </rect>
+      <rect x="45" y="114" width="2" height="7" rx="1" fill="#FFFFFF" opacity="0">
+        <animate attributeName="y" values="114;114;64;64" keyTimes="0;0.42;0.68;1" dur="13.30s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;1;0;0" keyTimes="0;0.42;0.46;0.66;0.69;1" dur="13.30s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Player ship moving cleanly between shots -->
+      <g transform="translate(24, 126)">
+        <animateTransform attributeName="transform" type="translate" values="24,126; 24,126; 46,126; 46,126; 66,126; 24,126" keyTimes="0;0.35;0.44;0.70;0.85;1" dur="13.30s" repeatCount="indefinite" />
+        <polygon points="0,-6 7,2 -7,2" fill="#00FF66" />
+        <rect x="-9" y="2" width="18" height="4" rx="1" fill="#FFE600" />
+      </g>
+    </g>
+  </g>
+
+  <g id="arrows-to-stack">
+    <line x1="250" y1="698" x2="250" y2="730" stroke="#00FF66" stroke-width="3" />
+    <polygon points="242,724 258,724 250,738" fill="#00FF66" />
+    <circle cx="0" cy="0" r="6" fill="#00FF66" opacity="0">
+      <animateMotion path="M250,698 L250,738" begin="0s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+
+    <line x1="750" y1="698" x2="750" y2="730" stroke="#FFE600" stroke-width="3" />
+    <polygon points="742,724 758,724 750,738" fill="#FFE600" />
+    <circle cx="0" cy="0" r="6" fill="#FFE600" opacity="0">
+      <animateMotion path="M750,698 L750,738" begin="0.76s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0.76s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="box-stack-hierarchy" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="738" width="940" height="198" rx="16" fill="#000A05" stroke="url(#firmwareGrad)" stroke-width="2.5" stroke-opacity="0.4">
+      <animate attributeName="stroke-opacity" values="0.45;0.2;0.45" dur="4.56s" repeatCount="indefinite" />
+    </rect>
+    <rect x="30" y="738" width="940" height="198" rx="16" fill="none" stroke="#00FF66" stroke-width="2.5" stroke-linecap="round" filter="url(#glowGreen)" stroke-dasharray="180 2020" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-2200" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.85;1" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#FFFFFF" stroke-width="2" fill="none">
+      <path d="M24,756 L24,732 L48,732" />
+      <path d="M952,732 L976,732 L976,756" />
+      <path d="M24,918 L24,942 L48,942" />
+      <path d="M952,942 L976,942 L976,918" />
+      <animate attributeName="opacity" values="0.8;0.15;0.8" dur="5.70s" repeatCount="indefinite" />
+    </g>
+
+    <text x="500" y="766" text-anchor="middle" font-size="18.5" font-weight="bold" fill="#FFFFFF" letter-spacing="1" filter="url(#neonTextGlow)">
+      GERARCHIA A STRATI (Stack Tecnologico)
+      <animate attributeName="opacity" values="1;1;0.25;1;1" keyTimes="0;0.74;0.77;0.80;1" dur="10.45s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Node 1: Hardware -->
+    <g transform="translate(122, 858)">
+      <rect x="-74" y="-52" width="148" height="104" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="1.8">
+        <animate attributeName="stroke-opacity" values="1;0.4;1;0.4" keyTimes="0;0.15;0.5;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <g stroke="#00FF66" stroke-width="1.4" fill="none" transform="translate(0, -14)">
+        <rect x="-15" y="-15" width="30" height="30" rx="4" fill="#002914" />
+        <path d="M-8,-15 V-19 M0,-15 V-19 M8,-15 V-19 M-8,15 V19 M0,15 V19 M8,15 V19 M-15,-8 H-19 M-15,0 H-19 M-15,8 H-19 M15,-8 H19 M15,0 H19 M15,8 H19" />
+        <text x="0" y="4" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" stroke="none">&lt;/&gt;</text>
+      </g>
+      <text x="0" y="34" text-anchor="middle" font-size="12" font-weight="bold" fill="#00FF66">Hardware</text>
+    </g>
+
+    <!-- Arrow 1->2 -->
+    <line x1="198" y1="858" x2="226" y2="858" stroke="#00FF66" stroke-width="2.5" />
+    <polygon points="224,852 235,858 224,864" fill="#00FF66" />
+
+    <!-- Node 2: Firmware -->
+    <g transform="translate(311, 858)">
+      <rect x="-74" y="-52" width="148" height="104" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="1.8">
+        <animate attributeName="stroke-opacity" values="0.4;1;0.4;0.4" keyTimes="0;0.25;0.45;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <g stroke="#FFFFFF" stroke-width="1.4" fill="none" transform="translate(0, -14)">
+        <rect x="-15" y="-15" width="30" height="30" rx="4" fill="#002914" stroke="#00FF66" />
+        <path d="M-7,-15 V-19 M7,-15 V-19 M-7,15 V19 M7,15 V19" stroke="#00FF66" />
+        <text x="0" y="4" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#FFE600" stroke="none">BIOS</text>
+      </g>
+      <text x="0" y="34" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">Firmware</text>
+    </g>
+
+    <!-- Arrow 2->3 -->
+    <line x1="387" y1="858" x2="415" y2="858" stroke="#FFFFFF" stroke-width="2.5" />
+    <polygon points="413,852 424,858 413,864" fill="#FFFFFF" />
+
+    <!-- Node 3: Sistema Operativo -->
+    <g transform="translate(500, 858)">
+      <rect x="-74" y="-52" width="148" height="104" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="1.8">
+        <animate attributeName="stroke-opacity" values="0.4;1;0.4;0.4" keyTimes="0;0.50;0.70;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <g stroke="#00FF66" stroke-width="1.5" fill="none" transform="translate(0, -16)">
+        <polygon points="0,-12 16,-5 0,2 -16,-5" fill="#00FF66" fill-opacity="0.35" />
+        <polygon points="0,-5 16,2 0,9 -16,2" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" />
+        <polygon points="0,2 16,9 0,16 -16,9" fill="#00FF66" fill-opacity="0.25" />
+      </g>
+      <text x="0" y="22" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#00FF66">Sistema</text>
+      <text x="0" y="38" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#00FF66">Operativo</text>
+    </g>
+
+    <!-- Arrow 3->4 -->
+    <line x1="576" y1="858" x2="604" y2="858" stroke="#FFE600" stroke-width="2.5" />
+    <polygon points="602,852 613,858 602,864" fill="#FFE600" />
+
+    <!-- Node 4: Software Applicativo -->
+    <g transform="translate(689, 858)">
+      <rect x="-74" y="-52" width="148" height="104" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="1.8">
+        <animate attributeName="stroke-opacity" values="0.4;1;0.4;0.4" keyTimes="0;0.75;0.92;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <g stroke="#FFE600" stroke-width="1.5" fill="none" transform="translate(0, -16)">
+        <polygon points="0,-12 16,-5 0,2 -16,-5" fill="#FFE600" fill-opacity="0.38" />
+        <polygon points="0,-5 16,2 0,9 -16,2" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" />
+        <polygon points="0,2 16,9 0,16 -16,9" fill="#FFE600" fill-opacity="0.25" />
+      </g>
+      <text x="0" y="22" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#FFE600">Software</text>
+      <text x="0" y="38" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#FFE600">Applicativo</text>
+    </g>
+
+    <!-- Arrow 4->5 -->
+    <line x1="765" y1="858" x2="793" y2="858" stroke="#FFFFFF" stroke-width="2.5" />
+    <polygon points="791,852 802,858 791,864" fill="#FFFFFF" />
+
+    <!-- Node 5: Utente -->
+    <g transform="translate(878, 858)">
+      <rect x="-74" y="-52" width="148" height="104" rx="12" fill="#1A1500" stroke="#FFFFFF" stroke-width="1.8">
+        <animate attributeName="stroke-opacity" values="0.4;0.4;1;0.4" keyTimes="0;0.85;0.96;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <g transform="translate(0, -14)" fill="none" stroke-width="1.5">
+        <circle cx="-6" cy="-7" r="5" fill="#00FF66" fill-opacity="0.35" stroke="#00FF66" />
+        <path d="M-15,9 A9,9 0 0,1 3,9 Z" fill="#00FF66" fill-opacity="0.25" stroke="#00FF66" />
+        <circle cx="7" cy="-5" r="4.5" fill="#FFE600" fill-opacity="0.35" stroke="#FFE600" />
+        <path d="M0,9 A7,7 0 0,1 14,9 Z" fill="#FFE600" fill-opacity="0.25" stroke="#FFE600" />
+      </g>
+      <text x="0" y="34" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">Utente</text>
+    </g>
+
+    <g id="qbert-stack-hopper">
+    <path d="M 122,802 Q 216,772 311,802 Q 405,772 500,802 Q 594,772 689,802 Q 783,772 878,802" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2" stroke-dasharray="3 5" />
+    <g opacity="0" filter="url(#glowYellow)">
+      <animateMotion path="M 122,802 Q 216,772 311,802 Q 405,772 500,802 Q 594,772 689,802 Q 783,772 878,802" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.88;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      <!-- Minimalist Q*bert-inspired hopper -->
+      <circle cx="0" cy="0" r="6" fill="#FFE600" stroke="#FFFFFF" stroke-width="1" />
+      <ellipse cx="5" cy="1" rx="3" ry="1.8" fill="#FFE600" />
+      <circle cx="-1.5" cy="-1.8" r="1.3" fill="#FFFFFF" />
+      <circle cx="1.8" cy="-1.8" r="1.3" fill="#FFFFFF" />
+      <circle cx="-1.2" cy="-1.8" r="0.6" fill="#000000" />
+      <circle cx="2.1" cy="-1.8" r="0.6" fill="#000000" />
+      <animateTransform attributeName="transform" type="scale" values="1,1; 1.18,0.82; 0.92,1.15; 1.18,0.82; 0.92,1.15; 1.18,0.82; 0.92,1.15; 1.18,0.82; 1,1" keyTimes="0;0.03;0.14;0.25;0.38;0.50;0.63;0.75;1" dur="15.20s" repeatCount="indefinite" />
+    </g>
+  </g>
+  </g>
+  <g id="checklist" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="956" width="940" height="158" rx="12" fill="#050A07" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1.5" />
+    <rect x="30" y="956" width="940" height="158" rx="12" fill="none" stroke="#00FF66" stroke-width="2" stroke-linecap="round" stroke-dasharray="140 2032" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-2172" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.82;1" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+    <line x1="495" y1="972" x2="495" y2="1074" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1" />
+
+    <text x="52" y="982" font-size="11.5" font-weight="bold" fill="#00FF66">CHECK SCHEMA ORIGINALE:</text>
+    <text x="52" y="1004" font-size="11" fill="#A8FFCC">[✓] SW SISTEMA: CPU/RAM/I/O, BACKGROUND, SO/DRIVER</text>
+    <text x="52" y="1024" font-size="11" fill="#A8FFCC">[✓] SW APPLICATIVO: UTENTE, APPOGGIO SO, OPZIONALE</text>
+    <text x="52" y="1044" font-size="11" fill="#A8FFCC">[✓] STACK: HARDWARE → FIRMWARE → SO → APP → UTENTE</text>
+    <text x="52" y="1064" font-size="11" fill="#A8FFCC">[✓] ESEMPI COMPLETI (BROWSER, OFFICE, IDE, GIOCHI)</text>
+
+    <text x="515" y="982" font-size="11.5" font-weight="bold" fill="#FFE600">CHECK ARCADE MIX (NUOVA SKILL):</text>
+    <text x="515" y="1004" font-size="11" fill="#FFF2A6">[✓] MINESWEEPER → SW DI SISTEMA (SYS_CHECK / IRQ)</text>
+    <text x="515" y="1024" font-size="11" fill="#FFF2A6">[✓] SPACE INVADERS → SW APPLICATIVO (GAME_EXE)</text>
+    <text x="515" y="1044" font-size="11" fill="#FFF2A6">[✓] TRON LIGHT CYCLES → CORRIDOIO KERNEL ↔ USER</text>
+    <text x="515" y="1064" font-size="11" fill="#FFF2A6">[✓] Q*BERT → SALTO A STRATI NELLO STACK TECNOLOGICO</text>
+
+    <line x1="52" y1="1082" x2="948" y2="1082" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+    <text x="500" y="1102" text-anchor="middle" font-size="12" fill="#888888">Generato con Skill cyberpunk-svg-diagram v2 (13-game Arcade Motif Library) — puro SMIL 1.9x</text>
+  </g>
+</svg>

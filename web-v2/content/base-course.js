@@ -61,7 +61,13 @@
           "<li><strong>Bus</strong> — le autostrade che collegano CPU, RAM e periferiche.</li>" +
           "</ul>" +
           "<p>La CPU lavora in un ciclo continuo: <strong>fetch</strong> (preleva l'istruzione dalla RAM), <strong>decode</strong> (la decodifica), <strong>execute</strong> (la esegue). Poi riparte dalla successiva.</p>" +
-          '<div class="callout warn"><strong>RAM ≠ SSD.</strong> La RAM è velocissima ma perde tutto allo spegnimento; l’SSD conserva i file, ma è più lento da leggere.</div>'
+          '<div class="callout warn"><strong>RAM ≠ SSD.</strong> La RAM è velocissima ma perde tutto allo spegnimento; l’SSD conserva i file, ma è più lento da leggere.</div>' +
+          '<figure class="schema-inline">' +
+          '<button type="button" class="schema-trigger" data-schema-zoom data-schema-src="assets/svg/architettura-von-neumann-full-ok.svg" data-schema-title="Architettura di Von Neumann" data-schema-desc="CPU (CU, ALU, Registri), RAM, bus di sistema, periferiche I/O e ciclo Fetch → Decode → Execute.">' +
+          '<img class="schema-img" src="assets/svg/architettura-von-neumann-full-ok.svg" alt="Schema animato dell\'architettura di Von Neumann con CPU, RAM, bus di sistema, periferiche I/O e ciclo Fetch-Decode-Execute" width="1000" height="1180" loading="lazy" decoding="async" />' +
+          '<span class="schema-zoom-pill"><span>Schema animato · Von Neumann</span><b>Ingrandisci</b></span>' +
+          "</button>" +
+          "</figure>"
       }
     ],
     lab: {
@@ -69,6 +75,80 @@
       description: "Clicca un componente per leggerne il ruolo. Poi avanza una fase alla volta e osserva PC, IR e ALU.",
       widget: "von-neumann"
     },
+    schemas: [
+      {
+        id: "hw-sw",
+        label: "HW vs SW",
+        title: "Hardware vs Software",
+        desc: "Parte fisica, software logico e il ponte del firmware (BIOS / UEFI).",
+        src: "assets/svg/hardware-vs-software(7).svg",
+        width: 1000,
+        height: 1180
+      },
+      {
+        id: "components",
+        label: "Componenti",
+        title: "Componenti hardware del computer",
+        desc: "Componenti interni nel case e periferiche di Input, Output e bidirezionali.",
+        src: "assets/svg/componenti_hardware_cyberpunk.svg",
+        width: 1000,
+        height: 1200
+      },
+      {
+        id: "mobo",
+        label: "Scheda Madre",
+        title: "La Scheda Madre (Motherboard)",
+        desc: "Socket CPU, slot RAM DIMM, PCIe, chipset, porte I/O e connettori storage.",
+        src: "assets/svg/scheda_madre_cyberpunk.svg",
+        width: 1000,
+        height: 1360
+      },
+      {
+        id: "bus-pcie",
+        label: "Bus & PCIe",
+        title: "I bus di sistema e le linee PCIe",
+        desc: "Bus dati, indirizzi e controllo insieme alle corsie PCI Express.",
+        src: "assets/svg/bus_pcie_cyberpunk.svg",
+        width: 1000,
+        height: 1270
+      },
+      {
+        id: "cpu-gpu",
+        label: "CPU vs GPU",
+        title: "CPU vs GPU",
+        desc: "Elaborazione seriale a bassa latenza contro calcolo parallelo massivo.",
+        src: "assets/svg/cpu_vs_gpu_cyberpunk.svg",
+        width: 1000,
+        height: 1126
+      },
+      {
+        id: "mem-hierarchy",
+        label: "Gerarchia memorie",
+        title: "Gerarchia delle memorie",
+        desc: "Dai registri interni alla CPU fino a cache, RAM, SSD/HDD e cloud.",
+        src: "assets/svg/gerarchia-delle-memorie.svg",
+        width: 1000,
+        height: 1125
+      },
+      {
+        id: "ram-rom-cache",
+        label: "RAM · ROM · Cache",
+        title: "RAM vs ROM vs Cache",
+        desc: "Confronto tecnico tra lettura/scrittura, volatilità, tecnologia e velocità.",
+        src: "assets/svg/ram-vs-rom-vs-cache.svg",
+        width: 1000,
+        height: 1118
+      },
+      {
+        id: "ssd-hdd",
+        label: "SSD vs HDD",
+        title: "SSD vs HDD",
+        desc: "Memoria a stato solido Flash NAND contro disco magnetico meccanico.",
+        src: "assets/svg/ssd_vs_hdd_cyberpunk.svg",
+        width: 1000,
+        height: 1020
+      }
+    ],
     keyPoints: [
       "Quasi tutti i computer moderni uniscono CPU (CU + ALU), RAM e periferiche I/O collegate dai bus.",
       "Nella RAM convivono dati e istruzioni: è il principio del programma memorizzato.",
@@ -142,6 +222,17 @@
       description: "Accendi e spegni i bit, leggi il valore decimale, il carattere ASCII e prova le conversioni passo-passo.",
       widget: "binary"
     },
+    schemas: [
+      {
+        id: "scale",
+        label: "Scala unità",
+        title: "Scala delle unità informatiche: dal bit al petabyte",
+        desc: "Potenze di 2 dal bit al petabyte e differenza tra prefissi binari IEC (1024) e decimali SI (1000).",
+        src: "assets/svg/scala-unita-informatiche(2).svg",
+        width: 1000,
+        height: 1335
+      }
+    ],
     keyPoints: [
       "Il bit ha due valori: 0 e 1. Il byte è un gruppo di 8 bit.",
       "Un byte rappresenta 256 combinazioni (0–255) e usa pesi posizionali 128…1.",
@@ -206,6 +297,17 @@
       description: "Confronta le due modalità con lo stesso script. Osserva quando compare l'errore e cosa viene stampato.",
       widget: "compilers"
     },
+    schemas: [
+      {
+        id: "sys-app",
+        label: "Sistema vs Applicativo",
+        title: "Software di sistema vs software applicativo",
+        desc: "Lo stack tecnologico da hardware e firmware fino a sistema operativo, compilatori/IDE e app.",
+        src: "assets/svg/software-sistema-vs-applicativo.svg",
+        width: 1000,
+        height: 1138
+      }
+    ],
     keyPoints: [
       "Il codice sorgente va sempre tradotto in istruzioni binarie per la CPU.",
       "Il compilatore traduce tutto prima e genera un eseguibile; l'interprete traduce ed esegue riga per riga.",

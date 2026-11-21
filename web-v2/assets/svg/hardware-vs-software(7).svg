@@ -1,0 +1,795 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1180" width="1000" height="1180" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+  <defs>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#001A0D" stroke-width="1" />
+    </pattern>
+
+    <radialGradient id="titleGlow" cx="50%" cy="6%" r="48%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.14" />
+      <stop offset="55%" stop-color="#FFE600" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="matrixFadeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="40%" stop-color="#00FF66" stop-opacity="0.25" />
+      <stop offset="78%" stop-color="#00FF66" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600" stop-opacity="0" />
+      <stop offset="40%" stop-color="#FFE600" stop-opacity="0.25" />
+      <stop offset="78%" stop-color="#FFE600" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#FFE600" stop-opacity="1" />
+    </linearGradient>
+
+    <filter id="matrixHeadGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonTextGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <clipPath id="leftMatrixClip">
+      <rect x="0" y="0" width="24" height="1180" />
+    </clipPath>
+
+    <clipPath id="rightMatrixClip">
+      <rect x="976" y="0" width="24" height="1180" />
+    </clipPath>
+
+    <clipPath id="centerMatrixClip">
+      <rect x="476" y="120" width="48" height="638" />
+    </clipPath>
+
+    <clipPath id="belowFirmwareMatrixClip">
+      <rect x="440" y="870" width="120" height="40" />
+    </clipPath>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="firmwareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <linearGradient id="bridgeDownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#00FF66" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="1180" fill="#000000" />
+  <rect width="1000" height="1180" fill="url(#gridPattern)" opacity="0.5" />
+  <rect width="1000" height="1180" fill="url(#titleGlow)" />
+
+  <g id="matrix-rain-left" clip-path="url(#leftMatrixClip)">
+    <g>
+      <text x="8" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.48"><tspan x="8" dy="0">0</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">A</tspan><tspan x="8" dy="13">F</tspan><tspan x="8" dy="13">7</tspan><tspan x="8" dy="13">&lt;</tspan><tspan x="8" dy="13">9</tspan><tspan x="8" dy="13">E</tspan><tspan x="8" dy="13">/</tspan><tspan x="8" dy="13">3</tspan><tspan x="8" dy="13">{</tspan><tspan x="8" dy="13">C</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">8</tspan><tspan x="8" dy="13">&gt;</tspan><tspan x="8" dy="13">X</tspan></text>
+      <text x="8" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-3.20s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="8" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.42"><tspan x="8" dy="0">1</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">F</tspan><tspan x="8" dy="13">4</tspan><tspan x="8" dy="13">&gt;</tspan><tspan x="8" dy="13">B</tspan><tspan x="8" dy="13">2</tspan><tspan x="8" dy="13">;</tspan><tspan x="8" dy="13">7</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">D</tspan><tspan x="8" dy="13">}</tspan><tspan x="8" dy="13">A</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">:</tspan><tspan x="8" dy="13">5</tspan><tspan x="8" dy="13">&lt;</tspan></text>
+      <text x="8" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-10.80s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="18" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.36"><tspan x="18" dy="0">E</tspan><tspan x="18" dy="13">7</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">&lt;</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">9</tspan><tspan x="18" dy="13">/</tspan><tspan x="18" dy="13">A</tspan><tspan x="18" dy="13">3</tspan><tspan x="18" dy="13">F</tspan><tspan x="18" dy="13">}</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">8</tspan><tspan x="18" dy="13">C</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">#</tspan><tspan x="18" dy="13">&gt;</tspan></text>
+      <text x="18" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-6.50s" dur="19.00s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="18" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.36"><tspan x="18" dy="0">0</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">A</tspan><tspan x="18" dy="13">F</tspan><tspan x="18" dy="13">7</tspan><tspan x="18" dy="13">&lt;</tspan><tspan x="18" dy="13">9</tspan><tspan x="18" dy="13">E</tspan><tspan x="18" dy="13">/</tspan><tspan x="18" dy="13">3</tspan><tspan x="18" dy="13">{</tspan><tspan x="18" dy="13">C</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">8</tspan><tspan x="18" dy="13">&gt;</tspan><tspan x="18" dy="13">X</tspan></text>
+      <text x="18" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-16.00s" dur="19.00s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <g id="matrix-rain-right" clip-path="url(#rightMatrixClip)">
+    <g>
+      <text x="982" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.38"><tspan x="982" dy="0">1</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">F</tspan><tspan x="982" dy="13">4</tspan><tspan x="982" dy="13">&gt;</tspan><tspan x="982" dy="13">B</tspan><tspan x="982" dy="13">2</tspan><tspan x="982" dy="13">;</tspan><tspan x="982" dy="13">7</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">D</tspan><tspan x="982" dy="13">}</tspan><tspan x="982" dy="13">A</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">:</tspan><tspan x="982" dy="13">5</tspan><tspan x="982" dy="13">&lt;</tspan></text>
+      <text x="982" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-4.10s" dur="17.10s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="982" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.38"><tspan x="982" dy="0">E</tspan><tspan x="982" dy="13">7</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">&lt;</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">9</tspan><tspan x="982" dy="13">/</tspan><tspan x="982" dy="13">A</tspan><tspan x="982" dy="13">3</tspan><tspan x="982" dy="13">F</tspan><tspan x="982" dy="13">}</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">8</tspan><tspan x="982" dy="13">C</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">#</tspan><tspan x="982" dy="13">&gt;</tspan></text>
+      <text x="982" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-12.65s" dur="17.10s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="992" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.48"><tspan x="992" dy="0">0</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">A</tspan><tspan x="992" dy="13">F</tspan><tspan x="992" dy="13">7</tspan><tspan x="992" dy="13">&lt;</tspan><tspan x="992" dy="13">9</tspan><tspan x="992" dy="13">E</tspan><tspan x="992" dy="13">/</tspan><tspan x="992" dy="13">3</tspan><tspan x="992" dy="13">{</tspan><tspan x="992" dy="13">C</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">8</tspan><tspan x="992" dy="13">&gt;</tspan><tspan x="992" dy="13">X</tspan></text>
+      <text x="992" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-2.40s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="992" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.42"><tspan x="992" dy="0">1</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">F</tspan><tspan x="992" dy="13">4</tspan><tspan x="992" dy="13">&gt;</tspan><tspan x="992" dy="13">B</tspan><tspan x="992" dy="13">2</tspan><tspan x="992" dy="13">;</tspan><tspan x="992" dy="13">7</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">D</tspan><tspan x="992" dy="13">}</tspan><tspan x="992" dy="13">A</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">:</tspan><tspan x="992" dy="13">5</tspan><tspan x="992" dy="13">&lt;</tspan></text>
+      <text x="992" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-9.50s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <g id="matrix-rain-center" clip-path="url(#centerMatrixClip)">
+    <g>
+      <text x="485" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.44"><tspan x="485" dy="0">0</tspan><tspan x="485" dy="13">1</tspan><tspan x="485" dy="13">A</tspan><tspan x="485" dy="13">F</tspan><tspan x="485" dy="13">7</tspan><tspan x="485" dy="13">&lt;</tspan><tspan x="485" dy="13">9</tspan><tspan x="485" dy="13">E</tspan><tspan x="485" dy="13">/</tspan><tspan x="485" dy="13">3</tspan><tspan x="485" dy="13">{</tspan><tspan x="485" dy="13">C</tspan><tspan x="485" dy="13">1</tspan><tspan x="485" dy="13">0</tspan><tspan x="485" dy="13">8</tspan><tspan x="485" dy="13">&gt;</tspan><tspan x="485" dy="13">X</tspan></text>
+      <text x="485" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-130" to="0,760" begin="-2.50s" dur="13.30s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="485" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.38"><tspan x="485" dy="0">E</tspan><tspan x="485" dy="13">7</tspan><tspan x="485" dy="13">0</tspan><tspan x="485" dy="13">&lt;</tspan><tspan x="485" dy="13">1</tspan><tspan x="485" dy="13">9</tspan><tspan x="485" dy="13">/</tspan><tspan x="485" dy="13">A</tspan><tspan x="485" dy="13">3</tspan><tspan x="485" dy="13">F</tspan><tspan x="485" dy="13">}</tspan><tspan x="485" dy="13">0</tspan><tspan x="485" dy="13">8</tspan><tspan x="485" dy="13">C</tspan><tspan x="485" dy="13">1</tspan><tspan x="485" dy="13">#</tspan><tspan x="485" dy="13">&gt;</tspan></text>
+      <text x="485" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-130" to="0,760" begin="-9.15s" dur="13.30s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="500" y="0" text-anchor="middle" font-size="10.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.5"><tspan x="500" dy="0">1</tspan><tspan x="500" dy="13">0</tspan><tspan x="500" dy="13">F</tspan><tspan x="500" dy="13">4</tspan><tspan x="500" dy="13">&gt;</tspan><tspan x="500" dy="13">B</tspan><tspan x="500" dy="13">2</tspan><tspan x="500" dy="13">;</tspan><tspan x="500" dy="13">7</tspan><tspan x="500" dy="13">0</tspan><tspan x="500" dy="13">D</tspan><tspan x="500" dy="13">}</tspan><tspan x="500" dy="13">A</tspan><tspan x="500" dy="13">1</tspan><tspan x="500" dy="13">:</tspan><tspan x="500" dy="13">5</tspan><tspan x="500" dy="13">&lt;</tspan></text>
+      <text x="500" y="221" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-130" to="0,760" begin="-5.40s" dur="16.15s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="500" y="0" text-anchor="middle" font-size="10.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.48"><tspan x="500" dy="0">0</tspan><tspan x="500" dy="13">1</tspan><tspan x="500" dy="13">A</tspan><tspan x="500" dy="13">F</tspan><tspan x="500" dy="13">7</tspan><tspan x="500" dy="13">&lt;</tspan><tspan x="500" dy="13">9</tspan><tspan x="500" dy="13">E</tspan><tspan x="500" dy="13">/</tspan><tspan x="500" dy="13">3</tspan><tspan x="500" dy="13">{</tspan><tspan x="500" dy="13">C</tspan><tspan x="500" dy="13">1</tspan><tspan x="500" dy="13">0</tspan><tspan x="500" dy="13">8</tspan><tspan x="500" dy="13">&gt;</tspan><tspan x="500" dy="13">X</tspan></text>
+      <text x="500" y="221" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-130" to="0,760" begin="-13.45s" dur="16.15s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="515" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.44"><tspan x="515" dy="0">E</tspan><tspan x="515" dy="13">7</tspan><tspan x="515" dy="13">0</tspan><tspan x="515" dy="13">&lt;</tspan><tspan x="515" dy="13">1</tspan><tspan x="515" dy="13">9</tspan><tspan x="515" dy="13">/</tspan><tspan x="515" dy="13">A</tspan><tspan x="515" dy="13">3</tspan><tspan x="515" dy="13">F</tspan><tspan x="515" dy="13">}</tspan><tspan x="515" dy="13">0</tspan><tspan x="515" dy="13">8</tspan><tspan x="515" dy="13">C</tspan><tspan x="515" dy="13">1</tspan><tspan x="515" dy="13">#</tspan><tspan x="515" dy="13">&gt;</tspan></text>
+      <text x="515" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-130" to="0,760" begin="-1.80s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="515" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.38"><tspan x="515" dy="0">1</tspan><tspan x="515" dy="13">0</tspan><tspan x="515" dy="13">F</tspan><tspan x="515" dy="13">4</tspan><tspan x="515" dy="13">&gt;</tspan><tspan x="515" dy="13">B</tspan><tspan x="515" dy="13">2</tspan><tspan x="515" dy="13">;</tspan><tspan x="515" dy="13">7</tspan><tspan x="515" dy="13">0</tspan><tspan x="515" dy="13">D</tspan><tspan x="515" dy="13">}</tspan><tspan x="515" dy="13">A</tspan><tspan x="515" dy="13">1</tspan><tspan x="515" dy="13">:</tspan><tspan x="515" dy="13">5</tspan><tspan x="515" dy="13">&lt;</tspan></text>
+      <text x="515" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-130" to="0,760" begin="-8.90s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <g id="matrix-rain-below-firmware" clip-path="url(#belowFirmwareMatrixClip)">
+    <g>
+      <text x="470" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.45"><tspan x="470" dy="0">0</tspan><tspan x="470" dy="12">1</tspan><tspan x="470" dy="12">A</tspan><tspan x="470" dy="12">F</tspan><tspan x="470" dy="12">7</tspan><tspan x="470" dy="12">&lt;</tspan><tspan x="470" dy="12">9</tspan><tspan x="470" dy="12">E</tspan><tspan x="470" dy="12">/</tspan><tspan x="470" dy="12">3</tspan><tspan x="470" dy="12">{</tspan><tspan x="470" dy="12">C</tspan><tspan x="470" dy="12">1</tspan><tspan x="470" dy="12">0</tspan><tspan x="470" dy="12">8</tspan><tspan x="470" dy="12">&gt;</tspan><tspan x="470" dy="12">X</tspan></text>
+      <text x="470" y="204" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,650" to="0,920" begin="-2.20s" dur="9.50s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="470" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.4"><tspan x="470" dy="0">1</tspan><tspan x="470" dy="12">0</tspan><tspan x="470" dy="12">F</tspan><tspan x="470" dy="12">4</tspan><tspan x="470" dy="12">&gt;</tspan><tspan x="470" dy="12">B</tspan><tspan x="470" dy="12">2</tspan><tspan x="470" dy="12">;</tspan><tspan x="470" dy="12">7</tspan><tspan x="470" dy="12">0</tspan><tspan x="470" dy="12">D</tspan><tspan x="470" dy="12">}</tspan><tspan x="470" dy="12">A</tspan><tspan x="470" dy="12">1</tspan><tspan x="470" dy="12">:</tspan><tspan x="470" dy="12">5</tspan><tspan x="470" dy="12">&lt;</tspan></text>
+      <text x="470" y="204" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,650" to="0,920" begin="-6.95s" dur="9.50s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="530" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.45"><tspan x="530" dy="0">E</tspan><tspan x="530" dy="12">7</tspan><tspan x="530" dy="12">0</tspan><tspan x="530" dy="12">&lt;</tspan><tspan x="530" dy="12">1</tspan><tspan x="530" dy="12">9</tspan><tspan x="530" dy="12">/</tspan><tspan x="530" dy="12">A</tspan><tspan x="530" dy="12">3</tspan><tspan x="530" dy="12">F</tspan><tspan x="530" dy="12">}</tspan><tspan x="530" dy="12">0</tspan><tspan x="530" dy="12">8</tspan><tspan x="530" dy="12">C</tspan><tspan x="530" dy="12">1</tspan><tspan x="530" dy="12">#</tspan><tspan x="530" dy="12">&gt;</tspan></text>
+      <text x="530" y="204" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,650" to="0,920" begin="-4.10s" dur="10.45s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="530" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.4"><tspan x="530" dy="0">0</tspan><tspan x="530" dy="12">1</tspan><tspan x="530" dy="12">A</tspan><tspan x="530" dy="12">F</tspan><tspan x="530" dy="12">7</tspan><tspan x="530" dy="12">&lt;</tspan><tspan x="530" dy="12">9</tspan><tspan x="530" dy="12">E</tspan><tspan x="530" dy="12">/</tspan><tspan x="530" dy="12">3</tspan><tspan x="530" dy="12">{</tspan><tspan x="530" dy="12">C</tspan><tspan x="530" dy="12">1</tspan><tspan x="530" dy="12">0</tspan><tspan x="530" dy="12">8</tspan><tspan x="530" dy="12">&gt;</tspan><tspan x="530" dy="12">X</tspan></text>
+      <text x="530" y="204" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,650" to="0,920" begin="-9.30s" dur="10.45s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <g fill="none" stroke-width="1.4">
+    <g opacity="0.18">
+      <path d="M0,220 L18,220 L30,232" stroke="#00FF66" />
+      <circle cx="18" cy="220" r="2.5" fill="#00FF66" />
+      <path d="M0,520 L14,520 L30,504" stroke="#00FF66" />
+      <circle cx="14" cy="520" r="2.5" fill="#00FF66" />
+      <path d="M1000,260 L982,260 L970,272" stroke="#FFE600" />
+      <circle cx="982" cy="260" r="2.5" fill="#FFE600" />
+      <path d="M1000,560 L984,560 L970,546" stroke="#FFE600" />
+      <circle cx="984" cy="560" r="2.5" fill="#FFE600" />
+      <path d="M470,380 L488,380 L498,390 L498,460" stroke="#00FF66" />
+      <circle cx="498" cy="460" r="2.5" fill="#00FF66" />
+      <path d="M530,420 L512,420 L502,430 L502,510" stroke="#FFE600" />
+      <circle cx="502" cy="510" r="2.5" fill="#FFE600" />
+      <path d="M100,815 L62,815 L45,832 L45,910" stroke="#00FF66" />
+      <circle cx="62" cy="815" r="2.5" fill="#00FF66" />
+      <path d="M900,815 L938,815 L955,832 L955,910" stroke="#FFE600" />
+      <circle cx="938" cy="815" r="2.5" fill="#FFE600" />
+    </g>
+
+    <path d="M100,815 L62,815 L45,832 L45,910" stroke="#00FF66" stroke-width="2" stroke-dasharray="28 160" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-188" dur="7.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.8;1" dur="7.60s" repeatCount="indefinite" />
+    </path>
+    <path d="M900,815 L938,815 L955,832 L955,910" stroke="#FFE600" stroke-width="2" stroke-dasharray="28 160" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-188" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.8;1" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <g opacity="0.45">
+    <circle cx="85" cy="180" r="2.5" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 18,-35; -10,-70; 0,0" dur="15.20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="485" cy="260" r="2" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -14,-40; 12,-20; 0,0" dur="19.00s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="515" cy="480" r="3" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 16,-45; -12,-90; 0,0" dur="17.10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="920" cy="210" r="2.5" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -20,-30; 10,-65; 0,0" dur="16.15s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="140" cy="740" r="2" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 22,-25; -8,-50; 0,0" dur="14.25s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="860" cy="735" r="2.5" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -18,-32; 14,-60; 0,0" dur="18.05s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="330" cy="885" r="2" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 15,-22; -15,-44; 0,0" dur="20.90s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="670" cy="885" r="2" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -15,-28; 10,-52; 0,0" dur="19.95s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="45" cy="960" r="2.5" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 12,-38; -6,-72; 0,0" dur="22.80s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="955" cy="950" r="2.5" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -16,-34; 8,-68; 0,0" dur="21.85s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <rect x="0" y="-10" width="1000" height="3" fill="#00FF66" opacity="0.12">
+    <animate attributeName="y" from="-10" to="1180" dur="7.60s" repeatCount="indefinite" />
+  </rect>
+
+  <g id="title-group" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <text x="503" y="52" text-anchor="middle" font-size="42" font-weight="bold" letter-spacing="3" fill="#00FFFF" opacity="0">
+      HARDWARE vs SOFTWARE
+      <animate attributeName="opacity" values="0;0;0.45;0;0.35;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <text x="497" y="52" text-anchor="middle" font-size="42" font-weight="bold" letter-spacing="3" fill="#FF2E63" opacity="0">
+      HARDWARE vs SOFTWARE
+      <animate attributeName="opacity" values="0;0;0.4;0;0.3;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <g filter="url(#neonTextGlow)">
+      <text x="500" y="52" text-anchor="middle" font-size="42" font-weight="bold" letter-spacing="3">
+        <tspan fill="#00FF66">HARDWARE<animate attributeName="opacity" values="1;1;0.15;1;0.08;1;1" keyTimes="0;0.68;0.70;0.73;0.75;0.78;1" dur="9.50s" repeatCount="indefinite" /></tspan>
+        <tspan fill="#FFFFFF"> vs </tspan>
+        <tspan fill="#FFE600">SOFTWARE<animate attributeName="opacity" values="1;1;0.12;1;0.2;1;1" keyTimes="0;0.42;0.44;0.47;0.49;0.52;1" dur="11.40s" repeatCount="indefinite" /></tspan>
+      </text>
+      <text x="500" y="80" text-anchor="middle" font-size="15" fill="#FFFFFF" letter-spacing="0.8">- Schema di ripasso per studenti di Informatica -</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 3,0; -3,0; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <text x="500" y="104" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="11.5" fill="#00FF66" letter-spacing="3">
+    SYS.HW_SW // SNAKE + TETRIS + PAC-MAN // 1.9x SLOW
+    <animate attributeName="opacity" values="1;0.4;1;0.15;1;0.7;1" keyTimes="0;0.25;0.45;0.48;0.52;0.75;1" dur="4.56s" repeatCount="indefinite" />
+  </text>
+
+  <g id="panel-hardware" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="122" width="440" height="606" rx="18" fill="#000A05" stroke="#00FF66" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+
+    <g id="snake-hardware">
+    <g transform="translate(470.0, 161.2)">
+        <g>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.5" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.8" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="0.9;0.45;1;1;0;0;0.9;0.9" keyTimes="0;0.11;0.205;0.22;0.245;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;0.85;1.15;1.55;0;0;1;1" keyTimes="0;0.11;0.205;0.22;0.245;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(452.0, 728.0)">
+        <g>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.5" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.8" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="0.9;0.45;1;1;0;0;0.9;0.9" keyTimes="0;0.25;0.485;0.5;0.525;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;0.85;1.15;1.55;0;0;1;1" keyTimes="0;0.25;0.485;0.5;0.525;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(30.0, 606.4)">
+        <g>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.5" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.8" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="0.9;0.45;1;1;0;0;0.9;0.9" keyTimes="0;0.38;0.745;0.76;0.785;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;0.85;1.15;1.55;0;0;1;1" keyTimes="0;0.38;0.745;0.76;0.785;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <path d="M 48,122 L 452,122 A 18,18 0 0 1 470,140 L 470,710 A 18,18 0 0 1 452,728 L 48,728 A 18,18 0 0 1 30,710 L 30,140 A 18,18 0 0 1 48,122 Z" pathLength="1000" fill="none" stroke="#00FF66" stroke-width="5" stroke-linecap="square" filter="url(#glowGreen)" opacity="0">
+      <animate attributeName="stroke-dasharray" values="26 1000;26 1000;26 1000;64 1000;64 1000;102 1000;102 1000;140 1000;140 1000;140 1000" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="26;-14;-194;-194;-436;-436;-658;-658;-800;-860" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.55;0.55;0.55;0.55;0.55;0.55;0.55;0;0" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+    </path>
+    <path d="M 48,122 L 452,122 A 18,18 0 0 1 470,140 L 470,710 A 18,18 0 0 1 452,728 L 48,728 A 18,18 0 0 1 30,710 L 30,140 A 18,18 0 0 1 48,122 Z" pathLength="1000" fill="none" stroke="#00FF66" stroke-width="2.8" stroke-linecap="square" opacity="0">
+      <animate attributeName="stroke-dasharray" values="26 1000;26 1000;26 1000;64 1000;64 1000;102 1000;102 1000;140 1000;140 1000;140 1000" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="26;-14;-194;-194;-436;-436;-658;-658;-800;-860" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;1;1;1;1;1;0;0" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+    </path>
+    <rect x="-4" y="-4" width="8" height="8" rx="1.5" fill="#FFFFFF" stroke="#00FF66" stroke-width="1.2" filter="url(#matrixHeadGlow)" opacity="0">
+      <animateMotion path="M 48,122 L 452,122 A 18,18 0 0 1 470,140 L 470,710 A 18,18 0 0 1 452,728 L 48,728 A 18,18 0 0 1 30,710 L 30,140 A 18,18 0 0 1 48,122 Z" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;1;1;1;1;1;0;0" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+    <g stroke="#00FF66" stroke-width="2.5" fill="none">
+      <path d="M24,144 L24,116 L52,116" />
+      <path d="M448,116 L476,116 L476,144" />
+      <path d="M24,706 L24,734 L52,734" />
+      <path d="M448,734 L476,734 L476,706" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <text x="250" y="162" text-anchor="middle" font-size="30" font-weight="bold" fill="#00FF66" letter-spacing="2" filter="url(#neonTextGlow)">
+      HARDWARE
+      <animate attributeName="opacity" values="1;1;0.15;1;0.1;1;1" keyTimes="0;0.58;0.60;0.63;0.65;0.68;1" dur="8.55s" repeatCount="indefinite" />
+    </text>
+    <text x="250" y="188" text-anchor="middle" font-size="14.5" fill="#FFFFFF">La parte fisica e tangibile</text>
+
+    <g font-size="13.8" fill="#E0FFE6" xml:space="preserve">
+      <text x="52" y="222">• Componenti elettronici e meccanici</text>
+      <text x="52" y="242">  (ciò che puoi toccare)</text>
+      <text x="52" y="272">• Esegue fisicamente i calcoli</text>
+      <text x="52" y="292">  e le istruzioni</text>
+      <text x="52" y="322">• Si usura nel tempo e si aggiorna</text>
+      <text x="52" y="342">  sostituendo i pezzi</text>
+    </g>
+
+    <g transform="translate(148, 398)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#00FF66" stroke-width="1.6" fill="none" transform="translate(0, -10)">
+          <rect x="-12" y="-12" width="24" height="24" rx="3" fill="#002914" />
+          <text x="0" y="3" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFFFFF" stroke="none">CPU</text>
+          <path d="M-6,-12 V-17 M0,-12 V-17 M6,-12 V-17 M-6,12 V17 M0,12 V17 M6,12 V17 M-12,-6 H-17 M-12,0 H-17 M-12,6 H-17 M12,-6 H17 M12,0 H17 M12,6 H17" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#00FF66">CPU</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(352, 398)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.38s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#00FF66" stroke-width="1.6" fill="none" transform="translate(0, -10)">
+          <rect x="-20" y="-9" width="40" height="16" rx="2" fill="#002914" />
+          <rect x="-15" y="-5" width="7" height="8" fill="#00FF66" opacity="0.5" />
+          <rect x="-4" y="-5" width="7" height="8" fill="#00FF66" opacity="0.5" />
+          <rect x="7" y="-5" width="7" height="8" fill="#00FF66" opacity="0.5" />
+          <path d="M-16,7 V12 M-10,7 V12 M-4,7 V12 M4,7 V12 M10,7 V12 M16,7 V12" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#00FF66">RAM</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.38s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(148, 484)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.76s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#00FF66" stroke-width="1.5" fill="none" transform="translate(0, -10)">
+          <rect x="-17" y="-13" width="34" height="26" rx="2" fill="#002914" />
+          <rect x="-12" y="-8" width="11" height="11" rx="1" />
+          <path d="M5,-9 V9 M10,-9 V9" stroke-width="1.8" />
+          <path d="M-12,8 H-2" stroke-width="1.8" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#00FF66">SCHEDA MADRE</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.76s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(352, 484)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="1.14s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#00FF66" stroke-width="1.5" fill="none" transform="translate(0, -10)">
+          <rect x="-19" y="-12" width="38" height="22" rx="3" fill="#002914" />
+          <rect x="-14" y="-8" width="28" height="14" rx="1.5" stroke="#FFFFFF" stroke-width="1" />
+          <path d="M-4,10 V14 M4,10 V14 M-10,14 H10" stroke-width="1.6" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#00FF66">MONITOR</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="1.14s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <rect x="52" y="544" width="396" height="152" rx="10" fill="#001A0D" stroke="#00FF66" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.95;0.2;0.95" dur="7.60s" repeatCount="indefinite" />
+    </rect>
+    <text x="72" y="574" font-size="13.5" font-weight="bold" fill="#00FF66">ESEMPI:</text>
+    <text x="72" y="604" font-size="13" fill="#FFFFFF">CPU, RAM, SSD, Scheda Madre,</text>
+    <text x="72" y="628" font-size="13" fill="#FFFFFF">GPU, Tastiera, Monitor,</text>
+    <text x="72" y="652" font-size="13" fill="#FFFFFF">Mouse, Stampante, Casse</text>
+  </g>
+
+  <g id="panel-software" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="530" y="122" width="440" height="606" rx="18" fill="#0A0800" stroke="#FFE600" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" begin="-2.66s" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+    <rect x="530" y="122" width="440" height="606" rx="18" fill="none" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round" filter="url(#glowYellow)" stroke-dasharray="140 1940" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-2080" begin="-3.80s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.84;1" begin="-3.80s" dur="15.20s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#FFE600" stroke-width="2.5" fill="none">
+      <path d="M524,144 L524,116 L552,116" />
+      <path d="M948,116 L976,116 L976,144" />
+      <path d="M524,706 L524,734 L552,734" />
+      <path d="M948,734 L976,734 L976,706" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <text x="750" y="162" text-anchor="middle" font-size="30" font-weight="bold" fill="#FFE600" letter-spacing="2" filter="url(#neonTextGlow)">
+      SOFTWARE
+      <animate attributeName="opacity" values="1;1;0.12;1;0.18;1;1" keyTimes="0;0.34;0.36;0.39;0.41;0.44;1" dur="9.50s" repeatCount="indefinite" />
+    </text>
+    <text x="750" y="188" text-anchor="middle" font-size="14.5" fill="#FFFFFF">La parte logica e intangibile</text>
+
+    <g font-size="13.8" fill="#FFF8CC" xml:space="preserve">
+      <text x="552" y="222">• Programmi, istruzioni e dati</text>
+      <text x="552" y="242">  (ciò che non puoi toccare)</text>
+      <text x="552" y="272">• Dice all'hardware cosa fare e</text>
+      <text x="552" y="292">  come elaborare i dati</text>
+      <text x="552" y="322">• Non si usura fisicamente; si</text>
+      <text x="552" y="342">  aggiorna tramite patch/codice</text>
+    </g>
+
+    <g transform="translate(648, 398)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.57s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.6" fill="none" transform="translate(0, -10)">
+          <rect x="-20" y="-12" width="40" height="24" rx="3" fill="#261F00" />
+          <line x1="-20" y1="-5" x2="20" y2="-5" />
+          <text x="0" y="8" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#FFE600" stroke="none">&lt;/&gt;</text>
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFE600">CODICE</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(852, 398)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="0.95s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.6" fill="none" transform="translate(0, -10)">
+          <rect x="-20" y="-12" width="40" height="24" rx="3" fill="#FFF8CC" fill-opacity="0.12" />
+          <circle cx="-14" cy="-8" r="1.2" fill="#FFE600" stroke="none" />
+          <circle cx="-9" cy="-8" r="1.2" fill="#FFFFFF" stroke="none" />
+          <circle cx="-4" cy="-8" r="1.2" fill="#00FF66" stroke="none" />
+          <text x="0" y="8" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#FFFFFF" stroke="none">&lt;/&gt;</text>
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFE600">IDE / EDITOR</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.95s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(648, 484)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="1.33s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.5" fill="none" transform="translate(0, -10)">
+          <rect x="-20" y="-12" width="40" height="24" rx="3" fill="#261F00" />
+          <line x1="-20" y1="-5" x2="20" y2="-5" />
+          <circle cx="-15" cy="-8.5" r="1.2" fill="#FFE600" stroke="none" />
+          <circle cx="-10" cy="-8.5" r="1.2" fill="#FFFFFF" stroke="none" />
+          <circle cx="-5" cy="-8.5" r="1.2" fill="#00FF66" stroke="none" />
+          <line x1="-12" y1="2" x2="12" y2="2" stroke="#FFFFFF" stroke-width="1.2" />
+          <line x1="-12" y1="7" x2="4" y2="7" stroke="#FFE600" stroke-width="1.2" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#FFE600">BROWSER / APP</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="1.33s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <g transform="translate(852, 484)">
+      <g>
+        <rect x="-88" y="-36" width="176" height="72" rx="12" fill="#1A1500" stroke="#FFE600" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6.84s" begin="1.71s" repeatCount="indefinite" />
+        </rect>
+        <g stroke="#FFE600" stroke-width="1.5" fill="none" transform="translate(0, -10)">
+          <polygon points="0,-13 15,-6 0,1 -15,-6" fill="#FFE600" fill-opacity="0.35" />
+          <polygon points="0,-6 15,1 0,8 -15,1" fill="#00FF66" fill-opacity="0.25" stroke="#00FF66" />
+          <polygon points="0,1 15,8 0,15 -15,8" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" />
+        </g>
+        <text x="0" y="24" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#FFE600">STACK LIVELLI</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="1.71s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <rect x="552" y="544" width="318" height="152" rx="10" fill="#1A1500" stroke="#FFE600" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.95;0.2;0.95" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </rect>
+    <text x="568" y="574" font-size="13.5" font-weight="bold" fill="#FFE600">ESEMPI:</text>
+    <text x="568" y="604" font-size="12.5" fill="#FFFFFF">Sistemi Operativi (Linux,</text>
+    <text x="568" y="628" font-size="12.5" fill="#FFFFFF">Windows), Compilatori,</text>
+    <text x="568" y="652" font-size="12.5" fill="#FFFFFF">Browser, App</text>
+
+    <g id="tetris-sw-stack" transform="translate(882, 552)">
+      <rect x="0" y="0" width="66" height="136" rx="6" fill="#060500" stroke="#FFE600" stroke-opacity="0.35" stroke-width="1.2" />
+      <text x="33" y="13" text-anchor="middle" font-size="7.2" font-weight="bold" fill="#FFE600" opacity="0.85" letter-spacing="0.8">SW_STACK</text>
+      <g stroke="#FFE600" stroke-opacity="0.12" stroke-width="0.7">
+        <line x1="3" y1="32" x2="3" y2="132" /><line x1="13" y1="32" x2="13" y2="132" /><line x1="23" y1="32" x2="23" y2="132" /><line x1="33" y1="32" x2="33" y2="132" /><line x1="43" y1="32" x2="43" y2="132" /><line x1="53" y1="32" x2="53" y2="132" /><line x1="63" y1="32" x2="63" y2="132" />
+        <line x1="3" y1="32" x2="63" y2="32" /><line x1="3" y1="42" x2="63" y2="42" /><line x1="3" y1="52" x2="63" y2="52" /><line x1="3" y1="62" x2="63" y2="62" /><line x1="3" y1="72" x2="63" y2="72" /><line x1="3" y1="82" x2="63" y2="82" /><line x1="3" y1="92" x2="63" y2="92" /><line x1="3" y1="102" x2="63" y2="102" /><line x1="3" y1="112" x2="63" y2="112" /><line x1="3" y1="122" x2="63" y2="122" /><line x1="3" y1="132" x2="63" y2="132" />
+      </g>
+
+      <g opacity="0">
+        <rect x="3.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <rect x="13.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <rect x="23.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,0; 0,0; 0,0; 0,0; 0,0; 0,0" keyTimes="0;0.03;0.20;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.95;0.95;0.95;1;1;0;0" keyTimes="0;0.03;0.20;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+      <g opacity="0">
+        <rect x="13.5" y="112.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,0; 0,0; 0,10; 0,10; 0,10; 0,10" keyTimes="0;0.03;0.20;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.95;0.95;0.95;0.95;0.95;0;0" keyTimes="0;0.03;0.20;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+
+      <g opacity="0">
+        <rect x="33.5" y="122.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <rect x="43.5" y="122.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,-100; 0,0; 0,0; 0,0; 0,0; 0,0; 0,0" keyTimes="0;0.23;0.24;0.42;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;1;1;0;0" keyTimes="0;0.23;0.24;0.42;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+      <g opacity="0">
+        <rect x="33.5" y="112.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <rect x="43.5" y="112.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,-100; 0,0; 0,0; 0,10; 0,10; 0,10; 0,10" keyTimes="0;0.23;0.24;0.42;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;0.95;0.95;0;0" keyTimes="0;0.23;0.24;0.42;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+
+      <g opacity="0">
+        <rect x="53.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFFFFF" stroke="#00FF66" stroke-width="0.6" />
+        <animateTransform attributeName="transform" type="translate" values="0,-90; 0,-90; 0,-90; 0,0; 0,0; 0,0; 0,0; 0,0; 0,0" keyTimes="0;0.45;0.46;0.65;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;1;1;0;0" keyTimes="0;0.45;0.46;0.65;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+      <g opacity="0">
+        <rect x="53.5" y="112.5" width="9" height="9" rx="1.5" fill="#FFFFFF" stroke="#00FF66" stroke-width="0.6" />
+        <rect x="53.5" y="102.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFFFFF" stroke-width="0.6" />
+        <animateTransform attributeName="transform" type="translate" values="0,-90; 0,-90; 0,-90; 0,0; 0,0; 0,10; 0,10; 0,10; 0,10" keyTimes="0;0.45;0.46;0.65;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;0.95;0.95;0;0" keyTimes="0;0.45;0.46;0.65;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+
+      <rect x="3" y="122" width="60" height="10" rx="1.5" fill="#FFFFFF" filter="url(#matrixHeadGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.95;0.2;0.95;0;0" keyTimes="0;0.67;0.70;0.73;0.76;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <g id="arrows-to-firmware">
+    <line x1="250" y1="728" x2="250" y2="758" stroke="#00FF66" stroke-width="3" />
+    <polygon points="242,752 258,752 250,766" fill="#00FF66" />
+
+    <line x1="750" y1="728" x2="750" y2="758" stroke="#FFE600" stroke-width="3" />
+    <polygon points="742,752 758,752 750,766" fill="#FFE600" />
+
+    <circle cx="0" cy="0" r="6" fill="#00FF66" opacity="0">
+      <animateMotion path="M250,728 L250,766" begin="0s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="6" fill="#FFE600" opacity="0">
+      <animateMotion path="M750,728 L750,766" begin="0.76s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0.76s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="box-firmware" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="100" y="766" width="800" height="106" rx="14" fill="#000000" stroke="url(#firmwareGrad)" stroke-width="2.5" stroke-opacity="0.4">
+      <animate attributeName="stroke-opacity" values="0.45;0.18;0.45" dur="3.80s" repeatCount="indefinite" />
+    </rect>
+
+    <g id="pacman-firmware">
+    <path d="M 114,766 L 886,766 A 14,14 0 0 1 900,780 L 900,858 A 14,14 0 0 1 886,872 L 114,872 A 14,14 0 0 1 100,858 L 100,780 A 14,14 0 0 1 114,766 Z" fill="none" stroke="#FFE600" stroke-opacity="0.14" stroke-width="1.5" stroke-dasharray="3 9" />
+    <g transform="translate(239.2, 766.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.06;0.07;0.082;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(346.4, 766.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.12;0.13;0.142;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(453.7, 766.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.18;0.19;0.202;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(561.0, 766.0)">
+        <g>
+          <circle cx="0" cy="0" r="4.6" fill="#00FF66" stroke="#FFFFFF" stroke-width="1" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="1;1;1;0;0;1;1" keyTimes="0;0.24;0.25;0.262;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;1.25;1.45;0;0;1;1" keyTimes="0;0.24;0.25;0.262;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(668.3, 766.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.3;0.31;0.322;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(775.5, 766.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.36;0.37;0.382;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(882.8, 766.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.42;0.43;0.442;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(899.4, 862.1)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.48;0.49;0.502;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(796.6, 872.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.54;0.55;0.562;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(689.3, 872.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.6;0.61;0.622;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(582.0, 872.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.66;0.67;0.682;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(474.8, 872.0)">
+        <g>
+          <circle cx="0" cy="0" r="4.6" fill="#00FF66" stroke="#FFFFFF" stroke-width="1" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="1;1;1;0;0;1;1" keyTimes="0;0.72;0.73;0.742;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;1.25;1.45;0;0;1;1" keyTimes="0;0.72;0.73;0.742;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(367.5, 872.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.78;0.79;0.802;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(260.2, 872.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.84;0.85;0.862;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(152.9, 872.0)">
+        <rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.9;0.91;0.922;0.96;0.99;1" dur="15.20s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g opacity="0.94">
+      <animateMotion path="M 114,766 L 886,766 A 14,14 0 0 1 900,780 L 900,858 A 14,14 0 0 1 886,872 L 114,872 A 14,14 0 0 1 100,858 L 100,780 A 14,14 0 0 1 114,766 Z" begin="-13.07s" dur="15.20s" repeatCount="indefinite" />
+      <g transform="translate(0, -1)">
+        <path d="M -6,5.5 L -6,-1 A 6,6 0 0,1 6,-1 L 6,5.5 L 3.8,3.2 L 1.4,5.5 L 0,3.6 L -1.4,5.5 L -3.8,3.2 Z" fill="#00FF66" filter="url(#glowGreen)">
+          <animate attributeName="fill" values="#00FF66;#00FF66;#FFFFFF;#FFFFFF;#00FF66;#00FF66;#00FF66;#FFFFFF;#FFFFFF;#00FF66;#00FF66;#00FF66" keyTimes="0;0.245;0.25;0.33;0.36;0.39;0.725;0.73;0.81;0.84;0.87;1" dur="15.20s" repeatCount="indefinite" />
+        </path>
+        <circle cx="-2.2" cy="-1.1" r="1.6" fill="#FFFFFF" />
+        <circle cx="2.2" cy="-1.1" r="1.6" fill="#FFFFFF" />
+        <circle cx="-1.7" cy="-1.1" r="0.8" fill="#001A0D" />
+        <circle cx="2.7" cy="-1.1" r="0.8" fill="#001A0D" />
+        <animateTransform attributeName="transform" type="translate" values="0,-1; 0,-2.4; 0,-1" dur="1.14s" repeatCount="indefinite" />
+      </g>
+    </g>
+    <g filter="url(#glowYellow)">
+      <animateMotion path="M 114,766 L 886,766 A 14,14 0 0 1 900,780 L 900,858 A 14,14 0 0 1 886,872 L 114,872 A 14,14 0 0 1 100,858 L 100,780 A 14,14 0 0 1 114,766 Z" rotate="auto" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <g>
+        <path d="M -8,0 A 8,8 0 0,1 8,0 Z" fill="#FFE600">
+          <animateTransform attributeName="transform" type="rotate" values="0;-40;0" dur="0.76s" repeatCount="indefinite" />
+        </path>
+        <path d="M 8,0 A 8,8 0 0,1 -8,0 Z" fill="#FFE600">
+          <animateTransform attributeName="transform" type="rotate" values="0;40;0" dur="0.76s" repeatCount="indefinite" />
+        </path>
+      </g>
+    </g>
+  </g>
+
+    <g stroke="#FFFFFF" stroke-width="2" fill="none">
+      <path d="M94,784 L94,760 L118,760" />
+      <path d="M882,760 L906,760 L906,784" />
+      <path d="M94,854 L94,878 L118,878" />
+      <path d="M882,878 L906,878 L906,854" />
+      <animate attributeName="opacity" values="0.8;0.15;0.8" dur="5.70s" repeatCount="indefinite" />
+    </g>
+
+    <g transform="translate(174, 819)">
+      <g>
+        <rect x="-24" y="-24" width="48" height="48" rx="8" fill="#001A0D" stroke="url(#firmwareGrad)" stroke-width="1.6" />
+        <path d="M-12,-24 V-29 M0,-24 V-29 M12,-24 V-29 M-12,24 V29 M0,24 V29 M12,24 V29 M-24,-12 H-29 M-24,0 H-29 M-24,12 H-29 M24,-12 H29 M24,0 H29 M24,12 H29" stroke="#00FF66" stroke-width="1.5" />
+        <text x="0" y="5" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">&lt;/&gt;</text>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <text x="526" y="806" text-anchor="middle" font-size="22" font-weight="bold" fill="#FFFFFF" letter-spacing="1.5" filter="url(#neonTextGlow)">
+      FIRMWARE (BIOS / UEFI)
+      <animate attributeName="opacity" values="1;1;0.25;1;0.3;1;1" keyTimes="0;0.74;0.76;0.79;0.81;0.84;1" dur="10.45s" repeatCount="indefinite" />
+    </text>
+    <text x="526" y="834" text-anchor="middle" font-size="14.5" fill="#FFFFFF">Il ponte tra Hardware e Software</text>
+    <text x="526" y="856" text-anchor="middle" font-size="11.5" fill="#AAAAAA">Avvia il sistema • Controlla l'hardware • Carica il SO</text>
+  </g>
+
+  <g id="arrow-firmware-to-final">
+    <line x1="500" y1="872" x2="500" y2="904" stroke="url(#bridgeDownGrad)" stroke-width="3" />
+    <polygon points="492,898 508,898 500,912" fill="#00FF66" />
+
+    <circle cx="0" cy="0" r="6" fill="#00FF66" opacity="0">
+      <animateMotion path="M500,872 L500,912" begin="0.48s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0.48s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="6" fill="#FFE600" opacity="0">
+      <animateMotion path="M500,872 L500,912" begin="2.00s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="2.00s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="final-phrase" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="912" width="940" height="66" rx="14" fill="#001A0D" stroke="#00FF66" stroke-width="2" stroke-opacity="0.35" />
+
+    <rect x="30" y="912" width="940" height="66" rx="14" fill="none" stroke="#00FF66" stroke-width="3" stroke-linecap="round" filter="url(#glowGreen)" stroke-dasharray="200 1790" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1990" dur="10.45s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.8;1" dur="10.45s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#00FF66" stroke-width="2" fill="none">
+      <path d="M24,928 L24,906 L46,906" />
+      <path d="M954,906 L976,906 L976,928" />
+      <path d="M24,962 L24,984 L46,984" />
+      <path d="M954,984 L976,984 L976,962" />
+      <animate attributeName="opacity" values="0.9;0.15;0.9" dur="6.65s" repeatCount="indefinite" />
+    </g>
+    <text x="500" y="952" text-anchor="middle" font-size="21" font-weight="bold" filter="url(#neonTextGlow)">
+      <tspan fill="#00FF66">Hardware</tspan>
+      <tspan fill="#FFFFFF"> + </tspan>
+      <tspan fill="#FFE600">Software</tspan>
+      <tspan fill="#FFFFFF"> = Sistema Informatico Completo</tspan>
+      <animate attributeName="opacity" values="1;0.6;1;0.2;1" keyTimes="0;0.45;0.78;0.81;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+  </g>
+  <g id="checklist" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="998" width="940" height="156" rx="12" fill="#050A07" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1.5" />
+    <rect x="30" y="998" width="940" height="156" rx="12" fill="none" stroke="#00FF66" stroke-width="2" stroke-linecap="round" stroke-dasharray="140 2028" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-2168" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.82;1" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+    <line x1="495" y1="1014" x2="495" y2="1116" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1" />
+
+    <text x="52" y="1024" font-size="11.5" font-weight="bold" fill="#00FF66">CHECK COMPONENTI:</text>
+    <text x="52" y="1046" font-size="11" fill="#A8FFCC">[✓] HARDWARE: CPU, RAM, SSD, SCHEDA MADRE,</text>
+    <text x="52" y="1064" font-size="11" fill="#A8FFCC">    GPU, MONITOR, TASTIERA</text>
+    <text x="52" y="1084" font-size="11" fill="#A8FFCC">[✓] SOFTWARE: SO, COMPILATORI, BROWSER, APP</text>
+    <text x="52" y="1104" font-size="11" fill="#A8FFCC">[✓] FIRMWARE: BIOS / UEFI (PONTE HW ↔ SW)</text>
+
+    <text x="515" y="1024" font-size="11.5" font-weight="bold" fill="#FFE600">CHECK ARCADE MIX:</text>
+    <text x="515" y="1046" font-size="11" fill="#FFF2A6">[✓] SNAKE → HARDWARE (ESECUZIONE FISICA)</text>
+    <text x="515" y="1066" font-size="11" fill="#FFF2A6">[✓] TETRIS → SOFTWARE (STACK &amp; LAYER APP)</text>
+    <text x="515" y="1086" font-size="11" fill="#FFF2A6">[✓] PAC-MAN → FIRMWARE (BOOT &amp; CHECK BIOS)</text>
+    <text x="515" y="1104" font-size="11" fill="#FFF2A6">[✓] HARDWARE + SOFTWARE = SISTEMA COMPLETO</text>
+
+    <line x1="52" y1="1122" x2="948" y2="1122" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+    <text x="500" y="1142" text-anchor="middle" font-size="12" fill="#888888">Generato con Skill cyberpunk-svg-diagram + Arcade Motif Library (puro SMIL 1.9x)</text>
+  </g>
+</svg>

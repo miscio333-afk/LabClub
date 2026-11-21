@@ -1,0 +1,663 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1125" width="1000" height="1125" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">
+  <defs>
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#001A0D" stroke-width="1" />
+    </pattern>
+
+    <radialGradient id="titleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#FFE600" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="speedUpGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFE600" />
+      <stop offset="100%" stop-color="#00FF66" />
+    </linearGradient>
+
+    <linearGradient id="capDownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FF66" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <linearGradient id="tierBridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00FF66" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#00FF66" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600" stop-opacity="0" />
+      <stop offset="25%" stop-color="#FFE600" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#FFE600" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#FFE600" stop-opacity="1" />
+    </linearGradient>
+
+    <clipPath id="matrixLeftClip">
+      <rect x="0" y="105" width="26" height="1010" />
+    </clipPath>
+    <clipPath id="matrixRightClip">
+      <rect x="974" y="105" width="26" height="1010" />
+    </clipPath>
+    <clipPath id="matrixBottomCenterClip">
+      <rect x="476" y="792" width="48" height="132" />
+    </clipPath>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonTextGlow" x="-15%" y="-30%" width="130%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="matrixHeadGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. Pure Black Background & Grid -->
+  <rect x="0" y="0" width="1000" height="1125" fill="#000000" />
+  <rect x="0" y="0" width="1000" height="1125" fill="url(#cyberGrid)" opacity="0.52" />
+  <ellipse cx="500" cy="56" rx="440" ry="62" fill="url(#titleGlow)" />
+
+  <!-- Subtle Outer PCB Traces -->
+  <g stroke="#00FF66" stroke-width="1" fill="none" opacity="0.18">
+    <path d="M 16,130 L 16,740 L 28,754" />
+    <path d="M 984,130 L 984,740 L 972,754" stroke="#FFE600" />
+    <path d="M 280,104 L 315,104 L 330,118 L 670,118 L 685,104 L 720,104" stroke="#00FF66" />
+  </g>
+  <path d="M 16,130 L 16,740" fill="none" stroke="#00FF66" stroke-width="1.4" stroke-dasharray="26 160" opacity="0.55">
+    <animate attributeName="stroke-dashoffset" values="0;-186" dur="11.40s" repeatCount="indefinite" />
+  </path>
+  <path d="M 984,740 L 984,130" fill="none" stroke="#FFE600" stroke-width="1.4" stroke-dasharray="26 160" opacity="0.55">
+    <animate attributeName="stroke-dashoffset" values="0;-186" dur="11.40s" repeatCount="indefinite" />
+  </path>
+
+  <!-- 2. Bicolore Matrix Rain in Outer Margins & Bottom Center Corridor -->
+  <g clip-path="url(#matrixLeftClip)">
+    <g>
+      <text x="13" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.5"><tspan x="13" dy="0">0</tspan><tspan x="13" dy="13">1</tspan><tspan x="13" dy="13">R</tspan><tspan x="13" dy="13">A</tspan><tspan x="13" dy="13">M</tspan><tspan x="13" dy="13">&lt;</tspan><tspan x="13" dy="13">L</tspan><tspan x="13" dy="13">1</tspan><tspan x="13" dy="13">/</tspan><tspan x="13" dy="13">C</tspan><tspan x="13" dy="13">{</tspan><tspan x="13" dy="13">1</tspan><tspan x="13" dy="13">0</tspan><tspan x="13" dy="13">&gt;</tspan><tspan x="13" dy="13">S</tspan><tspan x="13" dy="13">D</tspan></text>
+      <text x="13" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1165" begin="-3.80s" dur="13.30s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g clip-path="url(#matrixRightClip)">
+    <g>
+      <text x="987" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.5"><tspan x="987" dy="0">1</tspan><tspan x="987" dy="13">0</tspan><tspan x="987" dy="13">S</tspan><tspan x="987" dy="13">S</tspan><tspan x="987" dy="13">&gt;</tspan><tspan x="987" dy="13">H</tspan><tspan x="987" dy="13">D</tspan><tspan x="987" dy="13">;</tspan><tspan x="987" dy="13">R</tspan><tspan x="987" dy="13">O</tspan><tspan x="987" dy="13">}</tspan><tspan x="987" dy="13">M</tspan><tspan x="987" dy="13">1</tspan><tspan x="987" dy="13">:</tspan><tspan x="987" dy="13">C</tspan><tspan x="987" dy="13">&lt;</tspan></text>
+      <text x="987" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-260" to="0,1165" begin="-8.20s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g clip-path="url(#matrixBottomCenterClip)">
+    <g>
+      <text x="490" y="0" text-anchor="middle" font-size="9" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.5"><tspan x="490" dy="0">K</tspan><tspan x="490" dy="12">B</tspan><tspan x="490" dy="12">0</tspan><tspan x="490" dy="12">&lt;</tspan><tspan x="490" dy="12">1</tspan><tspan x="490" dy="12">9</tspan><tspan x="490" dy="12">/</tspan><tspan x="490" dy="12">G</tspan><tspan x="490" dy="12">B</tspan><tspan x="490" dy="12">T</tspan><tspan x="490" dy="12">}</tspan><tspan x="490" dy="12">0</tspan><tspan x="490" dy="12">P</tspan><tspan x="490" dy="12">B</tspan><tspan x="490" dy="12">1</tspan><tspan x="490" dy="12">#</tspan></text>
+      <text x="490" y="192" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">&gt;</text>
+      <animateTransform attributeName="transform" type="translate" from="0,730" to="0,960" begin="-4.40s" dur="11.40s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="510" y="0" text-anchor="middle" font-size="9" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.5"><tspan x="510" dy="0">0</tspan><tspan x="510" dy="12">1</tspan><tspan x="510" dy="12">R</tspan><tspan x="510" dy="12">A</tspan><tspan x="510" dy="12">M</tspan><tspan x="510" dy="12">&lt;</tspan><tspan x="510" dy="12">L</tspan><tspan x="510" dy="12">1</tspan><tspan x="510" dy="12">/</tspan><tspan x="510" dy="12">C</tspan><tspan x="510" dy="12">{</tspan><tspan x="510" dy="12">1</tspan><tspan x="510" dy="12">0</tspan><tspan x="510" dy="12">&gt;</tspan><tspan x="510" dy="12">S</tspan><tspan x="510" dy="12">D</tspan></text>
+      <text x="510" y="192" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,720" to="0,960" begin="-9.10s" dur="12.90s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <!-- Ambient Floating Particles -->
+  <g>
+    <circle cx="290" cy="70" r="2.2" fill="#00FF66" opacity="0.35">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 12,-14; 0,0" dur="15.20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="712" cy="74" r="2.2" fill="#FFE600" opacity="0.35">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -14,-10; 0,0" dur="17.10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="88" cy="480" r="2" fill="#00FF66" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-22; 0,0" dur="19.00s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="912" cy="520" r="2" fill="#FFE600" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0" dur="18.05s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 3. Header with Intermittent Glitch & Neon Tube Flicker -->
+  <g id="header">
+    <!-- Cyan Ghost Glitch -->
+    <text x="500" y="50" text-anchor="middle" font-size="37" font-weight="900" letter-spacing="1.5" fill="#00FFFF" opacity="0">
+      GERARCHIA DELLE MEMORIE
+      <animate attributeName="opacity" values="0;0;0.7;0;0.55;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -3,-1; 4,1; -2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <!-- Magenta Ghost Glitch -->
+    <text x="500" y="50" text-anchor="middle" font-size="37" font-weight="900" letter-spacing="1.5" fill="#FF2E63" opacity="0">
+      GERARCHIA DELLE MEMORIE
+      <animate attributeName="opacity" values="0;0;0.6;0;0.5;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 3,1; -3,-1; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Primary Bicolore Title -->
+    <text x="500" y="50" text-anchor="middle" font-size="37" font-weight="900" letter-spacing="1.5" filter="url(#neonTextGlow)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 2,0; -3,0; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+      <tspan fill="#00FF66">GERARCHIA<animate attributeName="opacity" values="1;1;0.12;1;1;0.2;1" keyTimes="0;0.34;0.36;0.38;0.74;0.75;1" dur="7.60s" repeatCount="indefinite" /></tspan>
+      <tspan fill="#FFFFFF"> DELLE </tspan>
+      <tspan fill="#FFE600">MEMORIE<animate attributeName="opacity" values="1;1;0.14;1;1;0.18;1" keyTimes="0;0.52;0.54;0.56;0.84;0.85;1" dur="9.50s" repeatCount="indefinite" /></tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="500" y="79" text-anchor="middle" font-size="16" font-weight="600" fill="#A8FFCC" letter-spacing="0.8">
+      - Schema di ripasso per Informatica -
+      <animate attributeName="opacity" values="0.9;0.9;0.2;0.9;0.9" keyTimes="0;0.62;0.64;0.66;1" dur="11.40s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Telemetry Status Line -->
+    <text x="500" y="99" text-anchor="middle" font-size="10" fill="#FFE600" opacity="0.72" letter-spacing="1.4">
+      MEM.HIERARCHY // Q*BERT + ASTEROIDS + TETRIS + PAC-MAN // 1.9x SLOW
+    </text>
+  </g>
+
+  <!-- 4. Left Vertical Axis: Velocità e Costo per bit AUMENTANO -->
+  <g id="left-speed-axis">
+    <line x1="52" y1="720" x2="52" y2="152" stroke="url(#speedUpGrad)" stroke-width="3.5" stroke-linecap="round" />
+    <polygon points="52,134 43,156 61,156" fill="#00FF66" filter="url(#glowGreen)" />
+    <!-- Upward pulse packet -->
+    <circle cx="52" cy="700" r="4.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="700;160" dur="7.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.88;1" dur="7.60s" repeatCount="indefinite" />
+    </circle>
+    <text x="36" y="435" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#00FF66" letter-spacing="0.7" transform="rotate(-90, 36, 435)">
+      Velocità e Costo per bit AUMENTANO
+    </text>
+
+    <!-- Top-Left Note Box: Accesso in nanosecondi -->
+    <g transform="translate(84, 132)">
+      <rect x="0" y="0" width="194" height="52" rx="10" fill="#000A05" stroke="#00FF66" stroke-opacity="0.5" stroke-width="1.2" />
+      <text x="97" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#00FF66">Accesso in nanosecondi</text>
+      <text x="97" y="40" text-anchor="middle" font-size="10.5" fill="#A8FFCC">Latenza minima • Costo/bit alto</text>
+    </g>
+  </g>
+
+  <!-- 5. Right Vertical Axis: Capacità di archiviazione AUMENTA -->
+  <g id="right-capacity-axis">
+    <line x1="948" y1="146" x2="948" y2="710" stroke="url(#capDownGrad)" stroke-width="3.5" stroke-linecap="round" />
+    <polygon points="948,728 939,706 957,706" fill="#FFE600" filter="url(#glowYellow)" />
+    <!-- Downward pulse packet -->
+    <circle cx="948" cy="164" r="4.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="164;700" dur="7.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.88;1" dur="7.60s" repeatCount="indefinite" />
+    </circle>
+    <text x="965" y="435" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#FFE600" letter-spacing="0.7" transform="rotate(90, 965, 435)">
+      Capacità di archiviazione AUMENTA
+    </text>
+
+    <!-- Right-side Scale Note Box -->
+    <g transform="translate(744, 412)">
+      <rect x="0" y="0" width="160" height="52" rx="10" fill="#0A0800" stroke="#FFE600" stroke-opacity="0.48" stroke-width="1.2" />
+      <text x="80" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFE600">Da Byte a Petabyte</text>
+      <text x="80" y="40" text-anchor="middle" font-size="10.5" fill="#FFF2A6">Capacità crescente</text>
+    </g>
+  </g>
+
+  <!-- 6. Upper Arcade Zones (Zero overlap with pyramid or side axes) -->
+  <g id="asteroids-memory-parser" transform="translate(84, 198)">
+      <rect x="0" y="0" width="194" height="160" rx="10" fill="#020D06" stroke="#00FF66" stroke-opacity="0.48" stroke-width="1.4" />
+      <text x="12" y="18" font-size="8.5" font-weight="bold" fill="#00FF66" letter-spacing="0.8">ASTEROIDS // TOKEN</text>
+      <text x="182" y="18" text-anchor="end" font-size="7.5" font-weight="bold" fill="#FFE600">HEAP_GC</text>
+
+      <!-- Inner CRT Vector Viewport -->
+      <rect x="10" y="26" width="174" height="110" rx="6" fill="#010704" stroke="#00FF66" stroke-opacity="0.28" stroke-width="1" />
+
+      <!-- Subtle CRT starfield dots -->
+      <circle cx="24" cy="40" r="1" fill="#00FF66" opacity="0.4" />
+      <circle cx="72" cy="36" r="1" fill="#FFFFFF" opacity="0.5" />
+      <circle cx="164" cy="44" r="1" fill="#FFE600" opacity="0.45" />
+      <circle cx="168" cy="122" r="1" fill="#00FF66" opacity="0.4" />
+      <circle cx="88" cy="124" r="1" fill="#FFFFFF" opacity="0.35" />
+
+      <!-- Rotating Vector Wireframe Ship -->
+      <g transform="translate(44, 102)">
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="36;54;28;44;36" keyTimes="0;0.28;0.58;0.82;1" dur="15.20s" repeatCount="indefinite" />
+          <polygon points="0,-13 9,10 0,5 -9,10" fill="#001A0D" stroke="#00FF66" stroke-width="1.35" stroke-linejoin="round" />
+          <polygon points="-3,8 0,15 3,8" fill="none" stroke="#FFE600" stroke-width="1.1">
+            <animate attributeName="opacity" values="0.25;1;0.35;1;0.25" dur="2.28s" repeatCount="indefinite" />
+          </polygon>
+        </g>
+      </g>
+
+      <!-- Shot 1: Ship -> Primary Raw Data Asteroid -->
+      <line x1="53" y1="93" x2="62" y2="85" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity="0">
+        <animate attributeName="x1" values="53;118;118" keyTimes="0;0.28;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="y1" values="93;64;64" keyTimes="0;0.28;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="61;125;125" keyTimes="0;0.28;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="89;61;61" keyTimes="0;0.28;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.08;0.10;0.27;0.30;1" dur="15.20s" repeatCount="indefinite" />
+      </line>
+
+      <!-- Shot 2: Ship -> Upper Sub-Token Fragment -->
+      <line x1="53" y1="93" x2="62" y2="85" stroke="#00FF66" stroke-width="1.6" stroke-linecap="round" opacity="0">
+        <animate attributeName="x1" values="53;146;146" keyTimes="0;0.60;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="y1" values="93;46;46" keyTimes="0;0.60;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="61;153;153" keyTimes="0;0.60;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="88;43;43" keyTimes="0;0.60;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42;0.44;0.59;0.62;1" dur="15.20s" repeatCount="indefinite" />
+      </line>
+
+      <!-- Primary Raw Polygonal Asteroid Rock -->
+      <g transform="translate(128, 62)">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.06;0.28;0.31;1" dur="15.20s" repeatCount="indefinite" />
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="140" dur="15.20s" repeatCount="indefinite" />
+          <polygon points="-18,-8 -6,-18 12,-14 20,-2 14,15 -2,18 -16,10" fill="#1A1500" fill-opacity="0.55" stroke="#FFE600" stroke-width="1.35" stroke-linejoin="round">
+            <animate attributeName="stroke" values="#FFE600;#FFE600;#FFFFFF;#FFE600" keyTimes="0;0.25;0.28;1" dur="15.20s" repeatCount="indefinite" />
+          </polygon>
+        </g>
+        <text x="0" y="3" text-anchor="middle" font-size="6.5" font-weight="bold" fill="#FFE600">RAW</text>
+      </g>
+
+      <!-- Impact Flash Ring 1 -->
+      <circle cx="128" cy="62" r="4" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0">
+        <animate attributeName="r" values="4;22;26" keyTimes="0;0.28;0.38" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0;0" keyTimes="0;0.27;0.29;0.40;1" dur="15.20s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Split Sub-Token A (Green Vector Fragment) -->
+      <g opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="128,62; 128,62; 150,46; 158,42" keyTimes="0;0.29;0.60;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.28;0.31;0.59;0.63;1" dur="15.20s" repeatCount="indefinite" />
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="-180" dur="15.20s" repeatCount="indefinite" />
+          <polygon points="-10,-6 2,-11 11,-2 6,9 -7,8" fill="#001A0D" stroke="#00FF66" stroke-width="1.25" stroke-linejoin="round" />
+        </g>
+      </g>
+
+      <!-- Split Sub-Token B (Yellow Vector Fragment drifting down & fading) -->
+      <g opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="128,62; 128,62; 152,102; 166,118" keyTimes="0;0.29;0.74;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;0.85;0;0" keyTimes="0;0.28;0.31;0.70;0.86;1" dur="15.20s" repeatCount="indefinite" />
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="210" dur="15.20s" repeatCount="indefinite" />
+          <polygon points="-9,-5 4,-9 10,3 -3,10 -10,4" fill="#1A1500" stroke="#FFE600" stroke-width="1.2" stroke-linejoin="round" />
+        </g>
+      </g>
+
+      <!-- Impact Flash Ring 2 -->
+      <circle cx="150" cy="46" r="3" fill="none" stroke="#00FF66" stroke-width="1.1" opacity="0">
+        <animate attributeName="r" values="3;16;20" keyTimes="0;0.60;0.72" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0;0" keyTimes="0;0.59;0.61;0.74;1" dur="15.20s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Bottom CRT Telemetry -->
+      <text x="12" y="150" font-size="7.5" fill="#A8FFCC" opacity="0.85">FRAG: SPLIT → CACHE</text>
+      <text x="182" y="150" text-anchor="end" font-size="7.5" font-weight="bold" fill="#00FF66">
+        OK
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="4.56s" repeatCount="indefinite" />
+      </text>
+    </g>
+  <g id="tetris-memory-alloc" transform="translate(724, 246)">
+      <rect x="0" y="0" width="180" height="154" rx="10" fill="#0A0800" stroke="#FFE600" stroke-opacity="0.48" stroke-width="1.4" />
+      <text x="12" y="18" font-size="8.5" font-weight="bold" fill="#FFE600" letter-spacing="0.8">TETRIS // ALLOC</text>
+      <text x="168" y="18" text-anchor="end" font-size="7.5" font-weight="bold" fill="#00FF66">BLOCKS</text>
+
+      <!-- 6x8 Well -->
+      <rect x="16" y="30" width="60" height="80" rx="4" fill="#050400" stroke="#FFE600" stroke-opacity="0.38" stroke-width="1" />
+      <line x1="26" y1="30" x2="26" y2="110" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="36" y1="30" x2="36" y2="110" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="46" y1="30" x2="46" y2="110" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="56" y1="30" x2="56" y2="110" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="66" y1="30" x2="66" y2="110" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="40" x2="76" y2="40" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="50" x2="76" y2="50" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="60" x2="76" y2="60" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="70" x2="76" y2="70" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="80" x2="76" y2="80" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="90" x2="76" y2="90" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+      <line x1="16" y1="100" x2="76" y2="100" stroke="#FFE600" stroke-opacity="0.14" stroke-width="0.6" />
+
+      <!-- Base existing memory blocks on bottom row (cols 0,1,4,5) -->
+      <g>
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.66;0.70;0.94;1" dur="15.20s" repeatCount="indefinite" />
+        <rect x="17" y="101" width="8" height="8" rx="1.2" fill="#00FF66" />
+        <rect x="27" y="101" width="8" height="8" rx="1.2" fill="#00FF66" />
+        <rect x="57" y="101" width="8" height="8" rx="1.2" fill="#FFE600" />
+        <rect x="67" y="101" width="8" height="8" rx="1.2" fill="#FFE600" />
+      </g>
+
+      <!-- Tetromino 1: O-block landing on row 6 (col 0..1) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,50; 0,50; 0,60; 0,60" keyTimes="0;0.30;0.68;0.74;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.90;0.96" dur="15.20s" repeatCount="indefinite" />
+        <rect x="17" y="31" width="8" height="8" rx="1.2" fill="#FFE600" />
+        <rect x="27" y="31" width="8" height="8" rx="1.2" fill="#FFE600" />
+        <rect x="17" y="41" width="8" height="8" rx="1.2" fill="#FFE600" />
+        <rect x="27" y="41" width="8" height="8" rx="1.2" fill="#FFE600" />
+      </g>
+
+      <!-- Tetromino 2: I-2 horizontal bar filling bottom gap (cols 2,3 at row 7) -->
+      <g opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="20,0; 20,70; 20,70" keyTimes="0;0.60;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.32;0.35;0.66;0.70;1" dur="15.20s" repeatCount="indefinite" />
+        <rect x="17" y="31" width="8" height="8" rx="1.2" fill="#00FF66" />
+        <rect x="27" y="31" width="8" height="8" rx="1.2" fill="#00FF66" />
+      </g>
+
+      <!-- Bottom row flush-complete white flash -->
+      <rect x="17" y="101" width="58" height="8" rx="1.5" fill="#FFFFFF" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.95;0;0" keyTimes="0;0.62;0.65;0.72;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Right Side Telemetry inside Tetris card -->
+      <text x="90" y="42" font-size="7.5" font-weight="bold" fill="#FFF2A6">CACHE / RAM</text>
+      <text x="90" y="55" font-size="7.2" fill="#FFFFFF" opacity="0.85">L1/L2 PAGES</text>
+
+      <rect x="90" y="64" width="76" height="22" rx="4" fill="#1A1500" stroke="#FFE600" stroke-opacity="0.4" stroke-width="0.9" />
+      <text x="128" y="78" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#FFE600">LINE FLUSH</text>
+
+      <text x="90" y="102" font-size="7.2" fill="#00FF66">ADDR: 0x0A40</text>
+      <text x="90" y="114" font-size="7.2" fill="#A8FFCC" opacity="0.85">PACK: SYNC</text>
+
+      <text x="16" y="138" font-size="7.2" fill="#FFF2A6" opacity="0.85">PAGE STACK: ACTIVE</text>
+      <circle cx="164" cy="135" r="3" fill="#FFE600">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="4.56s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+  <!-- 7. Central 5-Tier Memory Pyramid (x centered at 500, y=122..728) -->
+  <g id="memory-pyramid">
+    <!-- Tier 1: REGISTRI CPU (Apex Triangle + Attached Right Specs Card) -->
+    <g id="tier-1-registri">
+      <polygon points="500,122 410,240 590,240" fill="#001A0D" stroke="#00FF66" stroke-width="2" stroke-linejoin="round" filter="url(#glowGreen)">
+        <animate attributeName="stroke" values="#00FF66;#FFFFFF;#00FF66;#00FF66" keyTimes="0;0.04;0.10;1" dur="19.00s" repeatCount="indefinite" />
+      </polygon>
+      <!-- Connector beam from Triangle to REGISTRI CPU card -->
+      <line x1="564" y1="186" x2="600" y2="186" stroke="#00FF66" stroke-width="1.6" stroke-dasharray="4 3" />
+      <circle cx="582" cy="186" r="2.5" fill="#FFFFFF" />
+
+      <!-- Number Badge 1 -->
+      <circle cx="436" cy="212" r="12" fill="#00FF66" stroke="#000000" stroke-width="1.5">
+        <animate attributeName="fill" values="#FFFFFF;#00FF66;#00FF66;#FFFFFF" keyTimes="0;0.08;0.94;1" dur="19.00s" repeatCount="indefinite" />
+      </circle>
+      <text x="436" y="217" text-anchor="middle" font-size="13" font-weight="900" fill="#000000">1</text>
+
+      <!-- CPU Chip Pictogram inside Apex -->
+      <g transform="translate(508, 198)">
+        <g>
+          <animateTransform attributeName="transform" type="scale" values="1;1.08;1" dur="7.60s" repeatCount="indefinite" />
+          <rect x="-15" y="-15" width="30" height="30" rx="4" fill="#000A05" stroke="#00FF66" stroke-width="1.6" />
+          <line x1="-10" y1="-20" x2="-10" y2="-15" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="0" y1="-20" x2="0" y2="-15" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="10" y1="-20" x2="10" y2="-15" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="-10" y1="15" x2="-10" y2="20" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="0" y1="15" x2="0" y2="20" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="10" y1="15" x2="10" y2="20" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="-20" y1="-10" x2="-15" y2="-10" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="-20" y1="0" x2="-15" y2="0" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="-20" y1="10" x2="-15" y2="10" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="15" y1="-10" x2="20" y2="-10" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="15" y1="0" x2="20" y2="0" stroke="#00FF66" stroke-width="1.5" />
+          <line x1="15" y1="10" x2="20" y2="10" stroke="#00FF66" stroke-width="1.5" />
+          <rect x="-10" y="-10" width="20" height="20" rx="2" fill="#002914" stroke="#A8FFCC" stroke-width="0.9" />
+          <text x="0" y="4" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">CPU</text>
+        </g>
+      </g>
+
+      <!-- Attached Right Card for Tier 1 Specs (cleanly clears Tetris at y=246) -->
+      <g transform="translate(600, 132)">
+        <rect x="0" y="0" width="304" height="98" rx="12" fill="#000A05" stroke="#00FF66" stroke-width="1.6" />
+        <text x="16" y="25" font-size="16" font-weight="800" fill="#00FF66" letter-spacing="0.5">REGISTRI CPU</text>
+        <text x="16" y="47" font-size="12.5" fill="#E0FFE6">• Estremamente piccoli</text>
+        <text x="16" y="66" font-size="12.5" fill="#E0FFE6">• Estremamente veloci</text>
+        <text x="16" y="85" font-size="12.5" fill="#A8FFCC">• Interni alla CPU</text>
+      </g>
+    </g>
+
+    <!-- Tier 2: MEMORIA CACHE (L1, L2, L3) -->
+    <g id="tier-2-cache">
+      <polygon points="404,248 596,248 661,360 339,360" fill="#001209" stroke="#00FF66" stroke-width="1.8" stroke-linejoin="round">
+        <animate attributeName="stroke" values="#00FF66;#00FF66;#FFFFFF;#00FF66;#00FF66;#FFFFFF;#00FF66" keyTimes="0;0.10;0.125;0.16;0.84;0.875;1" dur="19.00s" repeatCount="indefinite" />
+      </polygon>
+      <circle cx="378" cy="306" r="12" fill="#00FF66" stroke="#000000" stroke-width="1.5">
+        <animate attributeName="fill" values="#00FF66;#00FF66;#FFFFFF;#00FF66;#00FF66;#FFFFFF;#00FF66" keyTimes="0;0.10;0.125;0.18;0.84;0.875;1" dur="19.00s" repeatCount="indefinite" />
+      </circle>
+      <text x="378" y="311" text-anchor="middle" font-size="13" font-weight="900" fill="#000000">2</text>
+
+      <text x="506" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#00FF66">MEMORIA CACHE</text>
+      <text x="506" y="302" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">(L1, L2, L3)</text>
+      <text x="506" y="324" text-anchor="middle" font-size="12" fill="#A8FFCC">SRAM, ultra rapida</text>
+      <text x="506" y="343" text-anchor="middle" font-size="12" fill="#E0FFE6">Locale ai core CPU</text>
+    </g>
+
+    <!-- Tier 3: MEMORIA CENTRALE - RAM -->
+    <g id="tier-3-ram">
+      <polygon points="334,368 666,368 731,480 269,480" fill="#120F00" stroke="#FFE600" stroke-width="1.8" stroke-linejoin="round">
+        <animate attributeName="stroke" values="#FFE600;#FFE600;#FFFFFF;#FFE600;#FFE600;#FFFFFF;#FFE600" keyTimes="0;0.22;0.25;0.30;0.72;0.75;1" dur="19.00s" repeatCount="indefinite" />
+      </polygon>
+      <circle cx="312" cy="424" r="12" fill="#FFE600" stroke="#000000" stroke-width="1.5">
+        <animate attributeName="fill" values="#FFE600;#FFE600;#FFFFFF;#FFE600;#FFE600;#FFFFFF;#FFE600" keyTimes="0;0.22;0.25;0.30;0.72;0.75;1" dur="19.00s" repeatCount="indefinite" />
+      </circle>
+      <text x="312" y="429" text-anchor="middle" font-size="13" font-weight="900" fill="#000000">3</text>
+
+      <text x="505" y="405" text-anchor="middle" font-size="15.5" font-weight="800" fill="#FFE600">MEMORIA CENTRALE - RAM</text>
+      <text x="505" y="430" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">DRAM, volatile</text>
+      <text x="505" y="454" text-anchor="middle" font-size="12.5" fill="#FFF2A6">Contiene dati e programmi correnti</text>
+    </g>
+
+    <!-- Tier 4: MEMORIA DI MASSA (SSD / HDD) -->
+    <g id="tier-4-massa">
+      <polygon points="264,488 736,488 801,600 199,600" fill="#0D0B00" stroke="#FFE600" stroke-width="1.8" stroke-linejoin="round">
+        <animate attributeName="stroke" values="#FFE600;#FFE600;#FFFFFF;#FFE600;#FFE600;#FFFFFF;#FFE600" keyTimes="0;0.35;0.375;0.42;0.60;0.625;1" dur="19.00s" repeatCount="indefinite" />
+      </polygon>
+      <circle cx="246" cy="544" r="12" fill="#FFE600" stroke="#000000" stroke-width="1.5">
+        <animate attributeName="fill" values="#FFE600;#FFE600;#FFFFFF;#FFE600;#FFE600;#FFFFFF;#FFE600" keyTimes="0;0.35;0.375;0.42;0.60;0.625;1" dur="19.00s" repeatCount="indefinite" />
+      </circle>
+      <text x="246" y="549" text-anchor="middle" font-size="13" font-weight="900" fill="#000000">4</text>
+
+      <text x="500" y="534" text-anchor="middle" font-size="16" font-weight="800" fill="#FFE600">MEMORIA DI MASSA (SSD / HDD)</text>
+      <text x="500" y="562" text-anchor="middle" font-size="13.5" fill="#FFFFFF">Non volatile, archiviazione permanente</text>
+    </g>
+
+    <!-- Tier 5: MEMORIE ESTERNE / CLOUD -->
+    <g id="tier-5-cloud">
+      <polygon points="194,608 806,608 875,728 125,728" fill="#001209" stroke="url(#tierBridgeGrad)" stroke-width="2" stroke-linejoin="round" />
+      <circle cx="176" cy="668" r="12" fill="#00FF66" stroke="#000000" stroke-width="1.5">
+        <animate attributeName="fill" values="#00FF66;#00FF66;#FFFFFF;#00FF66" keyTimes="0;0.47;0.50;0.56" dur="19.00s" repeatCount="indefinite" />
+      </circle>
+      <text x="176" y="673" text-anchor="middle" font-size="13" font-weight="900" fill="#000000">5</text>
+
+      <!-- Left Disk / HDD Pictogram -->
+      <g transform="translate(242, 670)">
+        <g>
+          <animateTransform attributeName="transform" type="scale" values="1;1.07;1" dur="8.55s" repeatCount="indefinite" />
+          <rect x="-22" y="-26" width="44" height="52" rx="5" fill="#000A05" stroke="#00FF66" stroke-width="1.6" />
+          <circle cx="0" cy="-4" r="13" fill="#001A0D" stroke="#A8FFCC" stroke-width="1.3" />
+          <circle cx="0" cy="-4" r="4" fill="#00FF66" />
+          <line x1="-10" y1="16" x2="10" y2="16" stroke="#FFE600" stroke-width="1.8" stroke-linecap="round" />
+        </g>
+      </g>
+
+      <text x="500" y="658" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">MEMORIE ESTERNE / CLOUD</text>
+      <text x="500" y="686" text-anchor="middle" font-size="14" fill="#A8FFCC">USB, Tape, Cloud Storage</text>
+
+      <!-- Right Cloud Upload Pictogram -->
+      <g transform="translate(756, 670)">
+        <g>
+          <animateTransform attributeName="transform" type="scale" values="1;1.07;1" dur="8.55s" begin="-3.80s" repeatCount="indefinite" />
+          <path d="M -20,8 A 11,11 0 0 1 -14,-12 A 14,14 0 0 1 12,-10 A 10,10 0 0 1 20,8 Z" fill="#1A1500" stroke="#FFE600" stroke-width="1.6" stroke-linejoin="round" />
+          <line x1="0" y1="5" x2="0" y2="-8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+          <polyline points="-5,-3 0,-9 5,-3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="-14" y1="16" x2="14" y2="16" stroke="#FFE600" stroke-width="1.4" />
+          <circle cx="-14" cy="16" r="2.2" fill="#00FF66" />
+          <circle cx="14" cy="16" r="2.2" fill="#FFE600" />
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- 8. Arcade Motif: Q*bert hopping down & up the 5 left stepped ledges -->
+  <g id="qbert-pyramid-hopper">
+      <!-- Dotted stair guide path -->
+      <path d="M 410,200 Q 362,232 350,304 Q 300,342 286,418 Q 236,458 222,534 Q 170,578 154,662 Q 170,578 222,534 Q 236,458 286,418 Q 300,342 350,304 Q 362,232 410,200" fill="none" stroke="#00FF66" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="3 5" />
+
+      <!-- Glowing Q*bert Cursor hopping across the 5 pyramid tiers -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.02;0.98;1" dur="19.00s" repeatCount="indefinite" />
+        <animateMotion path="M 410,200 Q 362,232 350,304 Q 300,342 286,418 Q 236,458 222,534 Q 170,578 154,662 Q 170,578 222,534 Q 236,458 286,418 Q 300,342 350,304 Q 362,232 410,200" keyPoints="0;0.125;0.25;0.375;0.5;0.625;0.75;0.875;1" keyTimes="0;0.125;0.25;0.375;0.5;0.625;0.75;0.875;1" calcMode="linear" dur="19.00s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="10" fill="#FFE600" opacity="0.22" />
+        <circle cx="0" cy="0" r="6.5" fill="#FFE600" stroke="#FFFFFF" stroke-width="1.2" />
+        <!-- Arcade Q*bert snout & eyes -->
+        <ellipse cx="4.5" cy="1.5" rx="3.2" ry="1.8" fill="#FFE600" stroke="#FFFFFF" stroke-width="0.8" />
+        <circle cx="-1.5" cy="-2" r="1.3" fill="#000000" />
+        <circle cx="2" cy="-2" r="1.3" fill="#000000" />
+      </g>
+    </g>
+
+  <!-- 9. Vertical Feed Lines + Arcade Motif: Pac-Man Horizontal Memory Bus -->
+  <g id="pyramid-to-summary-bus">
+    <line x1="252" y1="728" x2="252" y2="782" stroke="#00FF66" stroke-width="2" />
+    <polygon points="252,790 245,778 259,778" fill="#00FF66" />
+    <circle cx="252" cy="732" r="4.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="732;782" dur="3.80s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.80s" repeatCount="indefinite" />
+    </circle>
+
+    <line x1="748" y1="728" x2="748" y2="782" stroke="#FFE600" stroke-width="2" />
+    <polygon points="748,790 741,778 755,778" fill="#FFE600" />
+    <circle cx="748" cy="732" r="4.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="732;782" dur="3.80s" begin="-1.90s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.80s" begin="-1.90s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="pacman-bus-fetch">
+      <!-- Track rails -->
+      <line x1="296" y1="749" x2="704" y2="749" stroke="#00FF66" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 6" />
+      <line x1="296" y1="769" x2="704" y2="769" stroke="#FFE600" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 6" />
+      <text x="500" y="744" text-anchor="middle" font-size="8" font-weight="bold" fill="#A8FFCC" letter-spacing="1.2">MEMORY BUS // FETCH &amp; SWAP</text>
+
+      <!-- Bit-pellets -->
+      <rect x="345" y="756" width="6" height="6" rx="1.5" fill="#00FF66">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.12;0.135;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <rect x="393" y="756" width="6" height="6" rx="1.5" fill="#FFE600">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.24;0.255;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <rect x="441" y="756" width="6" height="6" rx="1.5" fill="#00FF66">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.36;0.375;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <rect x="545" y="756" width="6" height="6" rx="1.5" fill="#FFE600">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.62;0.635;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <rect x="593" y="756" width="6" height="6" rx="1.5" fill="#00FF66">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.74;0.755;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+      <rect x="641" y="756" width="6" height="6" rx="1.5" fill="#FFE600">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.86;0.875;0.95;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Power Pill at center (x=496) -->
+      <circle cx="496" cy="759" r="5" fill="#FFFFFF" filter="url(#matrixHeadGlow)">
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.48;0.50;0.95;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="r" values="4.2;5.5;4.2" dur="1.90s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Pac-Man sprite gliding left -> right -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="15.20s" repeatCount="indefinite" />
+        <animateMotion path="M 300,759 L 700,759" dur="15.20s" repeatCount="indefinite" />
+        <path d="M -9,0 A 9,9 0 0 1 9,0 Z" fill="#FFE600">
+          <animateTransform attributeName="transform" type="rotate" values="0;-38;0" dur="0.76s" repeatCount="indefinite" />
+        </path>
+        <path d="M -9,0 A 9,9 0 0 0 9,0 Z" fill="#FFE600">
+          <animateTransform attributeName="transform" type="rotate" values="0;38;0" dur="0.76s" repeatCount="indefinite" />
+        </path>
+      </g>
+
+      <!-- Upright Cyber-Ghost chasing behind Pac-Man -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0.92;0.92;0" keyTimes="0;0.04;0.94;1" dur="15.20s" begin="-12.50s" repeatCount="indefinite" />
+        <animateMotion path="M 300,759 L 700,759" dur="15.20s" begin="-12.50s" repeatCount="indefinite" />
+        <path d="M -7,6 L -7,-2 A 7,7 0 0 1 7,-2 L 7,6 L 4,3 L 0,6 L -4,3 Z" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.6">
+          <animate attributeName="fill" values="#00FF66;#00FF66;#FFFFFF;#00FF66" keyTimes="0;0.48;0.66;1" dur="15.20s" repeatCount="indefinite" />
+        </path>
+        <circle cx="-2.5" cy="-2" r="1.4" fill="#000000" />
+        <circle cx="2.5" cy="-2" r="1.4" fill="#000000" />
+      </g>
+    </g>
+
+  <!-- 10. Bottom Summary Panels: Memorie Volatili vs Memorie Non Volatili -->
+  <g id="summary-volatile" transform="translate(30, 790)">
+    <rect x="0" y="0" width="445" height="136" rx="16" fill="#000A05" stroke="#00FF66" stroke-width="2" filter="url(#glowGreen)" />
+    <!-- HUD Corner Brackets -->
+    <path d="M 14,0 L 0,0 L 0,14 M 431,0 L 445,0 L 445,14 M 0,122 L 0,136 L 14,136 M 445,122 L 445,136 L 431,136" fill="none" stroke="#A8FFCC" stroke-width="2" />
+    <!-- Animated border tracer -->
+    <rect x="0" y="0" width="445" height="136" rx="16" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="36 1126" opacity="0.65">
+      <animate attributeName="stroke-dashoffset" values="0;-1162" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+
+    <text x="222.5" y="38" text-anchor="middle" font-size="18" font-weight="800" fill="#00FF66">Memorie Volatili</text>
+    <text x="222.5" y="60" text-anchor="middle" font-size="13.5" fill="#A8FFCC">(perdono i dati allo spegnimento)</text>
+    <rect x="34" y="76" width="377" height="40" rx="8" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.45" stroke-width="1.2" />
+    <text x="222.5" y="101" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#FFFFFF">Registri, Cache, RAM</text>
+  </g>
+
+  <g id="summary-non-volatile" transform="translate(525, 790)">
+    <rect x="0" y="0" width="445" height="136" rx="16" fill="#0A0800" stroke="#FFE600" stroke-width="2" filter="url(#glowYellow)" />
+    <!-- HUD Corner Brackets -->
+    <path d="M 14,0 L 0,0 L 0,14 M 431,0 L 445,0 L 445,14 M 0,122 L 0,136 L 14,136 M 445,122 L 445,136 L 431,136" fill="none" stroke="#FFF2A6" stroke-width="2" />
+    <!-- Animated border tracer -->
+    <rect x="0" y="0" width="445" height="136" rx="16" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="36 1126" opacity="0.65">
+      <animate attributeName="stroke-dashoffset" values="0;1162" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+
+    <text x="222.5" y="38" text-anchor="middle" font-size="18" font-weight="800" fill="#FFE600">Memorie Non Volatili</text>
+    <text x="222.5" y="60" text-anchor="middle" font-size="13.5" fill="#FFF2A6">(archiviazione permanente)</text>
+    <rect x="34" y="76" width="377" height="40" rx="8" fill="#1A1500" stroke="#FFE600" stroke-opacity="0.45" stroke-width="1.2" />
+    <text x="222.5" y="101" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#FFFFFF">ROM, SSD, HDD, Cloud</text>
+  </g>
+
+  <!-- 11. Optional Verification Checklist -->
+  <g id="verification-checklist" transform="translate(30, 946)">
+    <rect x="0" y="0" width="940" height="152" rx="14" fill="#020D06" stroke="#00FF66" stroke-opacity="0.55" stroke-width="1.5" />
+    <line x1="470" y1="16" x2="470" y2="136" stroke="#00FF66" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4 4" />
+
+    <text x="24" y="30" font-size="13" font-weight="bold" fill="#00FF66" letter-spacing="0.8">CHECK SCHEMA ORIGINALE</text>
+    <text x="24" y="56" font-size="12.5" fill="#E0FFE6">[✓] Titolo, sottotitolo e 5 livelli numerati (1 → 5)</text>
+    <text x="24" y="80" font-size="12.5" fill="#E0FFE6">[✓] Assi Velocità/Costo ↑ (ns) &amp; Capacità ↓ (Byte → PB)</text>
+    <text x="24" y="104" font-size="12.5" fill="#E0FFE6">[✓] Box Volatili (Registri, Cache, RAM) vs Non Volatili (ROM..Cloud)</text>
+    <text x="24" y="128" font-size="11.5" fill="#A8FFCC" opacity="0.85">    Refusi OCR dell&apos;originale normalizzati in italiano chiaro</text>
+
+    <text x="494" y="30" font-size="13" font-weight="bold" fill="#FFE600" letter-spacing="0.8">CHECK ARCADE MIX (1.9x SLOW)</text>
+    <text x="494" y="56" font-size="12.5" fill="#FFF2A6">[✓] Asteroids: nave vettoriale frammenta blocchi dati (Alto SX)</text>
+    <text x="494" y="80" font-size="12.5" fill="#FFF2A6">[✓] Q*bert: salto continuo sui 5 gradini della piramide</text>
+    <text x="494" y="104" font-size="12.5" fill="#FFF2A6">[✓] Tetris (Alto DX) + Pac-Man &amp; Ghost sul bus centrale</text>
+    <text x="494" y="128" font-size="11.5" fill="#A8FFCC" opacity="0.85">    SMIL puro al 100% + Matrix Rain bicolore nei margini</text>
+  </g>
+
+  <!-- 12. Full-Width Cyberpunk Scanline -->
+  <rect x="0" y="-10" width="1000" height="3" fill="#00FF66" opacity="0.12">
+    <animate attributeName="y" from="-10" to="1135" dur="7.60s" repeatCount="indefinite" />
+  </rect>
+</svg>

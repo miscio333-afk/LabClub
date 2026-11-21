@@ -114,8 +114,167 @@
     /* ---------------- studio ---------------- */
     let cleanupLab = function () {};
     let cleanupReveal = function () {};
+    let cleanupSchemas = function () {};
     const introVideos = [];
     const introCleanups = [];
+
+    function renderSchemasBlock() {
+      const list = lesson.schemas || [];
+      if (!list.length) return "";
+      const first = list[0];
+      const kicker = list.length > 1 ? "SCHEMI DI APPROFONDIMENTO" : "SCHEMA DI RIPASSO";
+      const tabs =
+        list.length > 1
+          ? '<div class="schema-tabs" role="tablist" aria-label="Seleziona schema di ripasso">' +
+            list
+              .map(function (item, idx) {
+                return (
+                  '<button type="button" role="tab" class="schema-tab' + (idx === 0 ? " active" : "") + '"' +
+                  ' aria-selected="' + (idx === 0 ? "true" : "false") + '" data-schema-index="' + idx + '">' +
+                  App.ui.esc(item.label) +
+                  "</button>"
+                );
+              })
+              .join("") +
+            "</div>"
+          : "";
+      return (
+        '<section class="card schema-block">' +
+        '<span class="kicker' + (purple ? " purple" : "") + '">' + kicker + "</span>" +
+        '<h3 class="schema-block-title" data-schema-heading>' + App.ui.esc(first.title) + "</h3>" +
+        '<p class="schema-block-desc" data-schema-desc>' + App.ui.esc(first.desc || "") + "</p>" +
+        tabs +
+        '<div class="schema-stage">' +
+        '<button type="button" class="schema-trigger" data-schema-zoom' +
+        ' data-schema-src="' + App.ui.esc(first.src) + '"' +
+        ' data-schema-title="' + App.ui.esc(first.title) + '"' +
+        ' data-schema-desc="' + App.ui.esc(first.desc || "") + '"' +
+        ' aria-label="Ingrandisci lo schema: ' + App.ui.esc(first.title) + '">' +
+        '<img class="schema-img" data-schema-img src="' + App.ui.esc(first.src) + '" alt="' + App.ui.esc(first.title) + '"' +
+        ' width="' + Number(first.width || 1000) + '" height="' + Number(first.height || 1180) + '" loading="lazy" decoding="async" />' +
+        '<span class="schema-zoom-pill"><span>Schema animato · tocca per leggere i dettagli</span><b>Ingrandisci</b></span>' +
+        "</button>" +
+        "</div>" +
+        "</section>"
+      );
+    }
+
+    function mountSchemas() {
+      let activeModalClose = null;
+
+      function openZoom(src, title, desc) {
+        if (activeModalClose) activeModalClose();
+        const prevFocus = document.activeElement;
+        const modal = document.createElement("div");
+        modal.className = "schema-modal" + (purple ? " purple" : "");
+        modal.setAttribute("role", "dialog");
+        modal.setAttribute("aria-modal", "true");
+        modal.setAttribute("aria-label", title || "Schema ingrandito");
+        modal.innerHTML =
+          '<div class="schema-modal-head">' +
+          '<div class="schema-modal-copy">' +
+          "<h2>" + App.ui.esc(title || "Schema") + "</h2>" +
+          (desc ? "<p>" + App.ui.esc(desc) + "</p>" : "") +
+          "</div>" +
+          '<div class="schema-modal-actions">' +
+          '<button type="button" class="btn btn-soft btn-sm" data-zoom-toggle aria-pressed="false">Zoom 1.8×</button>' +
+          '<button type="button" class="icon-btn" data-zoom-close aria-label="Chiudi">' + App.ui.icon("x", 18) + "</button>" +
+          "</div>" +
+          "</div>" +
+          '<div class="schema-modal-body">' +
+          '<img class="schema-modal-img" src="' + App.ui.esc(src) + '" alt="' + App.ui.esc(title || "") + '" decoding="async" />' +
+          "</div>";
+
+        document.body.appendChild(modal);
+        document.body.classList.add("sheet-open");
+
+        const zoomBtn = modal.querySelector("[data-zoom-toggle]");
+        const bodyEl = modal.querySelector(".schema-modal-body");
+        let zoomed = false;
+
+        function close() {
+          document.removeEventListener("keydown", onKey);
+          document.body.classList.remove("sheet-open");
+          if (modal.parentNode) modal.parentNode.removeChild(modal);
+          if (prevFocus && prevFocus.focus) prevFocus.focus();
+          activeModalClose = null;
+        }
+        activeModalClose = close;
+
+        function onKey(e) {
+          if (e.key === "Escape") close();
+        }
+
+        zoomBtn.addEventListener("click", function () {
+          zoomed = !zoomed;
+          bodyEl.classList.toggle("is-zoomed", zoomed);
+          zoomBtn.setAttribute("aria-pressed", zoomed ? "true" : "false");
+          zoomBtn.textContent = zoomed ? "Adatta" : "Zoom 1.8×";
+        });
+        modal.querySelector("[data-zoom-close]").addEventListener("click", close);
+        bodyEl.addEventListener("click", function (e) {
+          if (e.target === bodyEl) close();
+        });
+        document.addEventListener("keydown", onKey);
+        requestAnimationFrame(function () {
+          modal.classList.add("open");
+        });
+        modal.querySelector("[data-zoom-close]").focus({ preventScroll: true });
+      }
+
+      const list = lesson.schemas || [];
+      const block = studyPanel.querySelector(".schema-block");
+      if (block && list.length > 1) {
+        const heading = block.querySelector("[data-schema-heading]");
+        const descEl = block.querySelector("[data-schema-desc]");
+        const trigger = block.querySelector("[data-schema-zoom]");
+        const img = block.querySelector("[data-schema-img]");
+        const pills = block.querySelectorAll("[data-schema-index]");
+        pills.forEach(function (pill) {
+          pill.addEventListener("click", function () {
+            const item = list[Number(pill.dataset.schemaIndex)];
+            if (!item) return;
+            pills.forEach(function (p) {
+              const active = p === pill;
+              p.classList.toggle("active", active);
+              p.setAttribute("aria-selected", active ? "true" : "false");
+            });
+            if (heading) heading.textContent = item.title;
+            if (descEl) descEl.textContent = item.desc || "";
+            if (img) {
+              img.src = item.src;
+              img.alt = item.title;
+              img.width = Number(item.width || 1000);
+              img.height = Number(item.height || 1180);
+            }
+            if (trigger) {
+              trigger.dataset.schemaSrc = item.src;
+              trigger.dataset.schemaTitle = item.title;
+              trigger.dataset.schemaDesc = item.desc || "";
+              trigger.setAttribute("aria-label", "Ingrandisci lo schema: " + item.title);
+            }
+          });
+        });
+      }
+
+      function onPanelClick(event) {
+        const trigger = event.target.closest("[data-schema-zoom]");
+        if (!trigger) return;
+        event.preventDefault();
+        event.stopPropagation();
+        openZoom(
+          trigger.dataset.schemaSrc || "",
+          trigger.dataset.schemaTitle || "",
+          trigger.dataset.schemaDesc || ""
+        );
+      }
+
+      studyPanel.addEventListener("click", onPanelClick);
+      return function () {
+        studyPanel.removeEventListener("click", onPanelClick);
+        if (activeModalClose) activeModalClose();
+      };
+    }
 
     function formatDuration(seconds) {
       const total = Math.max(0, Math.round(Number(seconds) || 0));
@@ -299,6 +458,8 @@
           "</section>"
         : "";
 
+      const schemas = renderSchemasBlock();
+
       studyPanel.innerHTML =
         '<div class="card study-block">' +
         '<span class="kicker' + (purple ? " purple" : "") + '">OBIETTIVO</span>' +
@@ -306,6 +467,7 @@
         "</div>" +
         '<div class="chapters">' + chapters + "</div>" +
         lab +
+        schemas +
         keyPoints +
         '<div class="stack mt-16">' +
         '<a class="btn btn-soft btn-block" href="#/indizi/' + lesson.id + '">' +
@@ -322,10 +484,12 @@
 
       cleanupReveal = App.ui.revealOnScroll(
         studyPanel,
-        ".chapter, .lab-block, .keypoints",
+        ".chapter, .lab-block, .schema-block, .keypoints",
         { skipFirst: true }
       );
     } else {
+      const schemas = renderSchemasBlock();
+
       studyPanel.innerHTML =
         '<div class="card study-block">' +
         '<span class="kicker' + (purple ? " purple" : "") + '">OBIETTIVO</span>' +
@@ -345,6 +509,7 @@
             "</a>"
           : "") +
         "</div>" +
+        schemas +
         '<div class="stack mt-16">' +
         '<a class="btn btn-soft btn-block" href="#/indizi/' + lesson.id + '">' +
         App.ui.icon("bulb", 16) + " Ho un dubbio: 3 indizi</a>" +
@@ -355,6 +520,7 @@
     }
 
     decorateCards(studyPanel, purple, true);
+    cleanupSchemas = mountSchemas();
 
     studyPanel.querySelectorAll(".chapter.has-intro").forEach(function (article) {
       const video = article.querySelector("[data-intro-video]");
@@ -693,6 +859,13 @@
       if (typeof cleanupReveal === "function") {
         try {
           cleanupReveal();
+        } catch (_) {
+          /* ignore */
+        }
+      }
+      if (typeof cleanupSchemas === "function") {
+        try {
+          cleanupSchemas();
         } catch (_) {
           /* ignore */
         }

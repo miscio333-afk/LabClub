@@ -2,7 +2,7 @@
  * Network-first: online prende sempre la versione fresca, offline usa la cache.
  * Cambia CACHE_VERSION quando aggiorni i file per forzare il refresh.
  */
-const CACHE_VERSION = "labclub-v2-14";
+const CACHE_VERSION = "labclub-v2-16";
 const CACHE_PREFIX = "labclub-v2-";
 const ASSETS = [
   "./",
@@ -80,7 +80,18 @@ const ASSETS = [
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/icons/maskable-512.png",
-  "./assets/icons/apple-touch-icon.png"
+  "./assets/icons/apple-touch-icon.png",
+  "./assets/svg/architettura-von-neumann-full-ok.svg",
+  "./assets/svg/bus_pcie_cyberpunk.svg",
+  "./assets/svg/componenti_hardware_cyberpunk.svg",
+  "./assets/svg/cpu_vs_gpu_cyberpunk.svg",
+  "./assets/svg/gerarchia-delle-memorie.svg",
+  "./assets/svg/hardware-vs-software(7).svg",
+  "./assets/svg/ram-vs-rom-vs-cache.svg",
+  "./assets/svg/scala-unita-informatiche(2).svg",
+  "./assets/svg/scheda_madre_cyberpunk.svg",
+  "./assets/svg/software-sistema-vs-applicativo.svg",
+  "./assets/svg/ssd_vs_hdd_cyberpunk.svg"
 ];
 
 self.addEventListener("install", function (event) {

@@ -1,0 +1,793 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1180" width="1000" height="1180" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+  <defs>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#001A0D" stroke-width="1" />
+    </pattern>
+
+    <radialGradient id="titleGlow" cx="50%" cy="6%" r="48%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.14" />
+      <stop offset="55%" stop-color="#FFE600" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="matrixFadeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="40%" stop-color="#00FF66" stop-opacity="0.25" />
+      <stop offset="78%" stop-color="#00FF66" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600" stop-opacity="0" />
+      <stop offset="40%" stop-color="#FFE600" stop-opacity="0.25" />
+      <stop offset="78%" stop-color="#FFE600" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#FFE600" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="firmwareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <linearGradient id="bridgeDownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#00FF66" />
+    </linearGradient>
+
+    <filter id="matrixHeadGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonTextGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <clipPath id="leftMatrixClip">
+      <rect x="0" y="0" width="24" height="1180" />
+    </clipPath>
+
+    <clipPath id="rightMatrixClip">
+      <rect x="976" y="0" width="24" height="1180" />
+    </clipPath>
+
+    <clipPath id="midCorridorMatrixClip">
+      <rect x="476" y="232" width="84" height="122" />
+    </clipPath>
+  </defs>
+
+  <rect width="1000" height="1180" fill="#000000" />
+  <rect width="1000" height="1180" fill="url(#gridPattern)" opacity="0.5" />
+  <rect width="1000" height="1180" fill="url(#titleGlow)" />
+
+  <g id="matrix-rain-left" clip-path="url(#leftMatrixClip)">
+    <g>
+      <text x="8" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.46"><tspan x="8" dy="0">0</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">P</tspan><tspan x="8" dy="13">C</tspan><tspan x="8" dy="13">I</tspan><tspan x="8" dy="13">&lt;</tspan><tspan x="8" dy="13">R</tspan><tspan x="8" dy="13">A</tspan><tspan x="8" dy="13">/</tspan><tspan x="8" dy="13">M</tspan><tspan x="8" dy="13">{</tspan><tspan x="8" dy="13">C</tspan><tspan x="8" dy="13">U</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">&gt;</tspan><tspan x="8" dy="13">A</tspan></text>
+      <text x="8" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-3.20s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="8" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.4"><tspan x="8" dy="0">1</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">B</tspan><tspan x="8" dy="13">U</tspan><tspan x="8" dy="13">&gt;</tspan><tspan x="8" dy="13">S</tspan><tspan x="8" dy="13">8</tspan><tspan x="8" dy="13">;</tspan><tspan x="8" dy="13">7</tspan><tspan x="8" dy="13">0</tspan><tspan x="8" dy="13">D</tspan><tspan x="8" dy="13">}</tspan><tspan x="8" dy="13">A</tspan><tspan x="8" dy="13">1</tspan><tspan x="8" dy="13">:</tspan><tspan x="8" dy="13">L</tspan><tspan x="8" dy="13">&lt;</tspan></text>
+      <text x="8" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-10.80s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="18" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.34"><tspan x="18" dy="0">F</tspan><tspan x="18" dy="13">E</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">&lt;</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">9</tspan><tspan x="18" dy="13">/</tspan><tspan x="18" dy="13">D</tspan><tspan x="18" dy="13">E</tspan><tspan x="18" dy="13">C</tspan><tspan x="18" dy="13">}</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">X</tspan><tspan x="18" dy="13">E</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">#</tspan><tspan x="18" dy="13">&gt;</tspan></text>
+      <text x="18" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-6.50s" dur="19.00s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="18" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.34"><tspan x="18" dy="0">0</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">P</tspan><tspan x="18" dy="13">C</tspan><tspan x="18" dy="13">I</tspan><tspan x="18" dy="13">&lt;</tspan><tspan x="18" dy="13">R</tspan><tspan x="18" dy="13">A</tspan><tspan x="18" dy="13">/</tspan><tspan x="18" dy="13">M</tspan><tspan x="18" dy="13">{</tspan><tspan x="18" dy="13">C</tspan><tspan x="18" dy="13">U</tspan><tspan x="18" dy="13">0</tspan><tspan x="18" dy="13">1</tspan><tspan x="18" dy="13">&gt;</tspan><tspan x="18" dy="13">A</tspan></text>
+      <text x="18" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-16.00s" dur="19.00s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g id="matrix-rain-right" clip-path="url(#rightMatrixClip)">
+    <g>
+      <text x="982" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.36"><tspan x="982" dy="0">1</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">B</tspan><tspan x="982" dy="13">U</tspan><tspan x="982" dy="13">&gt;</tspan><tspan x="982" dy="13">S</tspan><tspan x="982" dy="13">8</tspan><tspan x="982" dy="13">;</tspan><tspan x="982" dy="13">7</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">D</tspan><tspan x="982" dy="13">}</tspan><tspan x="982" dy="13">A</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">:</tspan><tspan x="982" dy="13">L</tspan><tspan x="982" dy="13">&lt;</tspan></text>
+      <text x="982" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-4.10s" dur="17.10s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="982" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.36"><tspan x="982" dy="0">F</tspan><tspan x="982" dy="13">E</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">&lt;</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">9</tspan><tspan x="982" dy="13">/</tspan><tspan x="982" dy="13">D</tspan><tspan x="982" dy="13">E</tspan><tspan x="982" dy="13">C</tspan><tspan x="982" dy="13">}</tspan><tspan x="982" dy="13">0</tspan><tspan x="982" dy="13">X</tspan><tspan x="982" dy="13">E</tspan><tspan x="982" dy="13">1</tspan><tspan x="982" dy="13">#</tspan><tspan x="982" dy="13">&gt;</tspan></text>
+      <text x="982" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-12.65s" dur="17.10s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="992" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.46"><tspan x="992" dy="0">0</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">P</tspan><tspan x="992" dy="13">C</tspan><tspan x="992" dy="13">I</tspan><tspan x="992" dy="13">&lt;</tspan><tspan x="992" dy="13">R</tspan><tspan x="992" dy="13">A</tspan><tspan x="992" dy="13">/</tspan><tspan x="992" dy="13">M</tspan><tspan x="992" dy="13">{</tspan><tspan x="992" dy="13">C</tspan><tspan x="992" dy="13">U</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">&gt;</tspan><tspan x="992" dy="13">A</tspan></text>
+      <text x="992" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-2.40s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="992" y="0" text-anchor="middle" font-size="10" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.4"><tspan x="992" dy="0">1</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">B</tspan><tspan x="992" dy="13">U</tspan><tspan x="992" dy="13">&gt;</tspan><tspan x="992" dy="13">S</tspan><tspan x="992" dy="13">8</tspan><tspan x="992" dy="13">;</tspan><tspan x="992" dy="13">7</tspan><tspan x="992" dy="13">0</tspan><tspan x="992" dy="13">D</tspan><tspan x="992" dy="13">}</tspan><tspan x="992" dy="13">A</tspan><tspan x="992" dy="13">1</tspan><tspan x="992" dy="13">:</tspan><tspan x="992" dy="13">L</tspan><tspan x="992" dy="13">&lt;</tspan></text>
+      <text x="992" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1200" begin="-9.50s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g id="matrix-rain-mid" clip-path="url(#midCorridorMatrixClip)">
+    <g>
+      <text x="495" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.32"><tspan x="495" dy="0">0</tspan><tspan x="495" dy="13">1</tspan><tspan x="495" dy="13">P</tspan><tspan x="495" dy="13">C</tspan><tspan x="495" dy="13">I</tspan><tspan x="495" dy="13">&lt;</tspan><tspan x="495" dy="13">R</tspan><tspan x="495" dy="13">A</tspan><tspan x="495" dy="13">/</tspan><tspan x="495" dy="13">M</tspan><tspan x="495" dy="13">{</tspan><tspan x="495" dy="13">C</tspan><tspan x="495" dy="13">U</tspan><tspan x="495" dy="13">0</tspan><tspan x="495" dy="13">1</tspan><tspan x="495" dy="13">&gt;</tspan><tspan x="495" dy="13">A</tspan></text>
+      <text x="495" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,80" to="0,380" begin="-2.10s" dur="10.45s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="520" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.32"><tspan x="520" dy="0">1</tspan><tspan x="520" dy="13">0</tspan><tspan x="520" dy="13">B</tspan><tspan x="520" dy="13">U</tspan><tspan x="520" dy="13">&gt;</tspan><tspan x="520" dy="13">S</tspan><tspan x="520" dy="13">8</tspan><tspan x="520" dy="13">;</tspan><tspan x="520" dy="13">7</tspan><tspan x="520" dy="13">0</tspan><tspan x="520" dy="13">D</tspan><tspan x="520" dy="13">}</tspan><tspan x="520" dy="13">A</tspan><tspan x="520" dy="13">1</tspan><tspan x="520" dy="13">:</tspan><tspan x="520" dy="13">L</tspan><tspan x="520" dy="13">&lt;</tspan></text>
+      <text x="520" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,80" to="0,380" begin="-6.40s" dur="12.35s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <text x="545" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.28"><tspan x="545" dy="0">F</tspan><tspan x="545" dy="13">E</tspan><tspan x="545" dy="13">0</tspan><tspan x="545" dy="13">&lt;</tspan><tspan x="545" dy="13">1</tspan><tspan x="545" dy="13">9</tspan><tspan x="545" dy="13">/</tspan><tspan x="545" dy="13">D</tspan><tspan x="545" dy="13">E</tspan><tspan x="545" dy="13">C</tspan><tspan x="545" dy="13">}</tspan><tspan x="545" dy="13">0</tspan><tspan x="545" dy="13">X</tspan><tspan x="545" dy="13">E</tspan><tspan x="545" dy="13">1</tspan><tspan x="545" dy="13">#</tspan><tspan x="545" dy="13">&gt;</tspan></text>
+      <text x="545" y="221" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">4</text>
+      <animateTransform attributeName="transform" type="translate" from="0,80" to="0,380" begin="-4.20s" dur="11.40s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <g fill="none" stroke-width="1.4">
+    <g opacity="0.18">
+      <path d="M0,240 L18,240 L34,256" stroke="#00FF66" />
+      <circle cx="18" cy="240" r="2.5" fill="#00FF66" />
+      <path d="M0,620 L16,620 L34,602" stroke="#00FF66" />
+      <circle cx="16" cy="620" r="2.5" fill="#00FF66" />
+      <path d="M1000,220 L982,220 L966,236" stroke="#FFE600" />
+      <circle cx="982" cy="220" r="2.5" fill="#FFE600" />
+      <path d="M1000,660 L982,660 L966,644" stroke="#FFE600" />
+      <circle cx="982" cy="660" r="2.5" fill="#FFE600" />
+      <path d="M80,841 L52,841 L36,857 L36,924" stroke="#00FF66" />
+      <circle cx="52" cy="841" r="2.5" fill="#00FF66" />
+      <path d="M920,841 L948,841 L964,857 L964,924" stroke="#FFE600" />
+      <circle cx="948" cy="841" r="2.5" fill="#FFE600" />
+    </g>
+    <path d="M80,841 L52,841 L36,857 L36,924" stroke="#00FF66" stroke-width="2" stroke-dasharray="26 150" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-176" dur="7.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.8;1" dur="7.60s" repeatCount="indefinite" />
+    </path>
+    <path d="M920,841 L948,841 L964,857 L964,924" stroke="#FFE600" stroke-width="2" stroke-dasharray="26 150" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-176" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.8;1" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <g opacity="0.45">
+    <circle cx="515" cy="170" r="2.5" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 16,-28; -8,-56; 0,0" dur="15.20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="515" cy="720" r="2.5" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -14,-25; 10,-50; 0,0" dur="18.05s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="48" cy="790" r="2" fill="#00FF66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 12,-35; -6,-70; 0,0" dur="19.00s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="952" cy="790" r="2" fill="#FFE600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -12,-35; 6,-70; 0,0" dur="20.90s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <rect x="0" y="-10" width="1000" height="3" fill="#00FF66" opacity="0.12">
+    <animate attributeName="y" from="-10" to="1180" dur="7.60s" repeatCount="indefinite" />
+  </rect>
+
+  <g id="title-group" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <text x="503" y="54" text-anchor="middle" font-size="35" font-weight="bold" letter-spacing="2" fill="#00FFFF" opacity="0">
+      ARCHITETTURA DI VON NEUMANN
+      <animate attributeName="opacity" values="0;0;0.45;0;0.35;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <text x="497" y="54" text-anchor="middle" font-size="35" font-weight="bold" letter-spacing="2" fill="#FF2E63" opacity="0">
+      ARCHITETTURA DI VON NEUMANN
+      <animate attributeName="opacity" values="0;0;0.4;0;0.3;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <g filter="url(#neonTextGlow)">
+      <text x="500" y="54" text-anchor="middle" font-size="35" font-weight="bold" letter-spacing="2">
+        <tspan fill="#00FF66">ARCHITETTURA DI <animate attributeName="opacity" values="1;1;0.15;1;0.1;1;1" keyTimes="0;0.68;0.70;0.73;0.75;0.78;1" dur="9.50s" repeatCount="indefinite" /></tspan>
+        <tspan fill="#FFE600">VON NEUMANN<animate attributeName="opacity" values="1;1;0.12;1;0.2;1;1" keyTimes="0;0.42;0.44;0.47;0.49;0.52;1" dur="11.40s" repeatCount="indefinite" /></tspan>
+      </text>
+      <text x="500" y="82" text-anchor="middle" font-size="15.5" fill="#FFFFFF" letter-spacing="1">- Schema di ripasso per Informatica -</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 3,0; -3,0; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <text x="500" y="106" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="11.5" fill="#00FF66" letter-spacing="3">
+    SYS.VON_NEUMANN // STORED-PROGRAM // FETCH-DECODE-EXECUTE
+    <animate attributeName="opacity" values="1;0.4;1;0.15;1;0.7;1" keyTimes="0;0.25;0.45;0.48;0.52;0.75;1" dur="4.56s" repeatCount="indefinite" />
+  </text>
+
+  <g id="panel-cpu" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="34" y="130" width="420" height="620" rx="18" fill="#000A05" stroke="#00FF66" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+    <g id="snake-cpu">
+    <g transform="translate(454.0, 186.5)">
+        <g>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.5" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.8" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="0.9;0.45;1;1;0;0;0.9;0.9" keyTimes="0;0.11;0.205;0.22;0.245;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;0.85;1.15;1.55;0;0;1;1" keyTimes="0;0.11;0.205;0.22;0.245;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(436.0, 750.0)">
+        <g>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.5" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.8" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="0.9;0.45;1;1;0;0;0.9;0.9" keyTimes="0;0.25;0.485;0.5;0.525;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;0.85;1.15;1.55;0;0;1;1" keyTimes="0;0.25;0.485;0.5;0.525;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(34.0, 611.5)">
+        <g>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.5" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.8" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="0.9;0.45;1;1;0;0;0.9;0.9" keyTimes="0;0.38;0.745;0.76;0.785;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;0.85;1.15;1.55;0;0;1;1" keyTimes="0;0.38;0.745;0.76;0.785;0.95;0.99;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <path d="M 52,130 L 436,130 A 18,18 0 0 1 454,148 L 454,732 A 18,18 0 0 1 436,750 L 52,750 A 18,18 0 0 1 34,732 L 34,148 A 18,18 0 0 1 52,130 Z" pathLength="1000" fill="none" stroke="#00FF66" stroke-width="4.5" stroke-linecap="square" filter="url(#glowGreen)" opacity="0">
+      <animate attributeName="stroke-dasharray" values="26 1000;26 1000;26 1000;64 1000;64 1000;102 1000;102 1000;140 1000;140 1000;140 1000" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="26;-14;-194;-194;-436;-436;-658;-658;-800;-860" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.55;0.55;0.55;0.55;0.55;0.55;0.55;0;0" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+    </path>
+    <path d="M 52,130 L 436,130 A 18,18 0 0 1 454,148 L 454,732 A 18,18 0 0 1 436,750 L 52,750 A 18,18 0 0 1 34,732 L 34,148 A 18,18 0 0 1 52,130 Z" pathLength="1000" fill="none" stroke="#00FF66" stroke-width="2.6" stroke-linecap="square" opacity="0">
+      <animate attributeName="stroke-dasharray" values="26 1000;26 1000;26 1000;64 1000;64 1000;102 1000;102 1000;140 1000;140 1000;140 1000" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="26;-14;-194;-194;-436;-436;-658;-658;-800;-860" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;1;1;1;1;1;0;0" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+    </path>
+    <rect x="-4" y="-4" width="8" height="8" rx="1.5" fill="#FFFFFF" stroke="#00FF66" stroke-width="1.2" filter="url(#matrixHeadGlow)" opacity="0">
+      <animateMotion path="M 52,130 L 436,130 A 18,18 0 0 1 454,148 L 454,732 A 18,18 0 0 1 436,750 L 52,750 A 18,18 0 0 1 34,732 L 34,148 A 18,18 0 0 1 52,130 Z" begin="0s" dur="15.20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;1;1;1;1;1;0;0" keyTimes="0;0.04;0.22;0.258;0.5;0.538;0.76;0.798;0.94;1" begin="0s" dur="15.20s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+    <g stroke="#00FF66" stroke-width="2.5" fill="none">
+      <path d="M28,152 L28,124 L56,124" />
+      <path d="M432,124 L460,124 L460,152" />
+      <path d="M28,728 L28,756 L56,756" />
+      <path d="M432,756 L460,756 L460,728" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <text x="244" y="170" text-anchor="middle" font-size="30" font-weight="bold" fill="#00FF66" letter-spacing="2" filter="url(#neonTextGlow)">
+      CPU
+      <animate attributeName="opacity" values="1;1;0.15;1;0.1;1;1" keyTimes="0;0.58;0.60;0.63;0.65;0.68;1" dur="8.55s" repeatCount="indefinite" />
+    </text>
+    <text x="244" y="196" text-anchor="middle" font-size="13.5" fill="#FFFFFF">(Unità Centrale di Elaborazione)</text>
+
+    <g id="sub-cu">
+      <rect x="60" y="218" width="368" height="138" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="1;0.3;1" dur="6.84s" begin="0s" repeatCount="indefinite" />
+      </rect>
+      <g transform="translate(106, 287)">
+        <g>
+          <rect x="-26" y="-26" width="52" height="52" rx="9" fill="#002914" stroke="#00FF66" stroke-width="1.5" />
+          <path d="M-16,0 H-8 L-4,-10 L2,10 L6,0 H16" fill="none" stroke="#00FF66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="-16" cy="0" r="2" fill="#FFFFFF" />
+          <circle cx="16" cy="0" r="2" fill="#FFFFFF" />
+          <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0s" dur="6.84s" repeatCount="indefinite" />
+        </g>
+      </g>
+      <text x="275" y="264" text-anchor="middle" font-size="23" font-weight="bold" fill="#00FF66" filter="url(#neonTextGlow)">CU</text>
+      <text x="275" y="294" text-anchor="middle" font-size="13.5" fill="#E0FFE6">(Control Unit -</text>
+      <text x="275" y="316" text-anchor="middle" font-size="13.5" fill="#E0FFE6">Unità di Controllo)</text>
+    </g>
+
+    <line x1="244" y1="356" x2="244" y2="388" stroke="#00FF66" stroke-width="2.5" />
+    <polygon points="237,382 251,382 244,395" fill="#00FF66" />
+    <circle cx="0" cy="0" r="5" fill="#00FF66" opacity="0">
+      <animateMotion path="M244,356 L244,395" begin="0s" dur="2.66s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" begin="0s" dur="2.66s" repeatCount="indefinite" />
+    </circle>
+
+    <g id="sub-alu">
+      <rect x="60" y="396" width="368" height="142" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="1;0.3;1" dur="6.84s" begin="0.57s" repeatCount="indefinite" />
+      </rect>
+      <g transform="translate(106, 467)">
+        <g>
+          <rect x="-26" y="-26" width="52" height="52" rx="9" fill="#002914" stroke="#00FF66" stroke-width="1.5" />
+          <text x="-10" y="-4" text-anchor="middle" font-size="14" font-weight="bold" fill="#00FF66">+</text>
+          <text x="10" y="-4" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">-</text>
+          <text x="-10" y="15" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">&amp;</text>
+          <text x="10" y="15" text-anchor="middle" font-size="13" font-weight="bold" fill="#00FF66">|</text>
+          <line x1="0" y1="-17" x2="0" y2="17" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1" />
+          <line x1="-17" y1="0" x2="17" y2="0" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1" />
+          <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+        </g>
+      </g>
+      <text x="275" y="442" text-anchor="middle" font-size="23" font-weight="bold" fill="#00FF66" filter="url(#neonTextGlow)">ALU</text>
+      <text x="275" y="472" text-anchor="middle" font-size="13" fill="#E0FFE6">(Arithmetic Logic Unit -</text>
+      <text x="275" y="494" text-anchor="middle" font-size="13" fill="#E0FFE6">Unità Logico-Aritmetica)</text>
+    </g>
+
+    <line x1="244" y1="538" x2="244" y2="570" stroke="#00FF66" stroke-width="2.5" />
+    <polygon points="237,564 251,564 244,577" fill="#00FF66" />
+    <circle cx="0" cy="0" r="5" fill="#00FF66" opacity="0">
+      <animateMotion path="M244,538 L244,577" begin="1.14s" dur="2.66s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" begin="1.14s" dur="2.66s" repeatCount="indefinite" />
+    </circle>
+
+    <g id="sub-registri">
+      <rect x="60" y="578" width="368" height="138" rx="12" fill="#001A0D" stroke="#00FF66" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="1;0.3;1" dur="6.84s" begin="1.14s" repeatCount="indefinite" />
+      </rect>
+      <g transform="translate(106, 647)">
+        <g>
+          <rect x="-26" y="-26" width="52" height="52" rx="9" fill="#002914" stroke="#00FF66" stroke-width="1.5" />
+          <rect x="-18" y="-14" width="36" height="8" rx="1.5" fill="#001A0D" stroke="#00FF66" stroke-width="1" />
+          <rect x="-18" y="-2" width="36" height="8" rx="1.5" fill="#001A0D" stroke="#00FF66" stroke-width="1" />
+          <rect x="-18" y="10" width="36" height="8" rx="1.5" fill="#00FF66" fill-opacity="0.3" stroke="#00FF66" stroke-width="1" />
+          <text x="0" y="-8" text-anchor="middle" font-size="6.5" fill="#FFFFFF">PC</text>
+          <text x="0" y="4" text-anchor="middle" font-size="6.5" fill="#00FF66">IR</text>
+          <text x="0" y="16" text-anchor="middle" font-size="6.5" fill="#FFFFFF">ACC</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="1.14s" dur="6.84s" repeatCount="indefinite" />
+        </g>
+      </g>
+      <text x="275" y="636" text-anchor="middle" font-size="21" font-weight="bold" fill="#00FF66" filter="url(#neonTextGlow)">Registri</text>
+      <text x="275" y="668" text-anchor="middle" font-size="14" fill="#E0FFE6">(PC, IR, ACC)</text>
+    </g>
+  </g>
+
+  <g id="panel-ram" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="576" y="130" width="390" height="192" rx="18" fill="#0A0800" stroke="#FFE600" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" begin="-2.66s" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+    <rect x="576" y="130" width="390" height="192" rx="18" fill="none" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round" filter="url(#glowYellow)" stroke-dasharray="110 1024" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1134" begin="-2.85s" dur="12.35s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.84;1" begin="-2.85s" dur="12.35s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#FFE600" stroke-width="2.5" fill="none">
+      <path d="M570,152 L570,124 L598,124" />
+      <path d="M944,124 L972,124 L972,152" />
+      <path d="M570,300 L570,328 L598,328" />
+      <path d="M944,328 L972,328 L972,300" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" begin="-3.80s" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <g transform="translate(616, 226)">
+      <g>
+        <rect x="-26" y="-26" width="52" height="52" rx="9" fill="#1A1500" stroke="#FFE600" stroke-width="1.6" />
+        <rect x="-18" y="-12" width="36" height="18" rx="2" fill="#261F00" stroke="#FFE600" stroke-width="1.4" />
+        <rect x="-13" y="-8" width="6" height="10" fill="#FFE600" opacity="0.55" />
+        <rect x="-3" y="-8" width="6" height="10" fill="#FFE600" opacity="0.55" />
+        <rect x="7" y="-8" width="6" height="10" fill="#FFE600" opacity="0.55" />
+        <path d="M-14,6 V13 M-7,6 V13 M0,6 V13 M7,6 V13 M14,6 V13" stroke="#FFE600" stroke-width="1.6" />
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.38s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <text x="764" y="176" text-anchor="middle" font-size="18.5" font-weight="bold" fill="#FFE600" filter="url(#neonTextGlow)">
+      MEMORIA CENTRALE
+      <animate attributeName="opacity" values="1;1;0.15;1;0.2;1;1" keyTimes="0;0.34;0.36;0.39;0.41;0.44;1" dur="9.50s" repeatCount="indefinite" />
+    </text>
+    <text x="764" y="204" text-anchor="middle" font-size="18.5" font-weight="bold" fill="#FFE600">(RAM)</text>
+    <text x="764" y="246" text-anchor="middle" font-size="13.5" fill="#FFF8CC">Contiene sia Dati</text>
+    <text x="764" y="270" text-anchor="middle" font-size="13.5" fill="#FFF8CC">che Istruzioni</text>
+
+    <g id="tetris-ram-stack" transform="translate(884, 158)">
+      <rect x="0" y="0" width="66" height="136" rx="6" fill="#060500" stroke="#FFE600" stroke-opacity="0.35" stroke-width="1.2" />
+      <text x="33" y="13" text-anchor="middle" font-size="7.2" font-weight="bold" fill="#FFE600" opacity="0.8" letter-spacing="0.8">MEM_STACK</text>
+      <g stroke="#FFE600" stroke-opacity="0.12" stroke-width="0.7">
+        <line x1="3" y1="32" x2="3" y2="132" /><line x1="13" y1="32" x2="13" y2="132" /><line x1="23" y1="32" x2="23" y2="132" /><line x1="33" y1="32" x2="33" y2="132" /><line x1="43" y1="32" x2="43" y2="132" /><line x1="53" y1="32" x2="53" y2="132" /><line x1="63" y1="32" x2="63" y2="132" />
+        <line x1="3" y1="32" x2="63" y2="32" /><line x1="3" y1="42" x2="63" y2="42" /><line x1="3" y1="52" x2="63" y2="52" /><line x1="3" y1="62" x2="63" y2="62" /><line x1="3" y1="72" x2="63" y2="72" /><line x1="3" y1="82" x2="63" y2="82" /><line x1="3" y1="92" x2="63" y2="92" /><line x1="3" y1="102" x2="63" y2="102" /><line x1="3" y1="112" x2="63" y2="112" /><line x1="3" y1="122" x2="63" y2="122" /><line x1="3" y1="132" x2="63" y2="132" />
+      </g>
+
+      <!-- Piece 1: T-piece (#FFE600) -->
+      <g opacity="0">
+        <rect x="3.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <rect x="13.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <rect x="23.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,0; 0,0; 0,0; 0,0; 0,0; 0,0" keyTimes="0;0.03;0.20;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.95;0.95;0.95;1;1;0;0" keyTimes="0;0.03;0.20;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+      <g opacity="0">
+        <rect x="13.5" y="112.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFF8CC" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,0; 0,0; 0,10; 0,10; 0,10; 0,10" keyTimes="0;0.03;0.20;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.95;0.95;0.95;0.95;0.95;0;0" keyTimes="0;0.03;0.20;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+
+      <!-- Piece 2: O-piece 2x2 (#00FF66) -->
+      <g opacity="0">
+        <rect x="33.5" y="122.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <rect x="43.5" y="122.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,-100; 0,0; 0,0; 0,0; 0,0; 0,0; 0,0" keyTimes="0;0.23;0.24;0.42;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;1;1;0;0" keyTimes="0;0.23;0.24;0.42;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+      <g opacity="0">
+        <rect x="33.5" y="112.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <rect x="43.5" y="112.5" width="9" height="9" rx="1.5" fill="#00FF66" stroke="#CCFFE0" stroke-width="0.5" />
+        <animateTransform attributeName="transform" type="translate" values="0,-100; 0,-100; 0,-100; 0,0; 0,0; 0,10; 0,10; 0,10; 0,10" keyTimes="0;0.23;0.24;0.42;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;0.95;0.95;0;0" keyTimes="0;0.23;0.24;0.42;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+
+      <!-- Piece 3: Vertical I-bar 1x3 (#FFFFFF / #FFE600) -->
+      <g opacity="0">
+        <rect x="53.5" y="122.5" width="9" height="9" rx="1.5" fill="#FFFFFF" stroke="#00FF66" stroke-width="0.6" />
+        <animateTransform attributeName="transform" type="translate" values="0,-90; 0,-90; 0,-90; 0,0; 0,0; 0,0; 0,0; 0,0; 0,0" keyTimes="0;0.45;0.46;0.65;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;1;1;0;0" keyTimes="0;0.45;0.46;0.65;0.68;0.74;0.78;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+      <g opacity="0">
+        <rect x="53.5" y="112.5" width="9" height="9" rx="1.5" fill="#FFFFFF" stroke="#00FF66" stroke-width="0.6" />
+        <rect x="53.5" y="102.5" width="9" height="9" rx="1.5" fill="#FFE600" stroke="#FFFFFF" stroke-width="0.6" />
+        <animateTransform attributeName="transform" type="translate" values="0,-90; 0,-90; 0,-90; 0,0; 0,0; 0,10; 0,10; 0,10; 0,10" keyTimes="0;0.45;0.46;0.65;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.95;0.95;0.95;0.95;0.95;0;0" keyTimes="0;0.45;0.46;0.65;0.80;0.86;0.93;0.98;1" dur="15.20s" repeatCount="indefinite" />
+      </g>
+
+      <!-- Full bottom row flush flash -->
+      <rect x="3" y="122" width="60" height="10" rx="1.5" fill="#FFFFFF" filter="url(#matrixHeadGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.95;0.2;0.95;0;0" keyTimes="0;0.67;0.70;0.73;0.76;0.80;1" dur="15.20s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <g id="arrow-cpu-ram">
+    <line x1="466" y1="208" x2="564" y2="208" stroke="#00FF66" stroke-width="3" />
+    <polygon points="454,208 469,200 469,216" fill="#00FF66" />
+    <polygon points="576,208 561,200 561,216" fill="#FFE600" />
+    <circle cx="0" cy="0" r="5" fill="#00FF66" opacity="0">
+      <animateMotion path="M464,208 L566,208" begin="0s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="5" fill="#FFE600" opacity="0">
+      <animateMotion path="M566,208 L464,208" begin="1.52s" dur="3.04s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="1.52s" dur="3.04s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="system-bus" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <text x="678" y="366" text-anchor="middle" font-size="16" font-weight="bold" fill="#00FF66" letter-spacing="1.5" filter="url(#neonTextGlow)">
+      BUS DI SISTEMA
+      <animate attributeName="opacity" values="1;0.55;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+
+    <line x1="896" y1="414" x2="896" y2="334" stroke="#00FF66" stroke-width="3" />
+    <polygon points="896,322 889,336 903,336" fill="#00FF66" />
+    <circle cx="0" cy="0" r="4.5" fill="#00FF66" opacity="0">
+      <animateMotion path="M896,414 L896,332" begin="0.4s" dur="2.66s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0.4s" dur="2.66s" repeatCount="indefinite" />
+    </circle>
+
+    <text x="678" y="402" text-anchor="middle" font-size="13" font-weight="bold" fill="#00FF66">Bus Dati (bidirezionale)</text>
+    <line x1="466" y1="414" x2="954" y2="414" stroke="#00FF66" stroke-width="3" />
+    <polygon points="454,414 469,407 469,421" fill="#00FF66" />
+    <polygon points="966,414 951,407 951,421" fill="#00FF66" />
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF" opacity="0">
+      <animateMotion path="M466,414 L954,414" begin="0s" dur="4.56s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" begin="0s" dur="4.56s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="5" fill="#00FF66" opacity="0">
+      <animateMotion path="M954,414 L466,414" begin="2.28s" dur="4.56s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" begin="2.28s" dur="4.56s" repeatCount="indefinite" />
+    </circle>
+
+    <text x="678" y="456" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFE600">Bus Indirizzi (unidirezionale)</text>
+    <line x1="466" y1="468" x2="966" y2="468" stroke="#FFE600" stroke-width="3" />
+    <polygon points="454,468 469,461 469,475" fill="#FFE600" />
+    <g id="pacman-bus-indirizzi">
+      <rect x="871.8" y="466.0" width="4" height="4" rx="1" fill="#FFF8CC" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.85;1;0;0;0.85;0.85" keyTimes="0;0.14;0.16;0.18;0.95;0.99;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </rect>
+      <rect x="790.9" y="466.0" width="4" height="4" rx="1" fill="#FFF8CC" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.85;1;0;0;0.85;0.85" keyTimes="0;0.31;0.33;0.35;0.95;0.99;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </rect>
+      <rect x="710.0" y="466.0" width="4" height="4" rx="1" fill="#FFF8CC" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.85;1;0;0;0.85;0.85" keyTimes="0;0.48;0.5;0.52;0.95;0.99;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </rect>
+      <rect x="629.1" y="466.0" width="4" height="4" rx="1" fill="#FFF8CC" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.85;1;0;0;0.85;0.85" keyTimes="0;0.65;0.67;0.69;0.95;0.99;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </rect>
+      <rect x="548.2" y="466.0" width="4" height="4" rx="1" fill="#FFF8CC" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.85;1;0;0;0.85;0.85" keyTimes="0;0.82;0.84;0.86;0.95;0.99;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+      </rect>
+      <g opacity="0" filter="url(#glowYellow)">
+        <animateMotion path="M950,468 L474,468" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" begin="0.57s" dur="6.84s" repeatCount="indefinite" />
+        <g transform="scale(-1, 1)">
+          <path d="M -6,0 A 6,6 0 0,1 6,0 Z" fill="#FFE600">
+            <animateTransform attributeName="transform" type="rotate" values="0;-40;0" dur="0.76s" repeatCount="indefinite" />
+          </path>
+          <path d="M 6,0 A 6,6 0 0,1 -6,0 Z" fill="#FFE600">
+            <animateTransform attributeName="transform" type="rotate" values="0;40;0" dur="0.76s" repeatCount="indefinite" />
+          </path>
+        </g>
+      </g>
+    </g>
+
+    <text x="678" y="510" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Bus Controllo (bidirezionale)</text>
+    <line x1="466" y1="522" x2="954" y2="522" stroke="#FFFFFF" stroke-width="3" />
+    <polygon points="454,522 469,515 469,529" fill="#FFFFFF" />
+    <polygon points="966,522 951,515 951,529" fill="#FFFFFF" />
+    <circle cx="0" cy="0" r="5" fill="#00FF66" opacity="0">
+      <animateMotion path="M466,522 L954,522" begin="1.52s" dur="4.56s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" begin="1.52s" dur="4.56s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="5" fill="#FFE600" opacity="0">
+      <animateMotion path="M954,522 L466,522" begin="3.80s" dur="4.56s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" begin="3.80s" dur="4.56s" repeatCount="indefinite" />
+    </circle>
+
+    <line x1="896" y1="522" x2="896" y2="556" stroke="#FFFFFF" stroke-width="3" />
+    <polygon points="896,568 889,554 903,554" fill="#FFFFFF" />
+    <circle cx="0" cy="0" r="4.5" fill="#FFE600" opacity="0">
+      <animateMotion path="M896,522 L896,558" begin="0.95s" dur="2.66s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" begin="0.95s" dur="2.66s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="panel-io" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="576" y="568" width="390" height="182" rx="18" fill="#0A0800" stroke="#FFE600" stroke-width="2.5" stroke-opacity="0.35">
+      <animate attributeName="stroke-opacity" values="0.45;0.22;0.45;0.12;0.45" keyTimes="0;0.4;0.6;0.63;1" begin="-1.33s" dur="5.32s" repeatCount="indefinite" />
+    </rect>
+    <rect x="576" y="568" width="390" height="182" rx="18" fill="none" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round" filter="url(#glowYellow)" stroke-dasharray="110 1004" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1114" begin="-7.60s" dur="12.35s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.84;1" begin="-7.60s" dur="12.35s" repeatCount="indefinite" />
+    </rect>
+
+    <g stroke="#FFE600" stroke-width="2.5" fill="none">
+      <path d="M570,590 L570,562 L598,562" />
+      <path d="M944,562 L972,562 L972,590" />
+      <path d="M570,728 L570,756 L598,756" />
+      <path d="M944,756 L972,756 L972,728" />
+      <animate attributeName="opacity" values="0.95;0.2;0.95;0.12;0.95" keyTimes="0;0.45;0.55;0.58;1" begin="-2.00s" dur="7.60s" repeatCount="indefinite" />
+    </g>
+
+    <g transform="translate(626, 659)">
+      <g>
+        <rect x="-26" y="-26" width="52" height="52" rx="9" fill="#1A1500" stroke="#FFE600" stroke-width="1.6" />
+        <rect x="-17" y="-16" width="34" height="20" rx="2.5" fill="#261F00" stroke="#FFE600" stroke-width="1.4" />
+        <line x1="-11" y1="-9" x2="11" y2="-9" stroke="#FFFFFF" stroke-width="1.3" />
+        <line x1="-11" y1="-3" x2="5" y2="-3" stroke="#FFE600" stroke-width="1.3" />
+        <rect x="-17" y="9" width="34" height="8" rx="1.5" fill="#261F00" stroke="#FFE600" stroke-width="1.3" />
+        <path d="M-12,13 H-8 M-4,13 H0 M4,13 H8 M11,13 H13" stroke="#FFE600" stroke-width="1.6" />
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" begin="0.76s" dur="6.84s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <text x="802" y="616" text-anchor="middle" font-size="18.5" font-weight="bold" fill="#FFE600" filter="url(#neonTextGlow)">
+      UNITÀ DI INPUT /
+      <animate attributeName="opacity" values="1;1;0.15;1;0.2;1;1" keyTimes="0;0.52;0.54;0.57;0.59;0.62;1" dur="10.45s" repeatCount="indefinite" />
+    </text>
+    <text x="802" y="642" text-anchor="middle" font-size="18.5" font-weight="bold" fill="#FFE600">OUTPUT (I/O)</text>
+    <text x="802" y="682" text-anchor="middle" font-size="13.5" fill="#FFF8CC">Tastiera, Mouse,</text>
+    <text x="802" y="706" text-anchor="middle" font-size="13.5" fill="#FFF8CC">Monitor, Disco</text>
+  </g>
+
+  <g id="arrow-cpu-io">
+    <!-- Subtle bidirectional link & arrowheads -->
+    <line x1="464" y1="670" x2="566" y2="670" stroke="#00FF66" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="4 4" />
+    <polygon points="454,670 464,664 464,676" fill="#00FF66" />
+    <polygon points="576,670 566,664 566,676" fill="#FFE600" />
+
+    <!-- Pong court rails & net -->
+    <line x1="465" y1="618" x2="565" y2="618" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.2" stroke-dasharray="4 4" />
+    <line x1="465" y1="722" x2="565" y2="722" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.2" stroke-dasharray="4 4" />
+    <line x1="515" y1="622" x2="515" y2="718" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.2" stroke-dasharray="3 5" />
+
+    <!-- CPU Paddle (#00FF66) -->
+    <rect x="466" y="658" width="5" height="24" rx="2.5" fill="#00FF66" filter="url(#glowGreen)">
+      <animate attributeName="y" values="658;668;680;666;658" keyTimes="0;0.2264;0.4675;0.7597;1" dur="9.50s" repeatCount="indefinite" />
+      <animate attributeName="fill" values="#FFFFFF;#00FF66;#00FF66;#FFFFFF;#00FF66;#00FF66;#FFFFFF" keyTimes="0;0.04;0.4375;0.4675;0.5075;0.96;1" dur="9.50s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- I/O Paddle (#FFE600) -->
+    <rect x="559" y="652" width="5" height="24" rx="2.5" fill="#FFE600" filter="url(#glowYellow)">
+      <animate attributeName="y" values="652;642;654;664;652" keyTimes="0;0.2264;0.4675;0.7597;1" dur="9.50s" repeatCount="indefinite" />
+      <animate attributeName="fill" values="#FFE600;#FFE600;#FFFFFF;#FFE600;#FFE600;#FFFFFF;#FFE600;#FFE600" keyTimes="0;0.1964;0.2264;0.2664;0.7297;0.7597;0.7997;1" dur="9.50s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Pong data bit ball -->
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" filter="url(#matrixHeadGlow)">
+      <animateMotion path="M473,670 L518,624 L557,654 L505,716 L473,692 L524,624 L557,676 L512,716 L473,670" dur="9.50s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="box-fetch-decode-execute" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="80" y="788" width="840" height="106" rx="16" fill="#000A05" stroke="url(#firmwareGrad)" stroke-width="2.5" stroke-opacity="0.45">
+      <animate attributeName="stroke-opacity" values="0.5;0.2;0.5" dur="3.80s" repeatCount="indefinite" />
+    </rect>
+    <g id="pacman-fetch-cycle">
+    <path d="M 96,788 L 904,788 A 16,16 0 0 1 920,804 L 920,878 A 16,16 0 0 1 904,894 L 96,894 A 16,16 0 0 1 80,878 L 80,804 A 16,16 0 0 1 96,788 Z" fill="none" stroke="#FFE600" stroke-opacity="0.16" stroke-width="1.5" stroke-dasharray="3 9" />
+    <g transform="translate(226.5, 788.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.06;0.07;0.082;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(338.4, 788.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.12;0.13;0.142;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(450.3, 788.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.18;0.19;0.202;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(562.1, 788.0)">
+        <g>
+          <circle cx="0" cy="0" r="4.8" fill="#00FF66" stroke="#FFFFFF" stroke-width="1" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="1;1;1;0;0;1;1" keyTimes="0;0.24;0.25;0.262;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;1.25;1.45;0;0;1;1" keyTimes="0;0.24;0.25;0.262;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(674.0, 788.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.3;0.31;0.322;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(785.9, 788.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.36;0.37;0.382;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(897.7, 788.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.42;0.43;0.442;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(918.7, 884.3)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.48;0.49;0.502;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(810.8, 894.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.54;0.55;0.562;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(698.9, 894.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.6;0.61;0.622;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(587.0, 894.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.66;0.67;0.682;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(475.2, 894.0)">
+        <g>
+          <circle cx="0" cy="0" r="4.8" fill="#00FF66" stroke="#FFFFFF" stroke-width="1" filter="url(#glowGreen)" />
+          <animate attributeName="opacity" values="1;1;1;0;0;1;1" keyTimes="0;0.72;0.73;0.742;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="scale" values="1;1.25;1.45;0;0;1;1" keyTimes="0;0.72;0.73;0.742;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </g>
+      </g>
+    <g transform="translate(363.3, 894.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.78;0.79;0.802;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(251.4, 894.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.84;0.85;0.862;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    <g transform="translate(139.5, 894.0)">
+        <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="1" fill="#FFF8CC" opacity="0.88">
+          <animate attributeName="opacity" values="0.88;0.88;1;0;0;0.88;0.88" keyTimes="0;0.9;0.91;0.922;0.96;0.99;1" dur="19.00s" repeatCount="indefinite" />
+        </rect>
+      </g>
+
+    <!-- Cyber Ghost chasing Pac-Man -->
+    <g opacity="0.94">
+      <animateMotion path="M 96,788 L 904,788 A 16,16 0 0 1 920,804 L 920,878 A 16,16 0 0 1 904,894 L 96,894 A 16,16 0 0 1 80,878 L 80,804 A 16,16 0 0 1 96,788 Z" begin="-16.34s" dur="19.00s" repeatCount="indefinite" />
+      <g transform="translate(0, -1)">
+        <path d="M -6.5,6 L -6.5,-1 A 6.5,6.5 0 0,1 6.5,-1 L 6.5,6 L 4,3.5 L 1.5,6 L 0,4 L -1.5,6 L -4,3.5 Z" fill="#00FF66" filter="url(#glowGreen)">
+          <animate attributeName="fill" values="#00FF66;#00FF66;#FFFFFF;#FFFFFF;#00FF66;#00FF66;#00FF66;#FFFFFF;#FFFFFF;#00FF66;#00FF66;#00FF66" keyTimes="0;0.245;0.25;0.33;0.36;0.39;0.725;0.73;0.81;0.84;0.87;1" dur="19.00s" repeatCount="indefinite" />
+        </path>
+        <circle cx="-2.4" cy="-1.2" r="1.7" fill="#FFFFFF" />
+        <circle cx="2.4" cy="-1.2" r="1.7" fill="#FFFFFF" />
+        <circle cx="-1.9" cy="-1.2" r="0.85" fill="#001A0D" />
+        <circle cx="2.9" cy="-1.2" r="0.85" fill="#001A0D" />
+        <animateTransform attributeName="transform" type="translate" values="0,-1; 0,-2.5; 0,-1" dur="1.14s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <!-- Pac-Man chomping around perimeter -->
+    <g filter="url(#glowYellow)">
+      <animateMotion path="M 96,788 L 904,788 A 16,16 0 0 1 920,804 L 920,878 A 16,16 0 0 1 904,894 L 96,894 A 16,16 0 0 1 80,878 L 80,804 A 16,16 0 0 1 96,788 Z" rotate="auto" begin="0s" dur="19.00s" repeatCount="indefinite" />
+      <g>
+        <path d="M -8.5,0 A 8.5,8.5 0 0,1 8.5,0 Z" fill="#FFE600">
+          <animateTransform attributeName="transform" type="rotate" values="0;-40;0" dur="0.76s" repeatCount="indefinite" />
+        </path>
+        <path d="M 8.5,0 A 8.5,8.5 0 0,1 -8.5,0 Z" fill="#FFE600">
+          <animateTransform attributeName="transform" type="rotate" values="0;40;0" dur="0.76s" repeatCount="indefinite" />
+        </path>
+      </g>
+    </g>
+  </g>
+
+    <g stroke="#FFFFFF" stroke-width="2" fill="none">
+      <path d="M74,806 L74,782 L98,782" />
+      <path d="M902,782 L926,782 L926,806" />
+      <path d="M74,876 L74,900 L98,900" />
+      <path d="M902,900 L926,900 L926,876" />
+      <animate attributeName="opacity" values="0.8;0.15;0.8" dur="5.70s" repeatCount="indefinite" />
+    </g>
+
+    <g transform="translate(178, 841)">
+      <g>
+        <path d="M 0,-26 A 26,26 0 0,1 22.5,13" fill="none" stroke="#00FF66" stroke-width="3.2" stroke-linecap="round" />
+        <polygon points="26,6 24,18 14,13" fill="#00FF66" />
+        <path d="M 18,18 A 26,26 0 0,1 -22.5,13" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" />
+        <polygon points="-16,18 -27,15 -22,5" fill="#FFFFFF" />
+        <path d="M -25,4 A 26,26 0 0,1 -5,-25" fill="none" stroke="#FFE600" stroke-width="3.2" stroke-linecap="round" />
+        <polygon points="-11,-28 0,-26 -6,-17" fill="#FFE600" />
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="11.40s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <text x="536" y="832" text-anchor="middle" font-size="21" font-weight="bold" fill="#FFFFFF" filter="url(#neonTextGlow)">
+      Ciclo Fetch - Decode - Execute:
+      <animate attributeName="opacity" values="1;1;0.25;1;1" keyTimes="0;0.74;0.77;0.80;1" dur="10.45s" repeatCount="indefinite" />
+    </text>
+    <text x="536" y="866" text-anchor="middle" font-size="16" fill="#00FF66">Prelievo, Decodifica, Esecuzione</text>
+  </g>
+
+  <g id="arrow-cycle-to-final">
+    <line x1="500" y1="894" x2="500" y2="916" stroke="url(#bridgeDownGrad)" stroke-width="3" />
+    <polygon points="493,912 507,912 500,924" fill="#00FF66" />
+    <circle cx="0" cy="0" r="5" fill="#00FF66" opacity="0">
+      <animateMotion path="M500,894 L500,924" begin="0.48s" dur="2.66s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.85;1" begin="0.48s" dur="2.66s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g id="final-phrase" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="924" width="940" height="64" rx="14" fill="#001A0D" stroke="#00FF66" stroke-width="2" stroke-opacity="0.35" />
+    <rect x="30" y="924" width="940" height="64" rx="14" fill="none" stroke="#00FF66" stroke-width="3" stroke-linecap="round" filter="url(#glowGreen)" stroke-dasharray="200 1784" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1984" dur="10.45s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.8;1" dur="10.45s" repeatCount="indefinite" />
+    </rect>
+    <g stroke="#00FF66" stroke-width="2" fill="none">
+      <path d="M24,940 L24,918 L46,918" />
+      <path d="M954,918 L976,918 L976,940" />
+      <path d="M24,972 L24,994 L46,994" />
+      <path d="M954,994 L976,994 L976,972" />
+      <animate attributeName="opacity" values="0.9;0.15;0.9" dur="6.65s" repeatCount="indefinite" />
+    </g>
+    <text x="500" y="963" text-anchor="middle" font-size="22" font-weight="bold" filter="url(#neonTextGlow)">
+      <tspan fill="#00FF66">Macchina</tspan>
+      <tspan fill="#FFFFFF"> a programma </tspan>
+      <tspan fill="#FFE600">memorizzato</tspan>
+      <animate attributeName="opacity" values="1;0.6;1;0.2;1" keyTimes="0;0.45;0.78;0.81;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+  </g>
+  <g id="checklist" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <rect x="30" y="1012" width="940" height="148" rx="12" fill="#050A07" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1.5" />
+    <rect x="30" y="1012" width="940" height="148" rx="12" fill="none" stroke="#00FF66" stroke-width="2" stroke-linecap="round" stroke-dasharray="140 2012" opacity="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-2152" dur="13.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.82;1" dur="13.30s" repeatCount="indefinite" />
+    </rect>
+    <line x1="495" y1="1028" x2="495" y2="1122" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1" />
+
+    <text x="52" y="1038" font-size="11.5" font-weight="bold" fill="#00FF66">CHECK COMPONENTI:</text>
+    <text x="52" y="1060" font-size="11" fill="#A8FFCC">[✓] CPU: CU, ALU, REGISTRI (PC, IR, ACC)</text>
+    <text x="52" y="1080" font-size="11" fill="#A8FFCC">[✓] MEMORIA CENTRALE (RAM): DATI E ISTRUZIONI</text>
+    <text x="52" y="1100" font-size="11" fill="#A8FFCC">[✓] UNITÀ I/O: TASTIERA, MOUSE, MONITOR, DISCO</text>
+
+    <text x="515" y="1038" font-size="11.5" font-weight="bold" fill="#FFE600">CHECK BUS E CICLO:</text>
+    <text x="515" y="1060" font-size="11" fill="#FFF2A6">[✓] BUS: DATI (BI), INDIRIZZI (UNI), CONTROLLO (BI)</text>
+    <text x="515" y="1080" font-size="11" fill="#FFF2A6">[✓] CICLO: FETCH → DECODE → EXECUTE</text>
+    <text x="515" y="1100" font-size="11" fill="#FFF2A6">[✓] MACCHINA A PROGRAMMA MEMORIZZATO</text>
+
+    <line x1="52" y1="1128" x2="948" y2="1128" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+    <text x="500" y="1148" text-anchor="middle" font-size="12" fill="#888888">Generato da immagine schema con Skill cyberpunk-svg-diagram — puro SMIL (1.9x LENTO)</text>
+  </g>
+</svg>

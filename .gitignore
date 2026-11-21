@@ -10,13 +10,25 @@
 
 # web-v2: pubblica solo l'app, non i materiali sorgente
 /web-v2/assets/avatar/
+/web-v2/assets/skill/
 /web-v2/assets/img/_gen/
 /web-v2/assets/img/hero.jpg
 /web-v2/assets/img/hero-crew.webp
+/web-v2/assets/video/Aria_001_test(10).mp4
 /web-v2/assets/video/corso-base-001.mp4
 /web-v2/assets/video/hero-001.mp4
 /web-v2/assets/video/hero-001.webm
 /web-v2/assets/video/webeapp-001.mp4
+/web-v2/assets/svg/architettura-von-neumann.svg
+/web-v2/assets/svg/architettura-von-neumann-pacman.svg
+/web-v2/assets/svg/gemini-svg(1).svg
+/web-v2/assets/svg/gemini-svg(2).svg
+/web-v2/assets/svg/gemini-svg(3).svg
+/web-v2/assets/svg/hardware-vs-software(2).svg
+/web-v2/assets/svg/hardware-vs-software-dyn.svg
+/web-v2/assets/svg/hardware-vs-software-mx.svg
+/web-v2/assets/svg/hardware-vs-software-snake.svg
+/web-v2/assets/svg/scala-unita-informatiche.svg
 
 # Sicurezza e file di sistema
 .DS_Store

@@ -1,0 +1,734 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1118" width="1000" height="1118" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">
+  <defs>
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#001A0D" stroke-width="1" />
+    </pattern>
+
+    <radialGradient id="titleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#FFE600" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00FFFF" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="speedBannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF" />
+      <stop offset="50%" stop-color="#00FF66" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00FF66" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#00FF66" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600" stop-opacity="0" />
+      <stop offset="25%" stop-color="#FFE600" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#FFE600" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#FFE600" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="matrixFadeCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00FFFF" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00FFFF" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#00FFFF" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00FFFF" stop-opacity="1" />
+    </linearGradient>
+
+    <clipPath id="matrixLeftClip">
+      <rect x="0" y="105" width="24" height="1003" />
+    </clipPath>
+    <clipPath id="matrixRightClip">
+      <rect x="976" y="105" width="24" height="1003" />
+    </clipPath>
+    <clipPath id="matrixCorridor1Clip">
+      <rect x="323" y="114" width="29" height="632" />
+    </clipPath>
+    <clipPath id="matrixCorridor2Clip">
+      <rect x="648" y="114" width="29" height="632" />
+    </clipPath>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonTextGlow" x="-15%" y="-30%" width="130%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="matrixHeadGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. Pure Black Background & Grid -->
+  <rect x="0" y="0" width="1000" height="1118" fill="#000000" />
+  <rect x="0" y="0" width="1000" height="1118" fill="url(#cyberGrid)" opacity="0.52" />
+  <ellipse cx="500" cy="54" rx="460" ry="60" fill="url(#titleGlow)" />
+
+  <!-- Subtle Outer & Corridor PCB Traces -->
+  <g stroke-width="1" fill="none" opacity="0.2">
+    <path d="M 14,130 L 14,734 L 26,746" stroke="#00FF66" />
+    <path d="M 986,130 L 986,734 L 974,746" stroke="#00FFFF" />
+    <path d="M 337,130 L 337,734" stroke="#FFE600" />
+    <path d="M 662,130 L 662,734" stroke="#00FFFF" />
+  </g>
+  <path d="M 337,130 L 337,734" fill="none" stroke="#00FF66" stroke-width="1.3" stroke-dasharray="24 140" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-164" dur="11.40s" repeatCount="indefinite" />
+  </path>
+  <path d="M 662,734 L 662,130" fill="none" stroke="#00FFFF" stroke-width="1.3" stroke-dasharray="24 140" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-164" dur="11.40s" repeatCount="indefinite" />
+  </path>
+
+  <!-- 2. Bicolore/Tricolore Matrix Rain in Outer Margins & Inter-Panel Corridors -->
+  <g clip-path="url(#matrixLeftClip)">
+    <g>
+      <text x="12" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeGreen)" opacity="0.5"><tspan x="12" dy="0">0</tspan><tspan x="12" dy="13">1</tspan><tspan x="12" dy="13">R</tspan><tspan x="12" dy="13">A</tspan><tspan x="12" dy="13">M</tspan><tspan x="12" dy="13">&lt;</tspan><tspan x="12" dy="13">D</tspan><tspan x="12" dy="13">R</tspan><tspan x="12" dy="13">/</tspan><tspan x="12" dy="13">L</tspan><tspan x="12" dy="13">{</tspan><tspan x="12" dy="13">1</tspan><tspan x="12" dy="13">0</tspan><tspan x="12" dy="13">&gt;</tspan><tspan x="12" dy="13">C</tspan><tspan x="12" dy="13">A</tspan></text>
+      <text x="12" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">#</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-240" to="0,1158" begin="-3.80s" dur="13.30s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g clip-path="url(#matrixRightClip)">
+    <g>
+      <text x="988" y="0" text-anchor="middle" font-size="9.5" font-weight="bold" fill="url(#matrixFadeCyan)" opacity="0.5"><tspan x="988" dy="0">S</tspan><tspan x="988" dy="13">R</tspan><tspan x="988" dy="13">0</tspan><tspan x="988" dy="13">&lt;</tspan><tspan x="988" dy="13">1</tspan><tspan x="988" dy="13">9</tspan><tspan x="988" dy="13">/</tspan><tspan x="988" dy="13">L</tspan><tspan x="988" dy="13">1</tspan><tspan x="988" dy="13">L</tspan><tspan x="988" dy="13">}</tspan><tspan x="988" dy="13">2</tspan><tspan x="988" dy="13">L</tspan><tspan x="988" dy="13">3</tspan><tspan x="988" dy="13">1</tspan><tspan x="988" dy="13">#</tspan></text>
+      <text x="988" y="208" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">&gt;</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-260" to="0,1158" begin="-8.20s" dur="15.20s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g clip-path="url(#matrixCorridor1Clip)">
+    <g>
+      <text x="337" y="0" text-anchor="middle" font-size="9" font-weight="bold" fill="url(#matrixFadeYellow)" opacity="0.45"><tspan x="337" dy="0">1</tspan><tspan x="337" dy="13">0</tspan><tspan x="337" dy="13">R</tspan><tspan x="337" dy="13">O</tspan><tspan x="337" dy="13">&gt;</tspan><tspan x="337" dy="13">B</tspan><tspan x="337" dy="13">I</tspan><tspan x="337" dy="13">;</tspan><tspan x="337" dy="13">O</tspan><tspan x="337" dy="13">S</tspan><tspan x="337" dy="13">}</tspan><tspan x="337" dy="13">E</tspan><tspan x="337" dy="13">1</tspan><tspan x="337" dy="13">:</tspan><tspan x="337" dy="13">P</tspan><tspan x="337" dy="13">&lt;</tspan></text>
+      <text x="337" y="208" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">9</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-160" to="0,810" begin="-5.20s" dur="12.35s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g clip-path="url(#matrixCorridor2Clip)">
+    <g>
+      <text x="662" y="0" text-anchor="middle" font-size="9" font-weight="bold" fill="url(#matrixFadeCyan)" opacity="0.45"><tspan x="662" dy="0">S</tspan><tspan x="662" dy="13">R</tspan><tspan x="662" dy="13">0</tspan><tspan x="662" dy="13">&lt;</tspan><tspan x="662" dy="13">1</tspan><tspan x="662" dy="13">9</tspan><tspan x="662" dy="13">/</tspan><tspan x="662" dy="13">L</tspan><tspan x="662" dy="13">1</tspan><tspan x="662" dy="13">L</tspan><tspan x="662" dy="13">}</tspan><tspan x="662" dy="13">2</tspan><tspan x="662" dy="13">L</tspan><tspan x="662" dy="13">3</tspan><tspan x="662" dy="13">1</tspan><tspan x="662" dy="13">#</tspan></text>
+      <text x="662" y="208" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF" opacity="0.92" filter="url(#matrixHeadGlow)">&gt;</text>
+      <animateTransform attributeName="transform" type="translate" from="0,-180" to="0,810" begin="-9.60s" dur="14.25s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <!-- 3. Header with Intermittent Glitch & Neon Tube Flicker -->
+  <g id="header">
+    <!-- Cyan Ghost Glitch -->
+    <text x="500" y="48" text-anchor="middle" font-size="38" font-weight="900" letter-spacing="1.6" fill="#00FFFF" opacity="0">
+      RAM vs ROM vs CACHE
+      <animate attributeName="opacity" values="0;0;0.7;0;0.55;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -3,-1; 4,1; -2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+    <!-- Magenta Ghost Glitch -->
+    <text x="500" y="48" text-anchor="middle" font-size="38" font-weight="900" letter-spacing="1.6" fill="#FF2E63" opacity="0">
+      RAM vs ROM vs CACHE
+      <animate attributeName="opacity" values="0;0;0.6;0;0.5;0;0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 3,1; -3,-1; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Primary Title -->
+    <text x="500" y="48" text-anchor="middle" font-size="38" font-weight="900" letter-spacing="1.6" filter="url(#neonTextGlow)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 2,0; -3,0; 2,0; 0,0; 0,0" keyTimes="0;0.78;0.81;0.84;0.87;0.90;1" dur="5.70s" repeatCount="indefinite" />
+      <tspan fill="#00FF66">RAM<animate attributeName="opacity" values="1;1;0.12;1;1;0.2;1" keyTimes="0;0.34;0.36;0.38;0.74;0.75;1" dur="7.60s" repeatCount="indefinite" /></tspan>
+      <tspan fill="#FFFFFF"> vs </tspan>
+      <tspan fill="#FFE600">ROM<animate attributeName="opacity" values="1;1;0.14;1;1;0.18;1" keyTimes="0;0.52;0.54;0.56;0.84;0.85;1" dur="9.50s" repeatCount="indefinite" /></tspan>
+      <tspan fill="#FFFFFF"> vs </tspan>
+      <tspan fill="#00FFFF">CACHE<animate attributeName="opacity" values="1;1;0.14;1;1;0.2;1" keyTimes="0;0.42;0.44;0.46;0.80;0.82;1" dur="8.55s" repeatCount="indefinite" /></tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="500" y="77" text-anchor="middle" font-size="15.5" font-weight="600" fill="#A8FFCC" letter-spacing="0.6">
+      Schema di ripasso - Differenze tecniche tra le memorie
+      <animate attributeName="opacity" values="0.9;0.9;0.2;0.9;0.9" keyTimes="0;0.62;0.64;0.66;1" dur="11.40s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Telemetry Status Line -->
+    <text x="500" y="97" text-anchor="middle" font-size="9.5" fill="#FFE600" opacity="0.72" letter-spacing="1.2">
+      MEM.COMPARE // GAME OF LIFE + MISSILE COMMAND + FROGGER + ARKANOID // 1.9x SLOW
+    </text>
+  </g>
+
+  <!-- 4. COLUMN 1: RAM (x=28, y=114, w=294, h=632) -->
+  <g id="panel-ram" transform="translate(28, 114)">
+    <rect x="0" y="0" width="294" height="632" rx="18" fill="#000A05" stroke="#00FF66" stroke-width="2" filter="url(#glowGreen)" />
+    <!-- HUD Corner Brackets -->
+    <path d="M 16,0 L 0,0 L 0,16 M 278,0 L 294,0 L 294,16 M 0,616 L 0,632 L 16,632 M 294,616 L 294,632 L 278,632" fill="none" stroke="#A8FFCC" stroke-width="2" />
+    <!-- Border Light Tracer -->
+    <rect x="0" y="0" width="294" height="632" rx="18" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="36 1784" opacity="0.65">
+      <animate attributeName="stroke-dashoffset" values="0;-1820" dur="15.20s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Header & Pictogram -->
+    <text x="147" y="34" text-anchor="middle" font-size="23" font-weight="900" fill="#00FF66" letter-spacing="1.2">RAM</text>
+    <text x="147" y="54" text-anchor="middle" font-size="11.5" fill="#A8FFCC">(Random Access Memory)</text>
+
+    <!-- DIMM Stick Vector Pictogram -->
+    <g transform="translate(147, 102)">
+      <g>
+        <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="7.60s" repeatCount="indefinite" />
+        <rect x="-54" y="-22" width="108" height="40" rx="4" fill="#001A0D" stroke="#00FF66" stroke-width="1.8" />
+        <rect x="-44" y="-12" width="16" height="18" rx="2" fill="#00381C" stroke="#A8FFCC" stroke-width="1" />
+        <rect x="-20" y="-12" width="16" height="18" rx="2" fill="#00381C" stroke="#A8FFCC" stroke-width="1" />
+        <rect x="4" y="-12" width="16" height="18" rx="2" fill="#00381C" stroke="#A8FFCC" stroke-width="1" />
+        <rect x="28" y="-12" width="16" height="18" rx="2" fill="#00381C" stroke="#A8FFCC" stroke-width="1" />
+        <!-- Gold contact pins + notch -->
+        <g fill="#FFE600">
+          <rect x="-46" y="18" width="5" height="6" />
+          <rect x="-38" y="18" width="5" height="6" />
+          <rect x="-30" y="18" width="5" height="6" />
+          <rect x="-22" y="18" width="5" height="6" />
+          <rect x="-14" y="18" width="5" height="6" />
+          <rect x="10" y="18" width="5" height="6" />
+          <rect x="18" y="18" width="5" height="6" />
+          <rect x="26" y="18" width="5" height="6" />
+          <rect x="34" y="18" width="5" height="6" />
+          <rect x="42" y="18" width="5" height="6" />
+        </g>
+        <rect x="-5" y="14" width="10" height="6" rx="2" fill="#000A05" />
+      </g>
+    </g>
+
+    <line x1="18" y1="150" x2="276" y2="150" stroke="#00FF66" stroke-opacity="0.35" stroke-width="1.2" />
+
+    <!-- Bullets (exact technical facts) -->
+    <g font-size="12" fill="#E0FFE6" xml:space="preserve">
+      <text x="16" y="182" fill="#00FF66" font-weight="bold">• Lettura e Scrittura (R/W)</text>
+
+      <text x="16" y="218">• Volatile (perde i dati</text>
+      <text x="16" y="237">  allo spegnimento)</text>
+
+      <text x="16" y="273">• Tecnologia: <tspan fill="#FFFFFF" font-weight="bold">DRAM</tspan></text>
+      <text x="16" y="292">  (condensatori, richiede refresh)</text>
+
+      <text x="16" y="328">• Funzione: contiene programmi</text>
+      <text x="16" y="347">  e dati in esecuzione</text>
+
+      <text x="16" y="383">• Capacità: <tspan fill="#00FF66" font-weight="bold">Alta (8 GB - 64+ GB)</tspan></text>
+    </g>
+
+    <!-- Arcade Motif: Game of Life (DRAM dynamic cell refresh) -->
+    <g id="game-of-life-ram" transform="translate(16, 480)">
+      <rect x="0" y="0" width="262" height="136" rx="10" fill="#020D06" stroke="#00FF66" stroke-opacity="0.45" stroke-width="1.2" />
+      <text x="14" y="18" font-size="8.5" font-weight="bold" fill="#00FF66" letter-spacing="0.6">GAME OF LIFE // DRAM</text>
+      <text x="248" y="18" text-anchor="end" font-size="7.5" fill="#A8FFCC">CELL_REFRESH</text>
+
+      <rect x="14" y="28" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="30" y="28" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="46" y="28" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="62" y="28" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="78" y="28" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="94" y="28" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="14" y="44" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;1;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#00FF66;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="30" y="44" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;1;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#00FF66;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="46" y="44" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;1;1;0.12;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#00FF66;#00FF66;#001A0D;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="62" y="44" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="78" y="44" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="94" y="44" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="14" y="60" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;0.12;1;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#001A0D;#00FF66;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="30" y="60" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;1;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#00FF66;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="46" y="60" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;1;1;1;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#00FF66;#00FF66;#00FF66;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="62" y="60" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;1;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#00FF66;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="78" y="60" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;0.12;1;0.12;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#001A0D;#00FF66;#001A0D;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="94" y="60" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="14" y="76" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="30" y="76" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;1;1;1;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#00FF66;#00FF66;#00FF66;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="46" y="76" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;1;1;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#00FF66;#00FF66;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="62" y="76" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;1;0.12;1;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#00FF66;#001A0D;#00FF66;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="78" y="76" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;1;1;1;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#00FF66;#00FF66;#00FF66;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="94" y="76" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;1;0.12;1;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#00FF66;#001A0D;#00FF66;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="14" y="92" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="30" y="92" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="46" y="92" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="62" y="92" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="78" y="92" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="1;0.12;1;0.12;1" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#00FF66;#001A0D;#00FF66;#001A0D;#00FF66" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="94" y="92" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="14" y="108" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="30" y="108" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="46" y="108" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="62" y="108" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="78" y="108" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+      <rect x="94" y="108" width="13" height="13" rx="2" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.35" stroke-width="0.8">
+          <animate attributeName="opacity" values="0.12;0.12;0.12;0.12;0.12" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#001A0D;#001A0D;#001A0D;#001A0D;#001A0D" calcMode="discrete" dur="11.40s" repeatCount="indefinite" />
+        </rect>
+
+      <!-- Right-side Capacitor Refresh Telemetry -->
+      <rect x="122" y="28" width="126" height="94" rx="6" fill="#00140A" stroke="#00FF66" stroke-opacity="0.25" stroke-width="0.9" />
+      <text x="132" y="46" font-size="8" font-weight="bold" fill="#FFFFFF">CONDENSATORI</text>
+      <text x="132" y="61" font-size="7.5" fill="#A8FFCC">Stato: DINAMICO</text>
+      <text x="132" y="76" font-size="7.5" fill="#00FF66">Ciclo: 64ms SYNC</text>
+      <text x="132" y="94" font-size="7" fill="#FFE600">POWER OFF → 0x00</text>
+      <rect x="132" y="104" width="106" height="5" rx="2.5" fill="#000A05" stroke="#00FF66" stroke-opacity="0.4" stroke-width="0.6" />
+      <rect x="132" y="104" width="20" height="5" rx="2.5" fill="#00FF66">
+        <animate attributeName="width" values="10;106;10" dur="5.70s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <!-- 5. COLUMN 2: ROM (x=353, y=114, w=294, h=632) -->
+  <g id="panel-rom" transform="translate(353, 114)">
+    <rect x="0" y="0" width="294" height="632" rx="18" fill="#0A0800" stroke="#FFE600" stroke-width="2" filter="url(#glowYellow)" />
+    <!-- HUD Corner Brackets -->
+    <path d="M 16,0 L 0,0 L 0,16 M 278,0 L 294,0 L 294,16 M 0,616 L 0,632 L 16,632 M 294,616 L 294,632 L 278,632" fill="none" stroke="#FFF2A6" stroke-width="2" />
+    <!-- Border Light Tracer -->
+    <rect x="0" y="0" width="294" height="632" rx="18" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="36 1784" opacity="0.65">
+      <animate attributeName="stroke-dashoffset" values="0;1820" dur="15.20s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Header & Pictogram -->
+    <text x="147" y="34" text-anchor="middle" font-size="23" font-weight="900" fill="#FFE600" letter-spacing="1.2">ROM</text>
+    <text x="147" y="54" text-anchor="middle" font-size="11.5" fill="#FFF2A6">(Read-Only Memory)</text>
+
+    <!-- EEPROM / BIOS Board Vector Pictogram -->
+    <g transform="translate(147, 102)">
+      <g>
+        <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="8.55s" repeatCount="indefinite" />
+        <rect x="-44" y="-28" width="88" height="56" rx="5" fill="#1A1500" stroke="#FFE600" stroke-width="1.8" />
+        <!-- PCB traces -->
+        <path d="M -38,-18 L -26,-18 L -26,-8 M 38,-18 L 26,-18 L 26,-8 M -38,18 L -22,18 L -22,10 M 38,18 L 22,18 L 22,10" fill="none" stroke="#FFE600" stroke-opacity="0.65" stroke-width="1.2" />
+        <!-- Central EEPROM chip -->
+        <rect x="-24" y="-12" width="48" height="24" rx="3" fill="#0A0800" stroke="#FFFFFF" stroke-width="1.2" />
+        <text x="0" y="4" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#FFE600">EEPROM</text>
+        <circle cx="-36" cy="0" r="2.5" fill="#00FF66" />
+        <circle cx="36" cy="0" r="2.5" fill="#00FFFF" />
+      </g>
+    </g>
+
+    <line x1="18" y1="150" x2="276" y2="150" stroke="#FFE600" stroke-opacity="0.35" stroke-width="1.2" />
+
+    <!-- Bullets (exact technical facts) -->
+    <g font-size="12" fill="#FFF2A6" xml:space="preserve">
+      <text x="16" y="182" fill="#FFE600" font-weight="bold">• Sola Lettura</text>
+      <text x="16" y="201">  (o scrittura rara)</text>
+
+      <text x="16" y="237">• Non volatile (mantiene i dati</text>
+      <text x="16" y="256">  senza corrente)</text>
+
+      <text x="16" y="292">• Tecnologia: <tspan fill="#FFFFFF" font-weight="bold">EEPROM /</tspan></text>
+      <text x="16" y="311">  <tspan fill="#FFFFFF" font-weight="bold">Memoria Flash</tspan></text>
+
+      <text x="16" y="347">• Funzione: conserva il firmware</text>
+      <text x="16" y="366">  di avvio (BIOS / UEFI)</text>
+
+      <text x="16" y="402">• Capacità: <tspan fill="#FFE600" font-weight="bold">Bassa (pochi MB)</tspan></text>
+    </g>
+
+    <!-- Arcade Motif: Missile Command (BIOS protection) -->
+    <g id="missile-command-rom" transform="translate(16, 480)">
+      <rect x="0" y="0" width="262" height="136" rx="10" fill="#0A0800" stroke="#FFE600" stroke-opacity="0.45" stroke-width="1.2" />
+      <text x="14" y="18" font-size="8.5" font-weight="bold" fill="#FFE600" letter-spacing="0.6">MISSILE CMD // ROM</text>
+      <text x="248" y="18" text-anchor="end" font-size="7.5" fill="#FFF2A6">BIOS_SHIELD</text>
+
+      <!-- Night sky radar frame -->
+      <rect x="12" y="26" width="238" height="98" rx="6" fill="#050400" stroke="#FFE600" stroke-opacity="0.25" stroke-width="0.9" />
+
+      <!-- Incoming diagonal write-spike 1 -> intercepted at (78, 62) -->
+      <path d="M 30,30 L 78,62" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="60" stroke-dashoffset="60">
+        <animate attributeName="stroke-dashoffset" values="60;0;0;60" keyTimes="0;0.34;0.42;0.44" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.36;0.45;1" dur="15.20s" repeatCount="indefinite" />
+      </path>
+      <!-- Counter-missile 1 from center turret (131, 102) -> (78, 62) -->
+      <path d="M 131,102 L 78,62" fill="none" stroke="#FFE600" stroke-width="1.3" stroke-dasharray="70" stroke-dashoffset="70">
+        <animate attributeName="stroke-dashoffset" values="70;70;0;0" keyTimes="0;0.14;0.34;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.14;0.35;0.44;1" dur="15.20s" repeatCount="indefinite" />
+      </path>
+      <!-- Interception Blast Ring 1 -->
+      <circle cx="78" cy="62" r="3" fill="none" stroke="#FFE600" stroke-width="1.5" opacity="0">
+        <animate attributeName="r" values="3;20;24" keyTimes="0;0.35;0.54" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.33;0.36;0.55;1" dur="15.20s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Incoming diagonal write-spike 2 -> intercepted at (186, 58) -->
+      <path d="M 232,30 L 186,58" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="60" stroke-dashoffset="60">
+        <animate attributeName="stroke-dashoffset" values="60;60;0;0" keyTimes="0;0.48;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.48;0.82;0.92;1" dur="15.20s" repeatCount="indefinite" />
+      </path>
+      <!-- Counter-missile 2 from center turret (131, 102) -> (186, 58) -->
+      <path d="M 131,102 L 186,58" fill="none" stroke="#00FF66" stroke-width="1.3" stroke-dasharray="75" stroke-dashoffset="75">
+        <animate attributeName="stroke-dashoffset" values="75;75;0;0" keyTimes="0;0.60;0.80;1" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.60;0.81;0.91;1" dur="15.20s" repeatCount="indefinite" />
+      </path>
+      <!-- Interception Blast Ring 2 -->
+      <circle cx="186" cy="58" r="3" fill="none" stroke="#00FF66" stroke-width="1.5" opacity="0">
+        <animate attributeName="r" values="3;20;24" keyTimes="0;0.80;0.96" dur="15.20s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.79;0.81;0.97;1" dur="15.20s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Protected Immutable EEPROM Nodes & Turret Base -->
+      <rect x="24" y="102" width="54" height="14" rx="3" fill="#1A1500" stroke="#FFE600" stroke-width="1.2" />
+      <text x="51" y="112" text-anchor="middle" font-size="7" font-weight="bold" fill="#FFE600">BIOS_0</text>
+
+      <polygon points="121,116 141,116 135,101 127,101" fill="#FFE600" />
+      <text x="131" y="96" text-anchor="middle" font-size="6.5" font-weight="bold" fill="#FFFFFF">LOCK</text>
+
+      <rect x="184" y="102" width="54" height="14" rx="3" fill="#1A1500" stroke="#FFE600" stroke-width="1.2" />
+      <text x="211" y="112" text-anchor="middle" font-size="7" font-weight="bold" fill="#FFE600">UEFI_1</text>
+    </g>
+  </g>
+
+  <!-- 6. COLUMN 3: MEMORIA CACHE (x=678, y=114, w=294, h=632) -->
+  <g id="panel-cache" transform="translate(678, 114)">
+    <rect x="0" y="0" width="294" height="632" rx="18" fill="#000B0F" stroke="#00FFFF" stroke-width="2" filter="url(#glowCyan)" />
+    <!-- HUD Corner Brackets -->
+    <path d="M 16,0 L 0,0 L 0,16 M 278,0 L 294,0 L 294,16 M 0,616 L 0,632 L 16,632 M 294,616 L 294,632 L 278,632" fill="none" stroke="#FFFFFF" stroke-width="2" />
+    <!-- Border Light Tracer -->
+    <rect x="0" y="0" width="294" height="632" rx="18" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="36 1784" opacity="0.65">
+      <animate attributeName="stroke-dashoffset" values="0;-1820" dur="15.20s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Header & Pictogram -->
+    <text x="147" y="34" text-anchor="middle" font-size="21.5" font-weight="900" fill="#00FFFF" letter-spacing="0.8">MEMORIA CACHE</text>
+    <text x="147" y="54" text-anchor="middle" font-size="11.5" fill="#E0FFFF">(L1, L2, L3)</text>
+
+    <!-- Integrated CPU Cache Vector Pictogram -->
+    <g transform="translate(147, 102)">
+      <g>
+        <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="6.65s" repeatCount="indefinite" />
+        <rect x="-24" y="-24" width="48" height="48" rx="6" fill="#001D26" stroke="#00FFFF" stroke-width="1.8" />
+        <!-- Pins -->
+        <g stroke="#00FFFF" stroke-width="1.6">
+          <line x1="-14" y1="-31" x2="-14" y2="-24" />
+          <line x1="0" y1="-31" x2="0" y2="-24" />
+          <line x1="14" y1="-31" x2="14" y2="-24" />
+          <line x1="-14" y1="24" x2="-14" y2="31" />
+          <line x1="0" y1="24" x2="0" y2="31" />
+          <line x1="14" y1="24" x2="14" y2="31" />
+          <line x1="-31" y1="-14" x2="-24" y2="-14" />
+          <line x1="-31" y1="0" x2="-24" y2="0" />
+          <line x1="-31" y1="14" x2="-24" y2="14" />
+          <line x1="24" y1="-14" x2="31" y2="-14" />
+          <line x1="24" y1="0" x2="31" y2="0" />
+          <line x1="24" y1="14" x2="31" y2="14" />
+        </g>
+        <rect x="-15" y="-15" width="30" height="30" rx="3" fill="#003747" stroke="#FFFFFF" stroke-width="1" />
+        <text x="0" y="4" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#FFFFFF">CPU</text>
+      </g>
+    </g>
+
+    <line x1="18" y1="150" x2="276" y2="150" stroke="#00FFFF" stroke-opacity="0.35" stroke-width="1.2" />
+
+    <!-- Bullets (exact technical facts, OCR fixed to "principio di località") -->
+    <g font-size="12" fill="#E0FFFF" xml:space="preserve">
+      <text x="16" y="182" fill="#00FFFF" font-weight="bold">• Lettura e Scrittura</text>
+      <text x="16" y="201" fill="#00FFFF" font-weight="bold">  ultra-rapida</text>
+
+      <text x="16" y="237">• Volatile</text>
+
+      <text x="16" y="273">• Tecnologia: <tspan fill="#FFFFFF" font-weight="bold">SRAM</tspan> (flip-flop,</text>
+      <text x="16" y="292">  nessun refresh, nella CPU)</text>
+
+      <text x="16" y="328">• Funzione: riduce collo di</text>
+      <text x="16" y="347">  bottiglia CPU-RAM (principio</text>
+      <text x="16" y="366">  di località)</text>
+
+      <text x="16" y="402">• Capacità: <tspan fill="#00FFFF" font-weight="bold">Molto ridotta</tspan></text>
+      <text x="16" y="421">  <tspan fill="#00FFFF" font-weight="bold">(KB - pochi MB)</tspan></text>
+    </g>
+
+    <!-- Arcade Motif: Frogger (L3 -> L2 -> L1 -> CPU Cache Hop) -->
+    <g id="frogger-cache-hop" transform="translate(16, 480)">
+      <rect x="0" y="0" width="262" height="136" rx="10" fill="#001218" stroke="#00FFFF" stroke-opacity="0.45" stroke-width="1.2" />
+      <text x="14" y="18" font-size="8.5" font-weight="bold" fill="#00FFFF" letter-spacing="0.6">FROGGER // CACHE</text>
+      <text x="248" y="18" text-anchor="end" font-size="7.5" fill="#FFFFFF">L3→L2→L1→CPU</text>
+
+      <!-- CPU Target Goal Bar -->
+      <rect x="14" y="25" width="234" height="15" rx="4" fill="#00222B" stroke="#00FFFF" stroke-opacity="0.4" stroke-width="0.9" />
+      <text x="131" y="36" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#FFFFFF">CPU CORE TARGET (ZERO WAIT)</text>
+
+      <!-- Lane L1 (y=45..61) moving right -->
+      <rect x="14" y="45" width="234" height="16" rx="3" fill="#010A0E" stroke="#00FFFF" stroke-opacity="0.2" stroke-width="0.7" />
+      <text x="20" y="56" font-size="7" font-weight="bold" fill="#00FFFF">L1</text>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 64,0; 0,0" dur="9.50s" repeatCount="indefinite" />
+        <rect x="48" y="48" width="38" height="10" rx="3" fill="#00FFFF" fill-opacity="0.32" stroke="#00FFFF" stroke-width="0.8" />
+        <rect x="128" y="48" width="44" height="10" rx="3" fill="#00FFFF" fill-opacity="0.32" stroke="#00FFFF" stroke-width="0.8" />
+      </g>
+
+      <!-- Lane L2 (y=66..82) moving left -->
+      <rect x="14" y="66" width="234" height="16" rx="3" fill="#010A0E" stroke="#00FF66" stroke-opacity="0.2" stroke-width="0.7" />
+      <text x="20" y="77" font-size="7" font-weight="bold" fill="#00FF66">L2</text>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="54,0; -16,0; 54,0" dur="11.40s" repeatCount="indefinite" />
+        <rect x="52" y="69" width="42" height="10" rx="3" fill="#00FF66" fill-opacity="0.3" stroke="#00FF66" stroke-width="0.8" />
+        <rect x="138" y="69" width="42" height="10" rx="3" fill="#00FF66" fill-opacity="0.3" stroke="#00FF66" stroke-width="0.8" />
+      </g>
+
+      <!-- Lane L3 (y=87..103) moving right -->
+      <rect x="14" y="87" width="234" height="16" rx="3" fill="#010A0E" stroke="#FFE600" stroke-opacity="0.2" stroke-width="0.7" />
+      <text x="20" y="98" font-size="7" font-weight="bold" fill="#FFE600">L3</text>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="-8,0; 56,0; -8,0" dur="13.30s" repeatCount="indefinite" />
+        <rect x="54" y="90" width="46" height="10" rx="3" fill="#FFE600" fill-opacity="0.28" stroke="#FFE600" stroke-width="0.8" />
+        <rect x="136" y="90" width="46" height="10" rx="3" fill="#FFE600" fill-opacity="0.28" stroke="#FFE600" stroke-width="0.8" />
+      </g>
+
+      <!-- Bottom RAM Start Dock -->
+      <rect x="14" y="108" width="234" height="16" rx="3" fill="#001A0D" stroke="#00FF66" stroke-opacity="0.28" stroke-width="0.8" />
+      <text x="220" y="119" text-anchor="end" font-size="7" fill="#A8FFCC">LOCALITÀ SPAZIALE/TEMP.</text>
+
+      <!-- Frogger Hot-Data Packet hopping upward discretely across RAM -> L3 -> L2 -> L1 -> CPU -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" calcMode="discrete" values="131,116; 131,95; 131,74; 131,53; 131,32; 131,116" keyTimes="0;0.18;0.38;0.58;0.78;0.94" dur="15.20s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="6" fill="#00FFFF" opacity="0.28" />
+        <rect x="-4.5" y="-4.5" width="9" height="9" rx="2" fill="#FFFFFF" stroke="#00FFFF" stroke-width="1.2" />
+      </g>
+    </g>
+  </g>
+
+  <!-- 7. Vertical Flow Connectors from 3 Columns to Speed Banner -->
+  <g id="column-to-speed-arrows">
+    <line x1="175" y1="746" x2="175" y2="778" stroke="#00FF66" stroke-width="2" />
+    <polygon points="175,786 168,775 182,775" fill="#00FF66" />
+    <circle cx="175" cy="748" r="4" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="748;779" dur="3.80s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.80s" repeatCount="indefinite" />
+    </circle>
+
+    <line x1="500" y1="746" x2="500" y2="778" stroke="#FFE600" stroke-width="2" />
+    <polygon points="500,786 493,775 507,775" fill="#FFE600" />
+    <circle cx="500" cy="748" r="4" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="748;779" dur="3.80s" begin="-1.30s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.80s" begin="-1.30s" repeatCount="indefinite" />
+    </circle>
+
+    <line x1="825" y1="746" x2="825" y2="778" stroke="#00FFFF" stroke-width="2" />
+    <polygon points="825,786 818,775 832,775" fill="#00FFFF" />
+    <circle cx="825" cy="748" r="4" fill="#FFFFFF" opacity="0">
+      <animate attributeName="cy" values="748;779" dur="3.80s" begin="-2.50s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.80s" begin="-2.50s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 8. Bottom Banner: Ordine di velocità + Arkanoid Speed Rank -->
+  <g id="speed-order-banner" transform="translate(28, 786)">
+    <rect x="0" y="0" width="944" height="140" rx="16" fill="#010A07" stroke="url(#speedBannerGrad)" stroke-width="2" />
+    <path d="M 14,0 L 0,0 L 0,14 M 930,0 L 944,0 L 944,14 M 0,126 L 0,140 L 14,140 M 944,126 L 944,140 L 930,140" fill="none" stroke="#FFFFFF" stroke-width="2" />
+
+    <text x="295" y="38" text-anchor="middle" font-size="19" font-weight="900" fill="#FFFFFF" letter-spacing="0.6">Ordine di velocità:</text>
+    <text x="295" y="72" text-anchor="middle" font-size="19.5" font-weight="900" filter="url(#neonTextGlow)">
+      <tspan fill="#00FFFF">Cache (SRAM)</tspan>
+      <tspan fill="#FFFFFF"> &gt; </tspan>
+      <tspan fill="#00FF66">RAM (DRAM)</tspan>
+      <tspan fill="#FFFFFF"> &gt; </tspan>
+      <tspan fill="#FFE600">ROM (Flash)</tspan>
+    </text>
+
+    <!-- Visual Latency / Speed Gauges -->
+    <g transform="translate(36, 94)">
+      <text x="0" y="10" font-size="9" font-weight="bold" fill="#00FFFF">CACHE</text>
+      <rect x="44" y="2" width="120" height="8" rx="4" fill="#002833" />
+      <rect x="44" y="2" width="114" height="8" rx="4" fill="#00FFFF">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.80s" repeatCount="indefinite" />
+      </rect>
+
+      <text x="182" y="10" font-size="9" font-weight="bold" fill="#00FF66">RAM</text>
+      <rect x="212" y="2" width="120" height="8" rx="4" fill="#001A0D" />
+      <rect x="212" y="2" width="76" height="8" rx="4" fill="#00FF66">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="5.70s" repeatCount="indefinite" />
+      </rect>
+
+      <text x="350" y="10" font-size="9" font-weight="bold" fill="#FFE600">ROM</text>
+      <rect x="380" y="2" width="120" height="8" rx="4" fill="#1A1500" />
+      <rect x="380" y="2" width="38" height="8" rx="4" fill="#FFE600">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="7.60s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Arcade Motif: Arkanoid Speed Breaker on right side -->
+    <g id="arkanoid-speed-rank" transform="translate(584, 14)">
+      <rect x="0" y="0" width="342" height="112" rx="10" fill="#010A07" stroke="#00FFFF" stroke-opacity="0.45" stroke-width="1.2" />
+      <text x="14" y="18" font-size="8.5" font-weight="bold" fill="#00FFFF" letter-spacing="0.6">ARKANOID // SPEED_RANK</text>
+      <text x="328" y="18" text-anchor="end" font-size="7.5" fill="#FFE600">SRAM &gt; DRAM &gt; FLASH</text>
+
+      <!-- Court frame -->
+      <rect x="12" y="25" width="318" height="76" rx="6" fill="#000503" stroke="#00FF66" stroke-opacity="0.25" stroke-width="0.9" />
+
+      <!-- 3 Memory Tier Bricks -->
+      <g>
+        <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.085;0.10;0.90;0.95" dur="13.30s" repeatCount="indefinite" />
+        <rect x="56" y="32" width="76" height="14" rx="3" fill="#002833" stroke="#00FFFF" stroke-width="1.2" />
+        <text x="94" y="42" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#00FFFF">1. CACHE</text>
+      </g>
+
+      <g>
+        <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.312;0.33;0.90;0.95" dur="13.30s" repeatCount="indefinite" />
+        <rect x="142" y="32" width="76" height="14" rx="3" fill="#001A0D" stroke="#00FF66" stroke-width="1.2" />
+        <text x="180" y="42" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#00FF66">2. RAM</text>
+      </g>
+
+      <g>
+        <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.540;0.56;0.90;0.95" dur="13.30s" repeatCount="indefinite" />
+        <rect x="228" y="32" width="76" height="14" rx="3" fill="#1A1500" stroke="#FFE600" stroke-width="1.2" />
+        <text x="266" y="42" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#FFE600">3. ROM</text>
+      </g>
+
+      <!-- Synced Horizontal Paddle -->
+      <rect x="52" y="90" width="48" height="6" rx="3" fill="#00FF66" stroke="#FFFFFF" stroke-width="0.7">
+        <animate attributeName="x" values="52;72;112;156;202;240;146;98;52" keyTimes="0;0.0892;0.2004;0.3170;0.4364;0.5450;0.7424;0.8725;1" calcMode="linear" dur="13.30s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Glowing Packet Ball -->
+      <circle cx="0" cy="0" r="4.5" fill="#FFFFFF" opacity="0" filter="url(#matrixHeadGlow)">
+        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.02;0.98;1" dur="13.30s" repeatCount="indefinite" />
+        <animateMotion path="M 76,88 L 96,46 L 136,88 L 180,46 L 226,88 L 264,46 L 170,88 L 122,40 L 76,88" calcMode="paced" dur="13.30s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+
+  <!-- 9. Optional Verification Checklist -->
+  <g id="verification-checklist" transform="translate(28, 944)">
+    <rect x="0" y="0" width="944" height="152" rx="14" fill="#020D06" stroke="#00FF66" stroke-opacity="0.55" stroke-width="1.5" />
+    <line x1="472" y1="16" x2="472" y2="136" stroke="#00FF66" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4 4" />
+
+    <text x="24" y="30" font-size="13" font-weight="bold" fill="#00FF66" letter-spacing="0.8">CHECK SCHEMA ORIGINALE</text>
+    <text x="24" y="56" font-size="12" fill="#E0FFE6">[✓] Titolo RAM vs ROM vs CACHE, sottotitolo e 3 pittogrammi vettoriali</text>
+    <text x="24" y="80" font-size="12" fill="#E0FFE6">[✓] Tutte le 5 proprietà per colonna (R/W, volatilità, tech, ruolo, GB/MB)</text>
+    <text x="24" y="104" font-size="12" fill="#E0FFE6">[✓] Ordine di velocità: Cache (SRAM) &gt; RAM (DRAM) &gt; ROM (Flash)</text>
+    <text x="24" y="128" font-size="11.5" fill="#A8FFCC" opacity="0.85">    Normalizzato refuso OCR su Cache: "principio di località"</text>
+
+    <text x="496" y="30" font-size="13" font-weight="bold" fill="#FFE600" letter-spacing="0.8">CHECK GIOCHI ORIGINALI (1.9x SLOW)</text>
+    <text x="496" y="56" font-size="12" fill="#FFF2A6">[✓] RAM → Game of Life: matrice 6×6 per refresh dinamico DRAM</text>
+    <text x="496" y="80" font-size="12" fill="#FFF2A6">[✓] ROM → Missile Command: scudo BIOS contro scritture anomale</text>
+    <text x="496" y="104" font-size="12" fill="#FFF2A6">[✓] Cache → Frogger: salto L3→L2→L1 anti collo di bottiglia</text>
+    <text x="496" y="128" font-size="12" fill="#E0FFFF">[✓] Velocità → Arkanoid: pacchetto che rompe i 3 blocchi in ordine</text>
+  </g>
+
+  <!-- 10. Full-Width Cyberpunk Scanline -->
+  <rect x="0" y="-10" width="1000" height="3" fill="#00FF66" opacity="0.12">
+    <animate attributeName="y" from="-10" to="1128" dur="7.60s" repeatCount="indefinite" />
+  </rect>
+</svg>

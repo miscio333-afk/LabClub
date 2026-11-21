@@ -146,6 +146,17 @@ for p in punti:
           pdfUrl: "https://ai.google.dev",
           description: "Dal Machine Learning classico ai Large Language Models (LLM): come i modelli riconoscono pattern e generano testo.",
           topicTag: "Fondamenti IA",
+          schemas: [
+            {
+              id: "cpu-gpu",
+              label: "CPU vs GPU",
+              title: "CPU vs GPU per l'Intelligenza Artificiale",
+              desc: "Perché l'addestramento e l'esecuzione dei modelli IA usano il calcolo parallelo delle GPU.",
+              src: "assets/svg/cpu_vs_gpu_cyberpunk.svg",
+              width: 1000,
+              height: 1126
+            }
+          ],
           codePrompt: "Scrivi in Python una piccola regola di classificazione che assegna 'ALTO' se confidenza >= 0.8.",
           codeStarter: `confidenza = 0.91
 if confidenza >= 0.8:

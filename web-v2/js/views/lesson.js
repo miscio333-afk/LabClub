@@ -472,6 +472,8 @@
         '<div class="stack mt-16">' +
         '<a class="btn btn-soft btn-block" href="#/indizi/' + lesson.id + '">' +
         App.ui.icon("bulb", 16) + " Ho un dubbio: 3 indizi</a>" +
+        '<button type="button" class="btn btn-purple btn-block" data-ask-ai>' +
+        App.ui.icon("sparkles", 16) + " Parla con l'Assistente AI</button>" +
         '<button type="button" class="btn btn-primary btn-block" data-goto="quiz">Vai al quiz · ' + questions.length + " domande</button>" +
         "</div>" +
         '<div class="notice mt-16">Per completare la lezione devi rispondere a tutte le ' + questions.length +
@@ -513,6 +515,8 @@
         '<div class="stack mt-16">' +
         '<a class="btn btn-soft btn-block" href="#/indizi/' + lesson.id + '">' +
         App.ui.icon("bulb", 16) + " Ho un dubbio: 3 indizi</a>" +
+        '<button type="button" class="btn btn-purple btn-block" data-ask-ai>' +
+        App.ui.icon("sparkles", 16) + " Parla con l'Assistente AI</button>" +
         '<button type="button" class="btn btn-primary btn-block" data-goto="quiz">Vai al quiz · ' + questions.length + " domande</button>" +
         "</div>" +
         '<div class="notice mt-16">Per completare la lezione devi rispondere a tutte le ' + questions.length +
@@ -669,6 +673,7 @@
       '<button type="button" class="btn btn-primary btn-sm" id="btn-run">' + App.ui.icon("play", 15) + " Esegui</button>" +
       '<button type="button" class="btn btn-soft btn-sm" id="btn-reset">Ripristina</button>' +
       '<a class="btn btn-ghost btn-sm" href="#/indizi/' + lesson.id + '">Indizi</a>' +
+      '<button type="button" class="btn btn-purple btn-sm" id="btn-code-ai">' + App.ui.icon("sparkles", 14) + " AI</button>" +
       "</div>" +
       (isHtml
         ? '<p class="mt-16" style="font-size:11px;color:var(--zinc)">ANTEPRIMA ISOLATA</p>' +
@@ -785,6 +790,28 @@
     }
 
     root.querySelector("#btn-run").addEventListener("click", runCode);
+    root.querySelectorAll("[data-ask-ai]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        App.actions.openAssistant({
+          lessonId: lesson.id,
+          lessonTitle: lesson.title,
+          courseTitle: course.title,
+          topicTag: lesson.topicTag
+        });
+      });
+    });
+    const codeAiBtn = root.querySelector("#btn-code-ai");
+    if (codeAiBtn) {
+      codeAiBtn.addEventListener("click", function () {
+        App.actions.openAssistant({
+          lessonId: lesson.id,
+          lessonTitle: lesson.title,
+          courseTitle: course.title,
+          topicTag: lesson.topicTag,
+          code: editor.value
+        });
+      });
+    }
     root.querySelector("#btn-reset").addEventListener("click", function () {
       editor.value = lesson.codeStarter;
       if (preview) preview.srcdoc = "";

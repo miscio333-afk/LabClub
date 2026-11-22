@@ -70,10 +70,22 @@
       '<div class="row wrap mt-16">' +
       '<a class="btn btn-primary btn-sm" href="#/lezione/' + lesson.id + '">Apri la lezione</a>' +
       '<a class="btn btn-ghost btn-sm" href="#/lab">Apri il Lab</a>' +
+      '<button type="button" class="btn btn-purple btn-sm" id="hint-ai-btn">' + App.ui.icon("sparkles", 14) + " Assistente AI</button>" +
       '<a class="btn btn-ghost btn-sm" href="#/indizi">Altri indizi</a>' +
       "</div>";
 
     const slot = root.querySelector("#hints-slot");
+    const aiBtn = root.querySelector("#hint-ai-btn");
+    if (aiBtn) {
+      aiBtn.addEventListener("click", function () {
+        App.actions.openAssistant({
+          lessonId: lesson.id,
+          lessonTitle: lesson.title,
+          courseTitle: course ? course.title : "",
+          topicTag: lesson.topicTag
+        });
+      });
+    }
 
     function draw() {
       slot.innerHTML = hintListHtml(lesson, state);

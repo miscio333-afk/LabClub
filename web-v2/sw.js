@@ -2,7 +2,7 @@
  * Network-first: online prende sempre la versione fresca, offline usa la cache.
  * Cambia CACHE_VERSION quando aggiorni i file per forzare il refresh.
  */
-const CACHE_VERSION = "labclub-v2-16";
+const CACHE_VERSION = "labclub-v2-18";
 const CACHE_PREFIX = "labclub-v2-";
 const ASSETS = [
   "./",
@@ -16,6 +16,7 @@ const ASSETS = [
   "./js/python.js",
   "./js/store.js",
   "./js/ui.js",
+  "./js/assistant.js",
   "./js/widgets/registry.js",
   "./js/widgets/von-neumann.js",
   "./js/widgets/binary.js",
@@ -38,6 +39,7 @@ const ASSETS = [
   "./js/views/lab.js",
   "./js/views/profile.js",
   "./js/views/portfolio.js",
+  "./js/views/assistant.js",
   "./content/base-course.js",
   "./content/courses.js",
   "./content/drops.js",
@@ -134,6 +136,7 @@ self.addEventListener("fetch", function (event) {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.indexOf("/api/") === 0 || url.pathname.indexOf("/ws/") === 0) return;
 
   // Video: cache-first, così non li riscarica a ogni visita e funzionano offline.
   if (url.pathname.indexOf("/assets/video/") !== -1) {

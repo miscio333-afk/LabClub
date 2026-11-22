@@ -99,6 +99,11 @@
       '<h3 class="mt-8">Sblocca il dubbio</h3>' +
       '<p>Tre indizi e la soluzione.</p>' +
       "</a>" +
+      '<a class="card quick-card quick-card-ai" href="#/assistente">' +
+      '<span class="kicker purple">ASSISTENTE AI · VOICE LIVE</span>' +
+      '<h3 class="mt-8">Parla con il tutor AI</h3>' +
+      '<p>Conversazione vocale in tempo reale su lezioni, quiz e codice.</p>' +
+      "</a>" +
       "</div>"
     );
   }

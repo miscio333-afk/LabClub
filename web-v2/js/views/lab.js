@@ -140,6 +140,7 @@
         '<button type="button" class="btn btn-primary btn-sm" id="lab-run">' + App.ui.icon("play", 15) + " Esegui</button>" +
         '<button type="button" class="btn btn-soft btn-sm" id="lab-reset">Ripristina esempio</button>' +
         '<button type="button" class="btn btn-ghost btn-sm" id="lab-clear">Pulisci</button>' +
+        '<button type="button" class="btn btn-purple btn-sm" id="lab-ai">' + App.ui.icon("sparkles", 14) + " AI</button>" +
         "</div>" +
         (lang === "HTML"
           ? '<p class="mt-16" style="font-size:11px;color:var(--zinc)">ANTEPRIMA ISOLATA</p>' +
@@ -229,6 +230,13 @@
         localConsole.textContent = "Esempio ripristinato: " + example.name + ".";
         localConsole.classList.remove("error");
         if (localPreview) localPreview.srcdoc = EMPTY_PREVIEW;
+      });
+      stage.querySelector("#lab-ai").addEventListener("click", function () {
+        App.actions.openAssistant({
+          lessonTitle: "Lab " + lang,
+          topicTag: lang,
+          code: editor.value
+        });
       });
     }
 

@@ -46,6 +46,8 @@
         return { view: "profile", params: {}, title: "Profilo", tab: "profilo" };
       case "portfolio":
         return { view: "portfolio", params: {}, title: "Portfolio", tab: "profilo" };
+      case "assistente":
+        return { view: "assistant", params: {}, title: "Assistente AI", tab: "assistente" };
       default:
         return { view: "notfound", params: {}, title: "Pagina non trovata", tab: "" };
     }
@@ -285,6 +287,12 @@
       if (active) el.setAttribute("aria-current", "page");
       else el.removeAttribute("aria-current");
     });
+    const aiPill = document.getElementById("ai-pill");
+    if (aiPill) {
+      aiPill.classList.toggle("active", tab === "assistente");
+      if (tab === "assistente") aiPill.setAttribute("aria-current", "page");
+      else aiPill.removeAttribute("aria-current");
+    }
   }
 
   function syncChrome() {
@@ -360,6 +368,10 @@
       const target = "#" + (path.charAt(0) === "/" ? path : "/" + path);
       if (location.hash === target) render({ transition: false, animate: false });
       else location.hash = target;
+    },
+    openAssistant: function (ctx) {
+      if (App.assistant) App.assistant.setContext(ctx || null);
+      actions.go("/assistente");
     }
   };
 
